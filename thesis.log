@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  6 MAR 2018 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  7 MAR 2018 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1489,13 +1489,17 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 10
  [3] [4
 
 
-] [5] [6
+]
+(c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+) [5] [6
 
 
 ]
 \openout2 = `Chapters/introduzione.aux'.
 
- (./Chapters/introduzione.tex
+
+(./Chapters/introduzione.tex
 chapter 1.
 
 Class scrbook Warning: \float@addtolists detected!
@@ -1512,24 +1516,25 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
 
-(c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-)) [7
+) [7
 
 
 
 ]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [8]
 \openout2 = `Chapters/strumenti.aux'.
 
-
-(./Chapters/strumenti.tex [8
+ (./Chapters/strumenti.tex
+chapter 2.
+) [9
 
 
 
 
 ]
-chapter 2.
-) [9]
 \openout2 = `Chapters/esperimenti.aux'.
 
  (./Chapters/esperimenti.tex [10
@@ -1569,28 +1574,29 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6E95777CCDCE5E7D4714897400EE2335;903.
+(rerunfilecheck)             Checksum: 6485C422F1B025B1E9D8427DE20EA3D9;887.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 4C685F47F3E9DA8E9A731637C39CF75E;177.
+(rerunfilecheck)             Checksum: 45A858FF9D7005423F67388479F07D23;292.
  ) 
 Here is how much of TeX's memory you used:
- 29365 strings out of 492982
- 527683 string characters out of 6136225
- 760587 words of memory out of 5000000
- 32254 multiletter control sequences out of 15000+600000
- 592640 words of font info for 231 fonts, out of 8000000 for 9000
+ 29434 strings out of 492982
+ 528292 string characters out of 6136225
+ 761587 words of memory out of 5000000
+ 32281 multiletter control sequences out of 15000+600000
+ 598160 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 50i,11n,73p,10395b,1288s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,13n,73p,10395b,1288s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texm
 f-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><c:/texlive/2017/texmf-dist
 /fonts/type1/public/fpl/fplrc8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
-lic/bera/fvmr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/lat
-xfont/lcircle1.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.
-pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (15 pages, 128004 bytes).
+lic/fpl/fplrij8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/bera/fvmr8a
+.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.
+pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive
+/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (15 pages, 135743 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 72318 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 235 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 76414 words of extra memory for PDF output out of 89155 (max. 10000000)
 

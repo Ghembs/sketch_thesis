@@ -1,15 +1,9 @@
 \chapter{Introduzione}
 \section{Prefazione}
-Questa tesi consiste nella riproduzione e nello studio di \textit{sketch-rnn} \cite{sketchrnn},
-una rete neurale in grado di generare disegni di semplici oggetti, composti da 
-sequenze di tratti, appresi da un dataset di disegni creati da esseri umani. Il 
-dataset è costantemente ampliato tramite \textit{Quick Draw!} \cite{quickdraw}, 
-un gioco online in cui agli utenti viene chiesto di disegnare alcuni oggetti entro 
-20 secondi, che al momento della stesura di questa tesi costituisce la più 
-vasta collezione di disegni al mondo. In questo lavoro viene proposta 
-un'implementazione in \textit{Keras} \cite{keras}, un framework che a sua 
-volta poggia su \textit{tensorflow} \cite{tensorflow}, che è la libreria 
-utilizzata per il lavoro originale.
+Questa tesi consiste nella riproduzione e nello studio di \textit{sketch-rnn} \cite{sketchrnn}, una rete neurale in grado di generare disegni di semplici oggetti, composti da sequenze di tratti, appresi da un dataset di disegni creati da esseri umani. Il dataset è costantemente ampliato tramite \textit{Quick Draw!} \cite{quickdraw}, un gioco online in cui agli utenti viene chiesto di disegnare alcuni oggetti entro 20 secondi, che al momento della stesura di questa tesi costituisce la più vasta collezione di disegni al mondo. In questo lavoro viene proposta un'implementazione in \textit{Keras} \cite{keras}, un framework che a sua volta poggia su \textit{tensorflow} \cite{tensorflow}, che è la libreria utilizzata per il lavoro originale.
 \section{Stato dell'arte}
+Negli ultimi anni la generazione di immagini attraverso l'uso di reti neurali ha avuto ampia diffusione, fra i modelli più importanti possiamo citare \textit{Generative Adversarial Networks (GANs)} \cite{GAN}, \textit{Variational Inference (VI)} \cite{VI} e \textit{Autoregressive Density Estimation (AR)}. \cite{AR} Il limite della maggior parte di questi algoritmi è che lavorano con immagini in pixel a bassa risoluzione, a differenza degli esseri umani che, piuttosto che vedere il mondo come una griglia di pixel, astraggono concetti per rappresentare ciò che osservano. Allo stesso modo degli esseri umani, che fin da piccoli imparano a riportare i concetti appresi attraverso una sequenza di tratti su un foglio, questo modello generativo apprende da, e produce, mmagini vettoriali.
+L'obbiettivo è di addestrare una macchina a riprodurre ed astrarre concetti, in maniera analoga a come farebbe un essere umano. Ciò può avere numerose applicazioni in campo didattico come artistico, ad esempio assistendo il processo creativo, così come l'analisi della rappresentazione prodotta può offrire spunti di ricerca.
+\section{Dataset}
+
 \section{Lavori correlati}
-\section{obbiettivi del progetto}

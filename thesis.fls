@@ -1,4 +1,4 @@
-PWD D:/Documenti/UNI/THESIS
+PWD D:/Documenti/UNI/sketch_thesis
 INPUT c:/texlive/2017/texmf.cnf
 INPUT c:/texlive/2017/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -395,11 +395,14 @@ INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/palatino/pplrc8r.tfm
 INPUT thesis.lof
 INPUT thesis.lof
 OUTPUT thesis.lof
+INPUT c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
+INPUT c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
 OUTPUT Chapters/introduzione.aux
 INPUT Chapters/introduzione.tex
 INPUT Chapters/introduzione.tex
-INPUT c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
-INPUT c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
+INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/palatino/pplrc9d.tfm
+INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/palatino/pplrc9d.vf
+INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 OUTPUT Chapters/strumenti.aux
 INPUT Chapters/strumenti.tex
 INPUT Chapters/strumenti.tex
@@ -439,6 +442,7 @@ INPUT ./thesis.brf
 INPUT c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb
+INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
