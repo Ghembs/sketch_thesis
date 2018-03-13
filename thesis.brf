@@ -2,6 +2,7 @@
 \backcite {quickdraw}{{7}{1.1}{section.1.1}}
 \backcite {keras}{{7}{1.1}{section.1.1}}
 \backcite {tensorflow}{{7}{1.1}{section.1.1}}
-\backcite {GAN}{{7}{1.2}{section.1.2}}
-\backcite {VI}{{7}{1.2}{section.1.2}}
-\backcite {AR}{{7}{1.2}{section.1.2}}
+\backcite {GAN}{{8}{1.2}{section.1.2}}
+\backcite {VI}{{8}{1.2}{section.1.2}}
+\backcite {AR}{{8}{1.2}{section.1.2}}
+\backcite {approx}{{9}{1.5}{figure.caption.5}}
