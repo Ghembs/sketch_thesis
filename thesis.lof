@@ -6,6 +6,10 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Rappresentazione di un neurone artificiale.\relax }}{9}{figure.caption.4}
 \contentsline {figure}{\numberline {3}{\ignorespaces Rappresentazione di un modello Multi-Strato.\relax }}{10}{figure.caption.5}
 \contentsline {figure}{\numberline {4}{\ignorespaces Una semplice RNN (Recurrent Neural Network).\relax }}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Una RNN dispiegata lungo la linea temporale.\relax }}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Due diversi metodi di implementazione della memoria in una RNN\relax }}{12}{figure.caption.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces Combinazioni di sequenze vettoriali. \cite {rnn_effect}\relax }}{13}{figure.caption.9}
+\contentsline {figure}{\numberline {8}{\ignorespaces Struttura interna di una RNN standard con un singolo hidden layer.\relax }}{14}{figure.caption.10}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

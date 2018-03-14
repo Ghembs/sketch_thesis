@@ -1,3 +1,4 @@
+\backcite {rnn_effect}{{3}{(document)}{Doc-Start}}
 \backcite {sketchrnn}{{7}{1.1}{section.1.1}}
 \backcite {quickdraw}{{7}{1.1}{section.1.1}}
 \backcite {keras}{{7}{1.1}{section.1.1}}
@@ -6,3 +7,5 @@
 \backcite {VI}{{8}{1.2}{section.1.2}}
 \backcite {AR}{{8}{1.2}{section.1.2}}
 \backcite {approx}{{9}{1.5}{figure.caption.5}}
+\backcite {rnn_effect}{{13}{7}{figure.caption.9}}
+\backcite {vanishing}{{14}{1.6.1}{figure.caption.10}}

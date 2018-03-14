@@ -1,6 +1,6 @@
 \chapter{Introduzione}
 \section{Prefazione}
-Questa tesi consiste nella riproduzione e nello studio di \textit{sketch-rnn} \cite{sketchrnn}, una rete neurale in grado di generare disegni di semplici oggetti, composti da sequenze di tratti, appresi da un dataset di disegni creati da esseri umani. Il dataset è costantemente ampliato tramite \textit{Quick Draw!} \cite{quickdraw}, un gioco online in cui agli utenti viene chiesto di disegnare alcuni oggetti entro 20 secondi, che al momento della stesura di questa tesi costituisce la più vasta collezione di disegni al mondo. In questo lavoro viene proposta un'implementazione in \textit{Keras} \cite{keras}, un framework che a sua volta poggia su \textit{tensorflow} \cite{tensorflow}, che è la libreria utilizzata per il lavoro originale.
+Questa tesi consiste nella riproduzione e nello studio di \textit{sketch-rnn} \cite{sketchrnn}, una rete neurale in grado di generare disegni di semplici oggetti, composti da sequenze di tratti, appresi da un dataset di disegni creati da esseri umani. Il dataset è costantemente ampliato tramite \textit{Quick Draw!} \cite{quickdraw}, un gioco online in cui agli utenti viene chiesto di riprodurre alcuni oggetti entro 20 secondi, che al momento della stesura di questa tesi costituisce la più vasta collezione di disegni al mondo. In questo lavoro viene proposta un'implementazione in \textit{Keras} \cite{keras}, un framework che a sua volta poggia su \textit{tensorflow} \cite{tensorflow}, che è la libreria utilizzata per il lavoro originale.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{img/sketch_rnn_latent.png}
@@ -10,11 +10,11 @@ Questa tesi consiste nella riproduzione e nello studio di \textit{sketch-rnn} \c
 \section{Stato dell'arte}
 Negli ultimi anni la generazione di immagini attraverso l'uso di reti neurali ha avuto ampia diffusione, fra i modelli più importanti possiamo citare \textit{Generative Adversarial Networks (GANs)} \cite{GAN}, \textit{Variational Inference (VI)} \cite{VI} e \textit{Autoregressive Density Estimation (AR)}. \cite{AR} Il limite della maggior parte di questi algoritmi è che lavorano con immagini in pixel a bassa risoluzione, a differenza degli esseri umani che, piuttosto che vedere il mondo come una griglia di pixel, astraggono concetti per rappresentare ciò che osservano. Allo stesso modo degli esseri umani, che fin da piccoli imparano a riportare i concetti appresi attraverso una sequenza di tratti su un foglio, questo modello generativo apprende da, e produce, immagini vettoriali.
 
-L'obbiettivo è di addestrare una macchina a riprodurre ed astrarre concetti, in maniera analoga a come farebbe un essere umano. Ciò può avere numerose applicazioni in campo didattico come artistico, ad esempio assistendo il processo creativo, così come l'analisi della rappresentazione prodotta può offrire spunti di ricerca.
+L'obbiettivo è di addestrare una macchina a riprodurre ed astrarre concetti, in maniera analoga a come farebbe una persona. Ciò può avere numerose applicazioni in campo didattico come artistico, ad esempio assistendo il processo creativo, così come l'analisi della rappresentazione prodotta può offrire spunti di ricerca.
 \section{Lavori correlati}
 
 \section{Reti neurali}
-Per spiegare le reti neurali e il Deep Learning si possono usare diversi approcci: uno consiste nel seguire il corso storico, introducendo il concetto di \textit{Percettrone}, passando ai Percettroni Multi-Strato ed ai primi metodi di ottimizzazione che furono applicati a questi modelli. Un altro approccio consiste nel partire da un punto di vista stocastico, definendo una regressione logistica che implica in modo naturale la minimizzazione di una \textit{loss function}. Ciò permette la definizione del concetto stesso di loss function e di come modificare dei parametri per ottenere una soluzione migliore, ciò si ricollega perfettamente al concetto di Percettrone Multi-Strato come classificatore di una regressione logistica.
+Per spiegare le reti neurali e il Deep Learning si possono usare diversi approcci: si può ad esempio seguire il corso storico, introducendo il concetto di \textit{Percettrone}, passando ai Percettroni Multi-Strato ed ai primi metodi di ottimizzazione che furono applicati a questi modelli. Un'altra possibilità consiste nel partire da un punto di vista stocastico, definendo una regressione logistica che implica in modo naturale la minimizzazione di una \textit{loss function}. Ciò permette la definizione del concetto stesso di loss function e di come modificare dei parametri per ottenere una soluzione migliore, ciò si ricollega perfettamente al concetto di Percettrone Multi-Strato come classificatore di una regressione logistica.
 
 Da qui in poi verrà proposta la spiegazione di alcuni modelli fondamentali del Deep Learning, che saranno considerati come "mattoni" costitutivi del modello studiato in questo progetto. Ciò aiuterà a comprendere agevolmente l'implementazione realizzata nel codice, seguendo un punto di vista coerente con le piattaforme più diffuse.
 \section{Reti densamente connesse} % (fold)
@@ -28,7 +28,7 @@ Un neurone artificiale consiste in una funzione matematica che costituisce l'uni
 \end{figure}
 Come si nota dalla figura \ref{fig:1.2} il neurone artificiale riceve \emph{n} input pesati $(w_1x_1,...,w_nx_n)$ e un bias \emph{b}. Successivamente li somma e applica una funzione non lineare nota come \textit{activation function} $\varphi$ per generare l'output. In sostanza calcolare l'output di un singolo neurone corrisponde a formare una combinazione lineare dei suoi input pesati e poi passarla ad una funzione di attivazione.
 
-Per ragioni storiche, nel caso particolare in cui la funzione di attivazione consiste di una funzione con una soglia lineare (e output binario), il neurone è detto \textit{Percettrone}.
+Per ragioni storiche, nel caso particolare in cui la funzione di attivazione consista di una funzione con una soglia lineare (e output binario), il neurone è detto \textit{Percettrone}.
 
 Da qui in poi, quando ci riferiremo ad un \textit{layer} di una rete neurale staremo parlando di un raggruppamento di neuroni che formano, nello specifico, una colonna nel grafo della figura \ref{fig:1.2}, ovvero neuroni che si trovano allo stesso livello di profondità nella rete. Inoltre, ogni layer che si trova fra quello di input e quello di output verrà chiamato \textit{hidden layer}.
 
@@ -61,10 +61,54 @@ Molti problemi richiedono, per essere risolti, di un certo grado di conoscenza p
 
 Per trovare una soluzione a questo problema, com'è uso nel campo dell'Intelligenza Artificiale, viene tratta nuovamente ispirazione dai modelli basati sui principi biologici per elaborare una classe di reti neurali artificiali, in cui le connessioni fra le unità formano un ciclo orientato, dette Reti Neurali Ricorrenti (RNN da Recurrent Neural Networks, Fig. \ref{fig:1.4}). Queste connessioni creano uno stato interno della rete che le permette di esibire un comportamento dinamico nel tempo.
 
+Per le reti neurali non ricorrenti possediamo già molte conoscenze per ottenere buoni parametri. Di conseguenza si rende necessario trovare un modo di trasferire le potenzialità già discusse anche su questo nuovo tipo di reti neurali. Un'idea primitiva potrebbe essere quella di elaborare la rete ricorrente attraverso copie molteplici di una singola rete, come si vede in fig. \ref{fig:1.5}, trasferendo le informazioni dall'hidden layer \textit{A} alla copia successiva per realizzare una forma di memorizzazione.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics{img/unrolled_rnn.png}
+	\caption{Una RNN dispiegata lungo la linea temporale.}
+	\label{fig:1.5}
+\end{figure}
+
+Tuttavia ci potrebbero essere diversi modi di intendere la memoria e di combinare l'input del \textit{time-step} attuale con le informazioni ottenute dal precedente. Ad esempio potremmo scegliere di ottenere le informazioni precedenti conservando l'input oppure l'hidden layer del time-step passato, ottenendo risultati completamente diversi. in fig. \ref{fig:1.6} sono riportati i due esempi sopra descritti, dove ogni colore rappresenta gli effetti sulla memoria dell'hidden layer \textit{A}.
+\begin{figure}[h]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.4\linewidth]{img/input_memory.png} &
+		\includegraphics[width=0.4\linewidth]{img/hidden_memory.png} \\
+		\footnotesize (a) Visualizzazione della memoria usando & \footnotesize (b) Visualizzazione della memoria usando \\ \footnotesize la ricorrenza dell'input & \footnotesize la ricorrenza dell'hidden layer
+	\end{tabular}
+	\caption{Due diversi metodi di implementazione della memoria in una RNN}
+	\label{fig:1.6}
+\end{figure}
+
+Come si può vedere in fig. \hyperref[fig:1.6]{6(a)}, usando la ricorrenza dell'input viene ricordato solo l'attuale input e il precedente, invece nel caso della ricorrenza dell'hidden layer (fig. \hyperref[fig:1.6]{6(b)}) viene ricordata una mistura di tutti gli input precedenti. Per comprendere perché la seconda ipotesi è migliore si può usare questo esempio: si immagini di voler dedurre la parola seguente a \textit{"I love"} ("io amo") e che il testo contega le affermazioni \textit{"I love you"} ("ti amo") e \textit{"I love carrots"} ("amo le carote"). Se lo scopo è predire la decisione che verrà presa fra queste due opzioni e non sono note altre informazioni al di là dell'input (nel caso della ricorrenza dell'input), la rete neurale non avrà abbastanza informazioni per decidere. Viceversa, se la rete neurale possiede informazioni riguardanti il contesto, ad esempio se precedentemente si è parlato di cibo o di pasti, la sceltà diventa più chiara. A prima vista la ricorrenza dell'hidden layer può essere interpretata come un tentativo di ricordare ogni informazione con cui la rete neurale è entrata in contatto ma in pratica vige un limite di al più qualche passo.
+
+Un'altra caratteristica delle RNN, che le avvantaggia ulteriormente rispetto alle MLN, è la versatilità. Le RNN, infatti, sono in grado di operare su sequenze di vettori, a differenza delle MLN o delle CNN (che non saranno trattate in questo elaborato) che operano su vettori di dimensioni fissate, così come fissato è il numero di passi computazionali (limitato ad esempio dal numero di hidden layers). Si possono elaborare sequenze sia in input che in output (o entrambi), in fig. \ref{fig:1.7} distinguiamo cinque casi.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics{img/rnn_seq.jpg}
+	\caption{Combinazioni di sequenze vettoriali. \cite{rnn_effect}}
+	\label{fig:1.7}
+\end{figure}
+
+\begin{enumerate}
+	\item[Uno a uno:] il caso più semplice, in cui non vi è ricorrenza, ad esempio nella classificazione di immagini.
+	\item[Uno a molti:] il caso in cui è presente una sequenza in output. Tipicamente usato nella creazione di sottotitoli, dove ad una sola immagine corrisponde una frase.
+	\item[Molti ad uno:] in questo caso la sequenza è presente solo in input, è la struttura della \textit{sentiment analysis}, dove da una frase viene estratta la sensazione positiva/negativa contenuta in essa.
+	\item[Molti a molti:] qui abbiamo una sequenza sia in input che in output, si potrebbe trattare di un modello di traduzione che assegna ad una frase in una lingua la frase corrispondente in un'altra.
+	\item[Molti a molti(sincronizzato):] come nell'esempio precedente ma l'output è in sincronia con l'input. Utilizzato ad esempio nella classificazione video, in cui un'etichetta va assegnata ad ogni frame in tempo reale.
+\end{enumerate}
 \subsection{Dipendenze a lungo termine} % (fold)
 \label{sub:dipendenze_a_lungo_termine}
-
+\begin{figure}[h]
+	\centering
+	\includegraphics{img/rnn_struct.png}
+	\caption{Struttura interna di una RNN standard con un singolo hidden layer.}
+	\label{fig:1.8}
+\end{figure}
+Nel progettare una RNN va presa in considerazione la possibilità di incontrare la necessità di fornire un vasto numero di informazioni dal contesto per risolvere un problema. Tornando al compito della previsione di parole in un testo, si supponga di dover completare la frase "sto per andare a nuotare in", le informazioni a breve termine suggeriscono che la parola successiva sia un luogo dove sia possibile nuotare, sapendo che la frase precedente è "la spiaggia è molto assolata" si potrebbe dedurre che la parola da predire sia "mare". Il problema in questione è che si incontrano spesso difficoltà nell'identificare informazioni rilevanti. La formulazione di RNN data finora, in teoria, è perfettamente in grado di gestire dipendenze a lungo termine. In pratica, come spesso accade, si tratta di una prova tipicamente banale per una mente umana ma che una semplice implementazione (come in fig. \ref{fig:1.8}) non sarebbe in grado di risolvere efficacemente. Uno degli ostacoli più frequenti da risolvere è il cosiddetto problema del gradiente evanescente (\textit{vanishing gradient} \cite{vanishing}), per superarlo si rendono necessarie varianti più elaborate della RNN semplice, come le LSTM.
 % subsection dipendenze_a_lungo_termine (end)
 \subsection{Long Short Term Memory}
 \subsection{Reti bidirezionali}

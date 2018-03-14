@@ -8,19 +8,19 @@
 \contentsline {section}{\numberline {1.4}Reti neurali}{8}{section.1.4}
 \contentsline {section}{\numberline {1.5}Reti densamente connesse}{8}{section.1.5}
 \contentsline {section}{\numberline {1.6}Reti ricorrenti}{10}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Dipendenze a lungo termine}{11}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Long Short Term Memory}{11}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Reti bidirezionali}{11}{subsection.1.6.3}
-\contentsline {section}{\numberline {1.7}Reti autoregressive}{11}{section.1.7}
-\contentsline {section}{\numberline {1.8}Autoencoder}{11}{section.1.8}
-\contentsline {subsection}{\numberline {1.8.1}Variational Autoencoder}{11}{subsection.1.8.1}
-\contentsline {section}{\numberline {1.9}MDN}{11}{section.1.9}
-\contentsline {chapter}{\numberline {2}Strumenti}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Librerie software}{13}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Keras}{13}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Edward}{13}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Recurrentshop}{13}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Dataset}{13}{section.2.2}
-\contentsline {chapter}{\numberline {3}Esperimenti}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Keras sketch-rnn}{15}{section.3.1}
-\contentsline {chapter}{\numberline {4}Conclusioni}{17}{chapter.4}
+\contentsline {subsection}{\numberline {1.6.1}Dipendenze a lungo termine}{13}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Long Short Term Memory}{14}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Reti bidirezionali}{14}{subsection.1.6.3}
+\contentsline {section}{\numberline {1.7}Reti autoregressive}{14}{section.1.7}
+\contentsline {section}{\numberline {1.8}Autoencoder}{14}{section.1.8}
+\contentsline {subsection}{\numberline {1.8.1}Variational Autoencoder}{14}{subsection.1.8.1}
+\contentsline {section}{\numberline {1.9}MDN}{14}{section.1.9}
+\contentsline {chapter}{\numberline {2}Strumenti}{15}{chapter.2}
+\contentsline {section}{\numberline {2.1}Librerie software}{15}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Keras}{15}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Edward}{15}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Recurrentshop}{15}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Dataset}{15}{section.2.2}
+\contentsline {chapter}{\numberline {3}Esperimenti}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Keras sketch-rnn}{17}{section.3.1}
+\contentsline {chapter}{\numberline {4}Conclusioni}{19}{chapter.4}
