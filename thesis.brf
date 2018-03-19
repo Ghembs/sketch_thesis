@@ -9,3 +9,13 @@
 \backcite {approx}{{9}{1.5}{figure.caption.5}}
 \backcite {rnn_effect}{{13}{7}{figure.caption.9}}
 \backcite {vanishing}{{14}{1.6.1}{figure.caption.10}}
+\backcite {vanishing}{{14}{1.6.2}{figure.caption.11}}
+\backcite {peephole}{{15}{1}{figure.caption.11}}
+\backcite {GRU}{{15}{1}{figure.caption.11}}
+\backcite {DGRNN}{{15}{1}{figure.caption.11}}
+\backcite {phone}{{16}{1.6.3}{subsection.1.6.3}}
+\backcite {BRNN}{{16}{1.6.3}{subsection.1.6.3}}
+\backcite {SDT}{{16}{1.6.3}{subsection.1.6.3}}
+\backcite {combining}{{16}{1.6.3}{subsection.1.6.3}}
+\backcite {phone1}{{16}{1.6.3}{subsection.1.6.3}}
+\backcite {BRNN}{{18}{2}{figure.caption.13}}

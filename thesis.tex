@@ -10,8 +10,9 @@
 % - based on Classic Thesis Style Copyright (C) 2008 
 %   Andr\'e Miede http://www.miede.de   
 %--------------------------------------------------------------
+\PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[twoside,openright,titlepage,fleqn,
-	headinclude,12pt,a4paper,BCOR5mm,footinclude]{scrbook}
+	headinclude,12pt,a4paper,BCOR=5mm,footinclude]{scrbook}
 %--------------------------------------------------------------
 \newcommand{\myItalianTitle}{Titolo italiano\xspace}
 \newcommand{\myEnglishTitle}{Titolo inglese\xspace}
@@ -44,7 +45,8 @@
 \usepackage{appendix}
 \usepackage{siunitx}
 \usepackage[pdftex]{graphicx}
-\usepackage{hyperref}
+\usepackage{tikz}
+\def\layersep{2.5cm}
 %--------------------------------------------------------------
 \usepackage{dia-classicthesis-ldpkg}
 %--------------------------------------------------------------
@@ -79,13 +81,16 @@ parts]{classicthesis}
 	language=Matlab,
   	aboveskip=3mm,
   	belowskip=3mm,
-  	showstringspaces=false,B
+  	showstringspaces=false %,B
   	columns=flexible,
   	basicstyle={\small\ttfamily},
   	numbers=none,
   	breaklines=true,
   	breakatwhitespace=true,
   	tabsize=3
+}
+\hypersetup{
+	pdfborderstyle={/S/U/W 1}
 }
 %--------------------------------------------------------------
 \begin{document}
@@ -110,7 +115,7 @@ parts]{classicthesis}
 \thispagestyle{empty}
 \begin{flushright}
 \null\vspace{\stretch {1}}
-\emph{"citazione" \break --- Autore} \vspace{\stretch{2}}\null
+\emph{"What I cannot create, I do not understand." \break --- Richard Feynman} \vspace{\stretch{2}}\null
 \end{flushright}
 \cleardoublepage
 \include{Chapters/introduzione}
