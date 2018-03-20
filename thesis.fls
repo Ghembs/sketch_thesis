@@ -589,6 +589,9 @@ INPUT ./img/BRNN.png
 INPUT img/autoencoder_schema.jpg
 INPUT ./img/autoencoder_schema.jpg
 INPUT ./img/autoencoder_schema.jpg
+INPUT img/vae_model.png
+INPUT ./img/vae_model.png
+INPUT ./img/vae_model.png
 OUTPUT Chapters/strumenti.aux
 INPUT Chapters/strumenti.tex
 INPUT Chapters/strumenti.tex

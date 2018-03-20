@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  19 MAR 2018 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  20 MAR 2018 02:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1747,7 +1747,7 @@ Class scrbook Warning: \float@addtolists detected!
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<img/sketch_rnn_latent.png, id=223, 1311.90125pt x 508.90125pt>
+<img/sketch_rnn_latent.png, id=227, 1311.90125pt x 508.90125pt>
 File: img/sketch_rnn_latent.png Graphic file (type png)
 <use img/sketch_rnn_latent.png>
 Package pdftex.def Info: img/sketch_rnn_latent.png  used on input line 6.
@@ -1757,7 +1757,7 @@ Package pdftex.def Info: img/sketch_rnn_latent.png  used on input line 6.
 
 
  <./img/sketch_rnn_latent.png>]
-<img/artificial_neuron.png, id=237, 204.01219pt x 98.61844pt>
+<img/artificial_neuron.png, id=241, 204.01219pt x 98.61844pt>
 File: img/artificial_neuron.png Graphic file (type png)
 <use img/artificial_neuron.png>
 Package pdftex.def Info: img/artificial_neuron.png  used on input line 25.
@@ -1777,23 +1777,23 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 92.
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 [9 <./img/artificial_neuron.png>]
-<img/rnn.png, id=260, 50.6111pt x 78.56876pt>
+<img/rnn.png, id=264, 50.6111pt x 78.56876pt>
 File: img/rnn.png Graphic file (type png)
 <use img/rnn.png>
 Package pdftex.def Info: img/rnn.png  used on input line 100.
 (pdftex.def)             Requested size: 50.61096pt x 78.56854pt.
  [10 <./img/rnn.png>]
-<img/unrolled_rnn.png, id=268, 289.29382pt x 76.0118pt>
+<img/unrolled_rnn.png, id=272, 289.29382pt x 76.0118pt>
 File: img/unrolled_rnn.png Graphic file (type png)
 <use img/unrolled_rnn.png>
 Package pdftex.def Info: img/unrolled_rnn.png  used on input line 114.
 (pdftex.def)             Requested size: 289.29312pt x 76.0116pt.
-<img/input_memory.png, id=270, 144.54pt x 97.13416pt>
+<img/input_memory.png, id=274, 144.54pt x 97.13416pt>
 File: img/input_memory.png Graphic file (type png)
 <use img/input_memory.png>
 Package pdftex.def Info: img/input_memory.png  used on input line 123.
 (pdftex.def)             Requested size: 153.64253pt x 103.25665pt.
-<img/hidden_memory.png, id=271, 144.54pt x 95.99638pt>
+<img/hidden_memory.png, id=275, 144.54pt x 95.99638pt>
 File: img/hidden_memory.png Graphic file (type png)
 <use img/hidden_memory.png>
 Package pdftex.def Info: img/hidden_memory.png  used on input line 124.
@@ -1805,40 +1805,46 @@ Overfull \hbox (14.61766pt too wide) in paragraph at lines 122--127
 
 [11 <./img/unrolled_rnn.png>] [12 <./img/input_memory.png> <./img/hidden_memory
 .png>]
-<img/rnn_seq.jpg, id=287, 362.44087pt x 113.45027pt>
+<img/rnn_seq.jpg, id=291, 362.44087pt x 113.45027pt>
 File: img/rnn_seq.jpg Graphic file (type jpg)
 <use img/rnn_seq.jpg>
 Package pdftex.def Info: img/rnn_seq.jpg  used on input line 137.
 (pdftex.def)             Requested size: 362.43997pt x 113.44998pt.
-<img/rnn_struct.png, id=290, 361.67264pt x 135.34494pt>
+<img/rnn_struct.png, id=294, 361.67264pt x 135.34494pt>
 File: img/rnn_struct.png Graphic file (type png)
 <use img/rnn_struct.png>
 Package pdftex.def Info: img/rnn_struct.png  used on input line 153.
 (pdftex.def)             Requested size: 361.67175pt x 135.3446pt.
  [13 <./img/rnn_seq.jpg>]
-<img/lstm_struct.png, id=297, 361.83612pt x 135.95186pt>
+<img/lstm_struct.png, id=301, 361.83612pt x 135.95186pt>
 File: img/lstm_struct.png Graphic file (type png)
 <use img/lstm_struct.png>
 Package pdftex.def Info: img/lstm_struct.png  used on input line 162.
 (pdftex.def)             Requested size: 361.83524pt x 135.9515pt.
  [14 <./img/rnn_struct.png> <./img/lstm_struct.png>] [15]
-<img/rnn_confront.png, id=324, 1325.95375pt x 578.16pt>
+<img/rnn_confront.png, id=328, 1325.95375pt x 578.16pt>
 File: img/rnn_confront.png Graphic file (type png)
 <use img/rnn_confront.png>
 Package pdftex.def Info: img/rnn_confront.png  used on input line 182.
 (pdftex.def)             Requested size: 384.1122pt x 167.48566pt.
-<img/BRNN.png, id=325, 1428.33624pt x 633.36626pt>
+<img/BRNN.png, id=329, 1428.33624pt x 633.36626pt>
 File: img/BRNN.png Graphic file (type png)
 <use img/BRNN.png>
 Package pdftex.def Info: img/BRNN.png  used on input line 191.
 (pdftex.def)             Requested size: 384.1122pt x 170.325pt.
  [16 <./img/rnn_confront.png>] [17 <./img/BRNN.png>]
-<img/autoencoder_schema.jpg, id=345, 168.63pt x 52.998pt>
+<img/autoencoder_schema.jpg, id=349, 168.63pt x 52.998pt>
 File: img/autoencoder_schema.jpg Graphic file (type jpg)
 <use img/autoencoder_schema.jpg>
 Package pdftex.def Info: img/autoencoder_schema.jpg  used on input line 204.
 (pdftex.def)             Requested size: 307.29092pt x 96.5794pt.
- [18 <./img/autoencoder_schema.jpg>]) [19] [20]
+ [18 <./img/autoencoder_schema.jpg>]
+<img/vae_model.png, id=357, 475.0548pt x 510.2262pt>
+File: img/vae_model.png Graphic file (type png)
+<use img/vae_model.png>
+Package pdftex.def Info: img/vae_model.png  used on input line 235.
+(pdftex.def)             Requested size: 153.64253pt x 165.01964pt.
+ [19]) [20 <./img/vae_model.png>]
 \openout2 = `Chapters/strumenti.aux'.
 
  (./Chapters/strumenti.tex
@@ -1921,14 +1927,14 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 400A61D2F87DEE4A9CBC64FE8C012C12;1539.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: B64AAA2F9DEE480D7310D319D93CACB7;979.
+(rerunfilecheck)             Checksum: 72D5DF1DDAA1EF5F92883A4D40BBA359;1082.
  ) 
 Here is how much of TeX's memory you used:
- 39917 strings out of 492982
- 748302 string characters out of 6136225
- 940940 words of memory out of 5000000
- 42234 multiletter control sequences out of 15000+600000
- 629593 words of font info for 477 fonts, out of 8000000 for 9000
+ 39952 strings out of 492982
+ 748726 string characters out of 6136225
+ 941939 words of memory out of 5000000
+ 42255 multiletter control sequences out of 15000+600000
+ 630165 words of font info for 485 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,14n,73p,10388b,1290s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texm
@@ -1944,10 +1950,10 @@ s/type1/public/amsfonts/latxfont/lcircle1.pfb><c:/texlive/2017/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/pala
 tino/uplr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.pf
 b>
-Output written on thesis.pdf (31 pages, 985224 bytes).
+Output written on thesis.pdf (31 pages, 1027472 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 435 compressed objects within 5 object streams
- 97 named destinations out of 1000 (max. 500000)
- 85782 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 85787 words of extra memory for PDF output out of 89155 (max. 10000000)
 

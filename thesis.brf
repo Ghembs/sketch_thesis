@@ -1,4 +1,5 @@
 \backcite {rnn_effect}{{3}{(document)}{Doc-Start}}
+\backcite {keras_blog}{{3}{(document)}{Doc-Start}}
 \backcite {sketchrnn}{{7}{1.1}{section.1.1}}
 \backcite {quickdraw}{{7}{1.1}{section.1.1}}
 \backcite {keras}{{7}{1.1}{section.1.1}}
@@ -18,4 +19,5 @@
 \backcite {SDT}{{16}{1.6.3}{subsection.1.6.3}}
 \backcite {combining}{{16}{1.6.3}{subsection.1.6.3}}
 \backcite {phone1}{{16}{1.6.3}{subsection.1.6.3}}
+\backcite {keras_blog}{{18}{12}{figure.caption.14}}
 \backcite {BRNN}{{18}{2}{figure.caption.13}}

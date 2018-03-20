@@ -8,7 +8,7 @@ Lo scopo di questo elaborato è la riproduzione e lo studio di \textit{sketch-rn
 	\label{fig:1.1}
 \end{figure}
 \section{Stato dell'arte}
-Negli ultimi anni la generazione di immagini attraverso l'uso di reti neurali ha avuto ampia diffusione, fra i modelli più importanti possiamo citare: \textit{Generative Adversarial Networks (GANs)} \cite{GAN}, \textit{Variational Inference (VI)} \cite{VI} e \textit{Autoregressive Density Estimation (AR)} \cite{AR}. Il limite della maggior parte di questi algoritmi è che lavorano con figure in pixel a bassa risoluzione, a differenza degli animali complessi che, piuttosto che vedere il mondo come una griglia di pixel, astraggono concetti per rappresentare ciò che osservano. Allo stesso modo degli esseri umani, che fin da piccoli imparano a riportare le proprie idee attraverso una sequenza di tratti su un foglio, questo modello generativo apprende da, e produce, immagini vettoriali.
+Negli ultimi anni la generazione di immagini attraverso l'uso di reti neurali ha avuto ampia diffusione, fra i modelli più importanti possiamo citare: \textit{Generative Adversarial Networks (GANs)} \cite{GAN}, \textit{Variational Inference (VI)} \cite{VI} e \textit{Autoregressive Density Estimation (AR)} \cite{AR}. Il limite della maggior parte di questi algoritmi consiste nel fatto che lavorano con figure in pixel a bassa risoluzione, a differenza degli animali complessi che, piuttosto che vedere il mondo come una griglia di pixel, astraggono concetti per rappresentare ciò che osservano. Allo stesso modo degli esseri umani, che fin da piccoli imparano a riportare le proprie idee attraverso una sequenza di tratti su un foglio, questo modello generativo apprende da, e produce, immagini vettoriali.
 
 L'obbiettivo è di addestrare una macchina a riprodurre ed astrarre concetti, in maniera analoga a come farebbe una persona. Ciò può avere numerose applicazioni in campo didattico come artistico, ad esempio assistendo il processo creativo, così come l'analisi della rappresentazione prodotta può offrire spunti di ricerca.
 \section{Lavori correlati}
@@ -89,7 +89,7 @@ Questa computazione eseguita da una rete neurale multi-Strato, con un singolo hi
 % 	\label{fig:1.3}
 % \end{figure}
 
-Seguendo il teorema di approssimazione universale \cite{approx} possiamo affermare che una rete neurale con un singolo hidden layer contenente un numero finito di neuroni (ovvero un MLP) è abbastanza per approssimare qualunque funzione continua su un sottoinsieme compatto di $\mathbb{R}^n$.
+Seguendo il teorema di approssimazione universale \cite{approx} possiamo affermare che una rete neurale con un singolo hidden layer contenente un numero finito di neuroni (ovvero un MLP) è sufficiente per approssimare qualunque funzione continua su un sottoinsieme compatto di $\mathbb{R}^n$.
 
 Alcuni sinonimi rilevanti utilizzati al posto di reti neurali Multi-Strato 
 sono \textit{dense layers}, \textit{fully-connected layers} o, meno diffuso, \textit{inner product layers}.
@@ -101,13 +101,13 @@ sono \textit{dense layers}, \textit{fully-connected layers} o, meno diffuso, \te
 	\caption{Una semplice RNN (Recurrent Neural Network).}
 	\label{fig:1.4}
 \end{figure}
-Il cervello umano, nello specifico il lobo frontale, è in grado di elaborare conseguenze future risultanti da azioni nel presente, è in grado di selezionare fra buone e cattive azioni (o fra migliori e ideali) e può determinare somiglianze e differenze fra oggetti ed eventi.
+Il cervello umano, nello specifico il lobo frontale, è in grado di elaborare conseguenze future risultanti da azioni nel presente, ha la capacità di selezionare fra buone e cattive azioni (o fra migliori e ideali) e può determinare somiglianze e differenze fra oggetti ed eventi.
 
-Molti problemi richiedono, per essere risolti, di un certo grado di conoscenza pregressa. Un esempio può riguardare le variazioni della luce di un semaforo: se, per esempio, osserviamo che nel momento attuale la luce accesa è quella gialla, il nostro scopo sarebbe quello di sapere quale sarà la prossima ad accendersi. Le diverse posizioni delle luci in un semaforo sono irrilevanti: ciò che ci interessa è sapere quale colore apparirà, sapendo che quello appena apparso è il giallo. Nella maggior parte delle città sappiamo che la risposta sarebbe che il prossimo sarà il rosso. Per rispondere a questa domanda è venuta in nostro aiuto la nostra esperienza ma se provassimo a risolvere il problema utilizzando una rete neurale come quella proposta in precedenza non otterremmo una risposta soddisfacente. Ciò accade perché la soluzione presenta una dipendenza temporale, che corrisponde al metodo attraverso cui un essere umano apprende a risolvere problemi: analizzando sequenze di eventi.
+Molti problemi per essere risolti necessitano di un certo grado di conoscenza pregressa. Un esempio può riguardare le variazioni della luce di un semaforo: se, per esempio, si osserva che nel momento attuale la luce accesa è quella gialla, lo scopo sarebbe quello di sapere quale sarà la prossima ad accendersi. Le diverse posizioni delle luci in un semaforo sono irrilevanti: ciò che interessa sapere è quale colore apparirà, sapendo che quello appena apparso è il giallo. Nella maggior parte delle città è noto che la risposta sarebbe il rosso. Per rispondere a questa domanda è venuta in aiuto l'esperienza ma se si provasse a risolvere il problema utilizzando una rete neurale come quella proposta in precedenza non si otterrebbe una risposta soddisfacente. Ciò accade perché la soluzione presenta una dipendenza temporale, che corrisponde al metodo attraverso cui un essere umano apprende a risolvere problemi: analizzando sequenze di eventi.
 
-Per trovare una soluzione a questo problema, com'è uso nel campo dell'Intelligenza Artificiale, viene tratta nuovamente ispirazione dai modelli basati sui principi biologici per elaborare una classe di reti neurali artificiali, in cui le connessioni fra le unità formano un ciclo orientato, dette Reti Neurali Ricorrenti (RNN da Recurrent Neural Networks, Fig. \ref{fig:1.4}). Queste connessioni creano uno stato interno della rete che le permette di esibire un comportamento dinamico nel tempo.
+Per trovare una soluzione a questo problema, com'è uso nel campo dell'Intelligenza Artificiale, si parte ancora una volta dai modelli basati sui principi biologici per elaborare una classe di reti neurali artificiali, in cui le connessioni fra le unità formano un ciclo orientato, dette Reti Neurali Ricorrenti (RNN da Recurrent Neural Networks, Fig. \ref{fig:1.4}). Queste connessioni creano uno stato interno della rete che le permette di esibire un comportamento dinamico nel tempo.
 
-Per le reti neurali non ricorrenti possediamo già molte conoscenze per ottenere buoni parametri. Di conseguenza si rende necessario trovare un modo di trasferire le potenzialità già discusse anche su questo nuovo tipo di reti neurali. Un'idea primitiva potrebbe essere quella di elaborare la rete ricorrente attraverso copie molteplici di una singola rete, come si vede in fig. \ref{fig:1.5}, trasferendo le informazioni dall'hidden layer \textit{A} alla copia successiva per realizzare una forma di memorizzazione.
+Per quanto riguarda le reti neurali non ricorrenti sono già state presentate molte conoscenze utili allo scopo di ottenere buoni parametri, di conseguenza si rende necessario trovare un modo di trasferire le potenzialità già discusse anche su questo nuovo tipo di reti neurali. Un'idea primitiva sarebbe quella di elaborare la rete ricorrente attraverso copie molteplici di una singola rete, come si vede in fig. \ref{fig:1.5}, trasferendo le informazioni dall'hidden layer \textit{A} alla copia successiva per realizzare una forma di memorizzazione.
 
 \begin{figure}[ht]
 	\centering
@@ -116,7 +116,7 @@ Per le reti neurali non ricorrenti possediamo già molte conoscenze per ottenere
 	\label{fig:1.5}
 \end{figure}
 
-Tuttavia ci potrebbero essere diversi modi di intendere la memoria e di combinare l'input del \textit{time-step} attuale con le informazioni ottenute dal precedente. Ad esempio potremmo scegliere di ottenere le informazioni precedenti conservando l'input oppure l'hidden layer del time-step passato, ottenendo risultati completamente diversi. in fig. \ref{fig:1.6} sono riportati i due esempi sopra descritti, dove ogni colore rappresenta gli effetti sulla memoria dell'hidden layer \textit{A}.
+Tuttavia ci potrebbero essere diversi modi di intendere la memoria e di combinare l'input del \textit{time-step} attuale con le informazioni ottenute dal precedente. Si prendono in considerazione due esempi: nel primo scegliamo di ottenere le informazioni precedenti conservando l'input, nel secondo l'hidden layer del time-step passato, ottenendo risultati completamente diversi. in fig. \ref{fig:1.6} sono riportati i due esempi sopra descritti, dove ogni colore rappresenta gli effetti sulla memoria dell'hidden layer \textit{A}.
 \begin{figure}[ht]
 	\centering
 	\begin{tabular}{cc}
@@ -128,7 +128,7 @@ Tuttavia ci potrebbero essere diversi modi di intendere la memoria e di combinar
 	\label{fig:1.6}
 \end{figure}
 
-Come si può vedere in fig. \hyperref[fig:1.6]{6(a)}, usando la ricorrenza dell'input viene ricordato solo l'attuale input e il precedente, invece nel caso della ricorrenza dell'hidden layer (fig. \hyperref[fig:1.6]{6(b)}) viene ricordata una mistura di tutti gli input precedenti. Per comprendere perché la seconda ipotesi è migliore si può usare questo esempio: si immagini di voler dedurre la parola seguente a \textit{"I love"} ("io amo") e che il testo contega le affermazioni \textit{"I love you"} ("ti amo") e \textit{"I love carrots"} ("amo le carote"). Se lo scopo è predire la decisione che verrà presa fra queste due opzioni e non sono note altre informazioni al di là dell'input (nel caso della ricorrenza dell'input), la rete neurale non avrà abbastanza informazioni per decidere. Viceversa, se la rete neurale possiede informazioni riguardanti il contesto, ad esempio se precedentemente si è parlato di cibo o di pasti, la sceltà diventa più chiara. A prima vista la ricorrenza dell'hidden layer può essere interpretata come un tentativo di ricordare ogni informazione con cui la rete neurale è entrata in contatto ma in pratica vige un limite di al più qualche passo.
+Come si può vedere in fig. \hyperref[fig:1.6]{6(a)}, usando la ricorrenza dell'input viene ricordato solo l'attuale input e il precedente, invece nel caso della ricorrenza dell'hidden layer (fig. \hyperref[fig:1.6]{6(b)}) viene ricordata una mistura di tutti gli input precedenti. Per comprendere perché la seconda ipotesi è migliore si può usare questo esempio: si immagini di voler dedurre la parola seguente a \textit{"I love"} ("io amo") e che il testo contega le affermazioni \textit{"I love you"} ("ti amo") e \textit{"I love carrots"} ("amo le carote"). Se lo scopo è predire la decisione che verrà presa fra queste due opzioni e non sono note altre informazioni al di là dell'input (nel caso della ricorrenza dell'input), la rete neurale non avrà abbastanza informazioni per decidere. Viceversa, se la rete neurale possiede informazioni riguardanti il contesto, ad esempio se precedentemente si è parlato di cibo o di pasti, la sceltà diventerà più chiara. In teoria la ricorrenza dell'hidden layer può essere interpretata come un tentativo di ricordare ogni informazione con cui la rete neurale è entrata in contatto ma in pratica vige un limite tutt'al più di qualche passo.
 
 Un'altra caratteristica delle RNN, che le avvantaggia ulteriormente rispetto alle MLN, è la versatilità. Le RNN, infatti, sono in grado di operare su sequenze di vettori, a differenza delle MLN o delle CNN (che non saranno trattate in questo elaborato) che operano su vettori di dimensioni fissate, così come fissato è il numero di passi computazionali (limitato ad esempio dal numero di hidden layers). Si possono elaborare sequenze sia in input che in output (o entrambi), in fig. \ref{fig:1.7} si distinguono cinque casi.
 \newpage
@@ -202,7 +202,7 @@ Una BRNN può essere addestrata con gli stessi algoritmi con cui si addestrerebb
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.8\linewidth]{img/autoencoder_schema.jpg}
-	\caption{Struttura di un generico AutoEncoder}
+	\caption{Struttura di un generico AutoEncoder, da \cite{keras_blog}}
 	\label{fig:1.12}
 \end{figure}
 Il processo di \textit{autoencoding} indica il risultato di un algoritmo di compressione, dove le funzioni di compressione e decompressione presentano le seguenti caratteristiche: sono specifiche dei dati, presentano perdite e sono apprese automaticamente attraverso gli esempi, piuttosto che codificate a mano da un programmatore. L'ultima di queste caratteristiche rimanda immediatamente all'uso di una rete neurale, che infatti è l'implementazione tipica di un autoencoder.
@@ -230,6 +230,12 @@ Per contro, un modello generativo cerca di apprendere la distribuzione di probab
 Che corrisponde a $p(x, y)$. Come si può notare intuitivamente, ad un modello generativo è richiesta una complessità superiore che si può tradurre in un calo di prestazioni su compiti meno elaborati, rispetto ai modelli discriminativi, ad esempio nella classificazione. D'altra parte un modello discriminativo non è in grado di cogliere caratteristiche e relazioni complesse fra i dati in input e le variabili target, né è in grado di produrre dati originali analoghi a quelli appresi, proprietà che rendono preferibile un modello generativo per compiti di apprendimento non supervisionato e che sono fondamentali per generare astrazioni come quelle ricercate nella riproduzione di disegni a mano.
 % section modelli_generativi (end)
 \section{Variational Autoencoder}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/vae_model.png}
+	\caption{Modello di un VAE}
+	\label{fig:1.13}
+\end{figure}
 \section{MDN}
 \subsection{Misture gaussiane} % (fold)
 \label{sub:misture_gaussiane}
