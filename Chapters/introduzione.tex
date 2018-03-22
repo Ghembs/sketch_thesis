@@ -22,7 +22,7 @@ Di seguito verrà proposta la spiegazione di alcuni modelli fondamentali del Dee
 Un neurone artificiale consiste in una funzione matematica che costituisce l'unità computazionale di base di una rete neurale artificiale.
 \begin{figure}[ht]
 	\centering
-	\includegraphics{img/artificial_neuron.png}
+	\includegraphics{img/artificial_neuron.PNG}
 	\caption{Rappresentazione di un neurone artificiale.}
 	\label{fig:1.2}
 \end{figure}
@@ -97,7 +97,7 @@ sono \textit{dense layers}, \textit{fully-connected layers} o, meno diffuso, \te
 \section{Reti ricorrenti}
 \begin{figure}[ht]
 	\centering
-	\includegraphics{img/rnn.png}
+	\includegraphics{img/RNN.png}
 	\caption{Una semplice RNN (Recurrent Neural Network).}
 	\label{fig:1.4}
 \end{figure}
@@ -229,6 +229,12 @@ Per contro, un modello generativo cerca di apprendere la distribuzione di probab
 \end{equation}
 Che corrisponde a $p(x, y)$. Come si può notare intuitivamente, ad un modello generativo è richiesta una complessità superiore che si può tradurre in un calo di prestazioni su compiti meno elaborati, rispetto ai modelli discriminativi, ad esempio nella classificazione. D'altra parte un modello discriminativo non è in grado di cogliere caratteristiche e relazioni complesse fra i dati in input e le variabili target, né è in grado di produrre dati originali analoghi a quelli appresi, proprietà che rendono preferibile un modello generativo per compiti di apprendimento non supervisionato e che sono fondamentali per generare astrazioni come quelle ricercate nella riproduzione di disegni a mano.
 % section modelli_generativi (end)
+\section{Variabili latenti} % (fold)
+\label{sec:variabili_latenti}
+Una variabile latente è una variabile casuale che condiziona la generazione dell'output di un modello. Se, ad esempio, si volessero generare immagini di cifre scritte a mano (database MNIST), se nella metà sinistra della cifra è presente metà del carattere \textit{5}, non si può accettare che nella metà destra compaia metà del carattere \textit{0}. In questo caso, la variabile latente permette di stabilire in precedenza quale carattere generare, prima di assegnare valori ai pixel. La variabile è detta \textit{latente} poiché dato il carattere prodotto dal modello non si possiede necessariamente l'informazione su quale assetto della variabile l'abbia generato. 
+
+Prima di poter dire che un modello è in grado di rappresentare il dataset considerato per ogni punto $\boldsymbol{x}$, ci si deve assicurare che esista un assetto della variabile latente che permette al modello di generare un punto molto simile ad esso. Formalmente si supponga di avere un vettore di variabili latenti $\boldsymbol{z}$, in uno spazio multidimensionale $\boldsymbol{Z}$ che si può facilmente campionare in accordo ad una qualche funzione di densità di probabilità (PDF - Probability Density Function) $P(\boldsymbol{z})$ definita su $\boldsymbol{Z}$. Successivamente, si supponga di avere una famiglia di funzioni deterministiche $f(\boldsymbol{z}, \boldsymbol{\theta)}$, parametrizzate rispetto ad un certo vettore $\boldsymbol{\theta}$
+% section variabili_latenti (end)
 \section{Variational Autoencoder}
 \begin{figure}[ht]
 	\centering
@@ -236,6 +242,8 @@ Che corrisponde a $p(x, y)$. Come si può notare intuitivamente, ad un modello g
 	\caption{Modello di un VAE}
 	\label{fig:1.13}
 \end{figure}
+I variational autoencoder realizzano l'implementazione di un modello generativo attraverso una struttura analoga a quella degli autoencoder tradizionali, seppur fondandosi su principi matematici diversi, per la presenza di un encoder ed un decoder nella propria struttura. Si tratta di una classe di modelli che si basano sulla generazione condizionata da una variabile latente.
+
 \section{MDN}
 \subsection{Misture gaussiane} % (fold)
 \label{sub:misture_gaussiane}

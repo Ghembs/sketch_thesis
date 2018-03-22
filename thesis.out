@@ -11,15 +11,16 @@
 \BOOKMARK [2][-]{subsection.1.6.4}{Reti bidirezionali}{section.1.6}% 11
 \BOOKMARK [1][-]{section.1.7}{Autoencoder}{chapter.1}% 12
 \BOOKMARK [1][-]{section.1.8}{Modelli Generativi}{chapter.1}% 13
-\BOOKMARK [1][-]{section.1.9}{Variational Autoencoder}{chapter.1}% 14
-\BOOKMARK [1][-]{section.1.10}{MDN}{chapter.1}% 15
-\BOOKMARK [2][-]{subsection.1.10.1}{Misture gaussiane}{section.1.10}% 16
-\BOOKMARK [0][-]{chapter.2}{Strumenti}{}% 17
-\BOOKMARK [1][-]{section.2.1}{Librerie software}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.1.1}{Keras}{section.2.1}% 19
-\BOOKMARK [2][-]{subsection.2.1.2}{Edward}{section.2.1}% 20
-\BOOKMARK [2][-]{subsection.2.1.3}{Recurrentshop}{section.2.1}% 21
-\BOOKMARK [1][-]{section.2.2}{Dataset}{chapter.2}% 22
-\BOOKMARK [0][-]{chapter.3}{Esperimenti}{}% 23
-\BOOKMARK [1][-]{section.3.1}{Keras sketch-rnn}{chapter.3}% 24
-\BOOKMARK [0][-]{chapter.4}{Conclusioni}{}% 25
+\BOOKMARK [1][-]{section.1.9}{Variabili latenti}{chapter.1}% 14
+\BOOKMARK [1][-]{section.1.10}{Variational Autoencoder}{chapter.1}% 15
+\BOOKMARK [1][-]{section.1.11}{MDN}{chapter.1}% 16
+\BOOKMARK [2][-]{subsection.1.11.1}{Misture gaussiane}{section.1.11}% 17
+\BOOKMARK [0][-]{chapter.2}{Strumenti}{}% 18
+\BOOKMARK [1][-]{section.2.1}{Librerie software}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.1.1}{Keras}{section.2.1}% 20
+\BOOKMARK [2][-]{subsection.2.1.2}{Edward}{section.2.1}% 21
+\BOOKMARK [2][-]{subsection.2.1.3}{Recurrentshop}{section.2.1}% 22
+\BOOKMARK [1][-]{section.2.2}{Dataset}{chapter.2}% 23
+\BOOKMARK [0][-]{chapter.3}{Esperimenti}{}% 24
+\BOOKMARK [1][-]{section.3.1}{Keras sketch-rnn}{chapter.3}% 25
+\BOOKMARK [0][-]{chapter.4}{Conclusioni}{}% 26
