@@ -3,6 +3,260 @@
 \label{sub:keras_sketch_rnn}
 
 % subsection keras_sketch_rnn (end)
-\begin{lstlisting}[language = Python, frame = single]
+\begin{lstlisting}[language = Python, frame = single, caption = {Il layer personalizzato che implementa l'output per la mistura gaussiana}, captionpos = b]
+class MixtureDensity(Layer):
+    def __init__(self, kernelDim, numComponents, **kwargs):
+        self.kernelDim = kernelDim
+        self.numComponents = numComponents
+        super(MixtureDensity, self).__init__(**kwargs)
 
+    def build(self, inputShape):
+        self.inputDim = inputShape[1]
+        self.outputDim = self.numComponents * (1 + self.kernelDim) + 3
+        self.Wo = K.variable(np.random.normal(scale=0.5, size = (self.inputDim, self.outputDim)))  # TODO check if random.normal is a meaningful choice
+        self.bo = K.variable(np.random.normal(scale=0.5, size = self.outputDim))
+
+        self.trainable_weights = [self.Wo, self.bo]
+
+    def call(self, x, mask=None):
+        output = K.dot(x, self.Wo) + self.bo
+        return output
+
+    def compute_output_shape(self, inputShape):
+        return inputShape[0], self.outputDim
+\end{lstlisting}
+\newpage
+
+\begin{lstlisting}[language = Python, frame = single, caption = {Il modello completo del VAE, composto da LSTM}, captionpos = b]
+	class Vae:
+    max_len = 250
+    input = Input((max_len, 5,))
+    decoder_input = Input(shape = (133,))
+    h_in = Input(shape = (512,))
+    c_in = Input(shape = (512,))
+    readout_in = Input(shape = (133,))
+    enc_1 = Bidirectional(LSTM(256))
+    enc_mean = Dense(128)
+    enc_log_sigma = Dense(128)
+    h_init = Dense(1024)
+    dec_1 = Dense(5)
+    dec_2 = Dense(123)
+    dec_3 = LSTMCell(512)
+    mdn = MixtureDensity(5, 20)
+
+    def __init__(self, generate = False):
+        self.h_out = None
+        self.c_out = None
+
+        if not generate:
+            self.encoder = self.build_encoder()
+            self.mean, self.log_sigma = self.encoder(self.input)
+            self.z = Lambda(self.sampling)([self.mean, self.log_sigma])
+        else:
+            self.z = Input(shape = (128,))
+
+        if self.h_out is None:
+            _h = self.h_init(self.z)
+
+            _h = Reshape((512, 2,))(_h)
+
+            _h_1 = Lambda(lambda x: x[:, :, 0])(_h)
+            _c_1 = Lambda(lambda x: x[:, :, 1])(_h)
+        else:
+            _h_1 = self.h_out
+            _c_1 = self.c_out
+
+        z_ = Reshape((1, 128,))(self.z)
+        z_ = Lambda(self.tile)(z_)
+
+        z_ = concatenate([z_, self.input], axis = 2)
+
+        dec_out, h, c = self.dec_3([self.decoder_input, self.h_in, self.c_in])
+
+        dec_out = self.mdn(dec_out)
+
+        rnn = RecurrentModel(input = self.decoder_input,
+                             initial_states = [self.h_in, self.c_in],
+                             output = dec_out, final_states = [h, c],
+                             readout_input = self.readout_in,
+                             return_sequences = True, return_states = True)
+
+        out, self.h_out, self.c_out = rnn(z_, initial_state = [_h_1, _c_1])
+
+        if generate:
+            self.vae = Model([self.z, self.input], out)
+        else:
+            self.vae = Model(self.input, out)
+
+    def tile(self, tensor):
+        return K.tile(tensor, [1, self.max_len, 1])
+
+    def build_encoder(self):
+        a = self.enc_1(self.input)
+        mean = self.enc_mean(a)
+        log_sigma = self.enc_log_sigma(a)
+        encoder = Model(self.input, [mean, log_sigma])
+        return encoder
+
+    def sampling(self, args):
+        z_mean, z_log_sigma = args
+        epsilon = K.random_normal(shape = (128,), mean = 0.,
+                                  stddev = 1.0)
+        return z_mean + K.exp(z_log_sigma) * epsilon
+\end{lstlisting}
+\newpage
+
+\begin{lstlisting}[language = Python, frame = single, caption = {La classe che si occupa della compilazione della rete e del fitting dei dati}, captionpos = b]
+	class Compiler:
+
+    batch_size = 100
+    original_dim = 250
+    epochs = 3
+
+    def __init__(self, names, generate = False):
+        self.vae = vae.Vae(generate)
+        if not generate:
+            self.z_mean = self.vae.mean
+            self.z_log_sigma = self.vae.log_sigma
+        self.x_train = None
+        self.x_valid = None
+        self.x_test = None
+        self.load_dataset(names)
+
+    def load_dataset(self, names):
+        for name in names:
+            dataset = np.load("Dataset/" + name + ".full.npz", encoding = 'bytes')
+            if self.x_train is None:
+                self.x_train = dataset["train"][:2500]
+                self.x_valid = dataset["valid"]
+                self.x_test = dataset["test"]
+            else:
+                self.x_train = np.concatenate((self.x_train, dataset["train"][:2500]))
+                self.x_valid = np.concatenate((self.x_valid, dataset["valid"]))
+                self.x_test = np.concatenate((self.x_test, dataset["test"]))
+
+        self.x_train = dl.DataLoader(self.x_train, self.batch_size)
+        normal_scale_factor = self.x_train.calculate_normalizing_scale_factor()
+        self.x_train.normalize(normal_scale_factor)
+
+        self.x_valid = dl.DataLoader(self.x_valid, self.batch_size)
+        self.x_valid.normalize(normal_scale_factor)
+
+        self.x_test = dl.DataLoader(self.x_test, self.batch_size)
+        self.x_test.normalize(normal_scale_factor)
+
+    def vae_loss(self, x, x_decoded):
+        val_x = x[:, :, 0]
+        val_y = x[:, :, 1]
+        pen = x[:, :, 2:]
+        rec_loss = mdn_loss(val_x, val_y, pen, x_decoded)
+        try:
+            kl_loss = - 0.5 * K.mean(1 + self.z_log_sigma - K.square(self.z_mean) -
+                                     K.exp(self.z_log_sigma), axis = -1)
+            return rec_loss + 0.5 * kl_loss
+        except AttributeError:
+            print("no encoder")
+            return rec_loss
+
+    def set_batches(self):
+        batches = None
+        val_batches = None
+        for i in range(50):
+            a, b, c = self.x_train.get_batch(i)
+            if batches is None:
+                batches = b
+            else:
+                batches = np.append(batches, b, axis = 0)
+
+        for i in range(10):
+            a, b, c = self.x_valid.get_batch(i)
+            if val_batches is None:
+                val_batches = b
+            else:
+                val_batches = np.append(val_batches, b, axis = 0)
+
+        return batches, val_batches
+
+    def load_weights(self):
+        try:
+            self.vae.vae.load_weights("vae_model")
+            print("Loaded weights from file")
+        except IOError:
+            print("Weights not found")
+
+    def compile_fit(self):
+        self.vae.vae.compile(loss = self.vae_loss, optimizer = 'adam',
+                               metrics = ['accuracy'])
+
+        self.load_weights()
+
+        batches, val_batches = self.set_batches()
+
+        print(batches.shape[:])
+        print(val_batches.shape[:])
+
+        self.vae.vae.fit(batches, batches, shuffle = False,
+                           batch_size = self.batch_size, epochs = self.epochs,
+                           validation_data = (val_batches, val_batches))
+        self.vae.vae.save_weights("vae_model", True)
+\end{lstlisting}
+\newpage
+\begin{lstlisting}[language = Python, frame = single, caption = {I metodi per il calcolo dell'errore di ricostruzione}, captionpos = b]
+	def get_mixture_coef(output):
+    out_pi = output[:, :, :20]
+    out_mu_x = output[:, :, 20:40]
+    out_mu_y = output[:, :, 40:60]
+    out_sigma_x = output[:, :, 60:80]
+    out_sigma_y = output[:, :, 80:100]
+    out_ro = output[:, :, 100:120]
+    pen_logits = output[:, :, 120:123]
+    # out_mu = K.reshape(out_mu, [-1, numComonents*2, outputDim])
+    out_mu_x = K.permute_dimensions(out_mu_x, [0, 2, 1])
+    out_mu_y = K.permute_dimensions(out_mu_y, [0, 2, 1])
+    # use softmax to normalize pi and q into prob distribution
+    max_pi = K.max(out_pi, axis = 1, keepdims=True)
+    out_pi = out_pi - max_pi
+    out_pi = K.exp(out_pi)
+    normalize_pi = 1 / K.sum(out_pi, axis=1, keepdims=True)
+    out_pi = normalize_pi * out_pi
+    out_q = K.softmax(pen_logits)
+    out_ro = K.tanh(out_ro)
+    # use exponential to make sure sigma is positive
+    out_sigma_x = K.exp(out_sigma_x)
+    out_sigma_y = K.exp(out_sigma_y)
+    return out_pi, out_mu_x, out_mu_y, out_sigma_x, out_sigma_y, out_ro, out_q
+
+
+def tf_bi_normal(x, y, mu_x, mu_y, sigma_x, sigma_y, ro):
+    norm1 = subtract([x, mu_x])
+    norm2 = subtract([y, mu_y])
+    norm1 = K.permute_dimensions(norm1, [0, 2, 1])
+    norm2 = K.permute_dimensions(norm2, [0, 2, 1])
+    sigma = multiply([sigma_x, sigma_y])
+    z = (K.square(norm1 / (sigma_x + 1e-8)) + K.square(norm2 / (sigma_y + 1e-8)) - 2 *
+         multiply([ro, norm1, norm2]) / (sigma + 1e-8) + 1e-8)
+    ro_opp = 1 - K.square(ro)
+    result = K.exp(-z / (2 * ro_opp + 1e-8))
+    denom = 2 * np.pi * multiply([sigma, K.square(ro_opp)]) + 1e-8
+    result = result / denom + 1e-8
+    return result
+
+
+# TODO sort dimensions out
+def get_lossfunc(out_pi, out_mu_x, out_mu_y, out_sigma_x, out_sigma_y, out_ro, out_q, x, y, logits):
+    # L_r loss term calculation, L_s part
+    result = tf_bi_normal(x, y, out_mu_x, out_mu_y, out_sigma_x, out_sigma_y, out_ro)
+    result = multiply([result, out_pi])
+    result = K.permute_dimensions(result, [0, 2, 1])
+    result = K.sum(result, axis=1, keepdims=True)
+    result = -K.log(result + 1e-8)
+    fs = 1.0 - logits[:, 2]
+    fs = Reshape((-1, 1))(fs)
+    result = multiply([result, fs])
+    result = K.permute_dimensions(result, [0, 2, 1])
+    # L_r loss term, L_p part
+    result1 = K.categorical_crossentropy(logits, out_q, from_logits = True)
+    result1 = Reshape((-1, 1))(result1)
+    result = result + result1
+    return K.mean(result)
 \end{lstlisting}
