@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {1.7}Autoencoder}{18}{section.1.7}
 \contentsline {section}{\numberline {1.8}Modelli Generativi}{19}{section.1.8}
 \contentsline {section}{\numberline {1.9}Variabili latenti}{20}{section.1.9}
-\contentsline {section}{\numberline {1.10}Variational Autoencoder}{20}{section.1.10}
+\contentsline {section}{\numberline {1.10}Variational Autoencoder}{21}{section.1.10}
 \contentsline {section}{\numberline {1.11}MDN}{21}{section.1.11}
 \contentsline {subsection}{\numberline {1.11.1}Misture gaussiane}{21}{subsection.1.11.1}
 \contentsline {chapter}{\numberline {2}\spacedlowsmallcaps {Strumenti}}{23}{chapter.2}

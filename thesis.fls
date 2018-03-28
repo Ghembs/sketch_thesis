@@ -595,6 +595,9 @@ INPUT ./img/vae_model.png
 INPUT c:/texlive/2017/texmf-dist/fonts/vf/public/eulervm/zeusb10.vf
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/euler/eufb10.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/euler/eusb10.tfm
+INPUT c:/texlive/2017/texmf-dist/fonts/vf/public/eulervm/zeuex10.vf
+INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/euler/euex10.tfm
 OUTPUT Chapters/strumenti.aux
 INPUT Chapters/strumenti.tex
 INPUT Chapters/strumenti.tex
@@ -638,6 +641,8 @@ INPUT ./thesis.out
 INPUT ./thesis.brf
 INPUT ./thesis.brf
 INPUT c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufb10.pfb
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb

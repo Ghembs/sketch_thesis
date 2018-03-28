@@ -233,7 +233,15 @@ Che corrisponde a $p(x, y)$. Come si può notare intuitivamente, ad un modello g
 \label{sec:variabili_latenti}
 Una variabile latente è una variabile casuale che condiziona la generazione dell'output di un modello. Se, ad esempio, si volessero generare immagini di cifre scritte a mano (database MNIST), se nella metà sinistra della cifra è presente metà del carattere \textit{5}, non si può accettare che nella metà destra compaia metà del carattere \textit{0}. In questo caso, la variabile latente permette di stabilire in precedenza quale carattere generare, prima di assegnare valori ai pixel. La variabile è detta \textit{latente} poiché dato il carattere prodotto dal modello non si possiede necessariamente l'informazione su quale assetto della variabile l'abbia generato. 
 
-Prima di poter dire che un modello è in grado di rappresentare il dataset considerato per ogni punto $\boldsymbol{x}$, ci si deve assicurare che esista un assetto della variabile latente che permette al modello di generare un punto molto simile ad esso. Formalmente si supponga di avere un vettore di variabili latenti $\boldsymbol{z}$, in uno spazio multidimensionale $\boldsymbol{Z}$ che si può facilmente campionare in accordo ad una qualche funzione di densità di probabilità (PDF - Probability Density Function) $P(\boldsymbol{z})$ definita su $\boldsymbol{Z}$. Successivamente, si supponga di avere una famiglia di funzioni deterministiche $f(\boldsymbol{z}, \boldsymbol{\theta)}$, parametrizzate rispetto ad un certo vettore $\boldsymbol{\theta}$
+Prima di poter dire che un modello è in grado di rappresentare il dataset considerato per ogni punto $\boldsymbol{x}$, ci si deve assicurare che esista un assetto della variabile latente che permette al modello di generare un punto molto simile ad esso. Formalmente si supponga di avere un vettore di variabili latenti $\boldsymbol{z}$, in uno spazio multidimensionale $\boldsymbol{Z}$ che si può facilmente campionare in accordo ad una qualche funzione di densità di probabilità (PDF - Probability Density Function) $P(\boldsymbol{z})$ definita su $\boldsymbol{Z}$. Successivamente, si supponga di avere una famiglia di funzioni deterministiche $f(\boldsymbol{z}, \boldsymbol{\theta)}$, parametrizzate rispetto ad un vettore $\boldsymbol{\theta}$ su di un qualche spazio $\boldsymbol{\Theta}$, dove $f : \boldsymbol{Z} x \boldsymbol{\Theta} \rightarrow \boldsymbol{\chi}$. $f$ è deterministica ma, se $\boldsymbol{z}$ è casuale e $\boldsymbol{\theta}$ è fissato, allora $f(\boldsymbol{z}; \boldsymbol{\theta})$ è una variabile casuale nello spazio $\boldsymbol{\chi}$. Si desidera ottimizzare $\boldsymbol{\theta}$ in modo da poter campionare $\boldsymbol{z}$ da $P(\boldsymbol{z})$ e, con alta probabilità, $f(\boldsymbol{z}; \boldsymbol{\theta})$ sarà analoga alle $\boldsymbol{x}$ del dataset considerato.
+
+In modo matematicamente rigoroso, si può affermare che l'obbiettivo è massimizzare la probabilità di ogni $\boldsymbol{x}$ nel training set lungo tutto il procedimento generativo, in accordo a:
+\begin{equation}
+	\label{probability}
+	P(\boldsymbol{x}) = \int P(\boldsymbol{x} | \boldsymbol{z}; \boldsymbol{\theta}) P(\boldsymbol{z})d\boldsymbol{z}
+\end{equation}
+
+Qui $f(\boldsymbol{z}, \boldsymbol{\theta)}$ è stato rimpiazzato da $P(\boldsymbol{x} | \boldsymbol{z}; \boldsymbol{\theta})$, che permette di rendere esplicita la dipendenza di $\boldsymbol{x}$ da $\boldsymbol{z}$ attraverso la regola delle probabilità totali. L'intuizione dietro a questo framework, detto \textit{"maximum likelihood"}, è che se il modello è in grado di riprodurre esempi del training set, sarà probabilmente in grado di generare esempi analoghi e con poca probabilità produrrà risultati molto diversi.
 % section variabili_latenti (end)
 \section{Variational Autoencoder}
 \begin{figure}[ht]
@@ -244,6 +252,11 @@ Prima di poter dire che un modello è in grado di rappresentare il dataset consi
 \end{figure}
 I variational autoencoder realizzano l'implementazione di un modello generativo attraverso una struttura analoga a quella degli autoencoder tradizionali, seppur fondandosi su principi matematici diversi, per la presenza di un encoder ed un decoder nella propria struttura. Si tratta di una classe di modelli che si basano sulla generazione condizionata da una variabile latente.
 
+Nei VAE, la scelta della distribuzione di output è spesso gaussiana, ovvero della forma:
+\begin{equation}
+	\label{gaussian_probability}
+	P(\boldsymbol{x} | \boldsymbol{z}; \boldsymbol{\theta}) = \mathcal{N}(\boldsymbol{x}|f(\boldsymbol{z}; \boldsymbol{\theta}), \sigma^2 * \boldsymbol{I})
+\end{equation}
 \section{MDN}
 \subsection{Misture gaussiane} % (fold)
 \label{sub:misture_gaussiane}

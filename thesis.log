@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  27 MAR 2018 02:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  27 MAR 2018 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1842,9 +1842,9 @@ Package pdftex.def Info: img/autoencoder_schema.jpg  used on input line 204.
 <img/vae_model.png, id=369, 475.0548pt x 510.2262pt>
 File: img/vae_model.png Graphic file (type png)
 <use img/vae_model.png>
-Package pdftex.def Info: img/vae_model.png  used on input line 241.
+Package pdftex.def Info: img/vae_model.png  used on input line 249.
 (pdftex.def)             Requested size: 153.64253pt x 165.01964pt.
- [20 <./img/vae_model.png>]) [21]
+ [20]) [21 <./img/vae_model.png>]
 \openout2 = `Chapters/strumenti.aux'.
 
 
@@ -1931,30 +1931,32 @@ Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 72D5DF1DDAA1EF5F92883A4D40BBA359;1082.
  ) 
 Here is how much of TeX's memory you used:
- 40606 strings out of 492982
- 757686 string characters out of 6136225
- 1018939 words of memory out of 5000000
- 42636 multiletter control sequences out of 15000+600000
- 631617 words of font info for 499 fonts, out of 8000000 for 9000
+ 40614 strings out of 492982
+ 757797 string characters out of 6136225
+ 1018940 words of memory out of 5000000
+ 42640 multiletter control sequences out of 15000+600000
+ 632019 words of font info for 501 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,14n,73p,10388b,2404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/euler/eufb10.pfb><c:/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2017/texmf-dist/fonts
-/type1/public/amsfonts/euler/eurb10.pfb><c:/texlive/2017/texmf-dist/fonts/type1
-/public/amsfonts/euler/eurm10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publi
-c/amsfonts/euler/eurm7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/euler/eusm10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/mathpazo/fp
-lmbb.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb><c:/tex
-live/2017/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb><c:/texlive/2017/texmf
--dist/fonts/type1/public/bera/fvmr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type
-1/public/amsfonts/latxfont/lcircle1.pfb><c:/texlive/2017/texmf-dist/fonts/type1
-/urw/palatino/uplb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
-plr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (39 pages, 1057853 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fo
+nts/type1/public/amsfonts/euler/euex10.pfb><c:/texlive/2017/texmf-dist/fonts/ty
+pe1/public/amsfonts/euler/eufb10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pu
+blic/amsfonts/euler/eufm10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/euler/eurb10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfont
+s/euler/eurm10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/eule
+r/eurm7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eusm1
+0.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb><c:/te
+xlive/2017/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb><c:/texlive/2017/texmf
+-dist/fonts/type1/public/fpl/fplrij8a.pfb><c:/texlive/2017/texmf-dist/fonts/typ
+e1/public/bera/fvmr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/latxfont/lcircle1.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
+plb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/t
+exlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (39 pages, 1070696 bytes).
 PDF statistics:
- 868 PDF objects out of 1000 (max. 8388607)
- 777 compressed objects within 8 object streams
- 356 named destinations out of 1000 (max. 500000)
+ 878 PDF objects out of 1000 (max. 8388607)
+ 785 compressed objects within 8 object streams
+ 358 named destinations out of 1000 (max. 500000)
  85795 words of extra memory for PDF output out of 89155 (max. 10000000)
 
