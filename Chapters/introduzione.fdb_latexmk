@@ -1,13 +1,13 @@
 # Fdb version 3
-["pdflatex"] 1520990216 "introduzione.tex" "introduzione.pdf" "introduzione" 1520990220
-  "c:/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1519752835 3332 103109f5612ad95229751940c61aada0 ""
-  "c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1519751045 1328 c834bbb027764024c09d3d2bf908b5f0 ""
-  "c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1519751045 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
-  "c:/texlive/2017/texmf-dist/web2c/texmf.cnf" 1519753916 33095 db9a077a3f94a5d0b580d566a7906714 ""
-  "c:/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1519760336 4127795 d2015c3da1652c2f6316157b49f3f69e ""
-  "c:/texlive/2017/texmf.cnf" 1519759865 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "introduzione.aux" 1520990170 5544 62b6370cfaeb33b91c6d34c4d740ebb3 ""
-  "introduzione.tex" 1520990208 13147 3f72123725347c0f85ac764c5c2abe03 ""
+["pdflatex"] 1522428636 "introduzione.tex" "introduzione.pdf" "introduzione" 1522428641
+  "c:/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1519756435 3332 103109f5612ad95229751940c61aada0 ""
+  "c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1519754645 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1519754645 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "c:/texlive/2017/texmf-dist/web2c/texmf.cnf" 1519757516 33095 db9a077a3f94a5d0b580d566a7906714 ""
+  "c:/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1519763936 4127795 d2015c3da1652c2f6316157b49f3f69e ""
+  "c:/texlive/2017/texmf.cnf" 1519763465 673 4ae7b2f49cee444c5343a45b5d0f169c ""
+  "introduzione.aux" 1522171562 9436 3627faca4bdb16e42465f9676feefd6a ""
+  "introduzione.tex" 1522428589 34565 dd5de2e0fc7629bc9080a37027958616 ""
   (generated)
-  "introduzione.pdf"
   "introduzione.log"
+  "introduzione.pdf"

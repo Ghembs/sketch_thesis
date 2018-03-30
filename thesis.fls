@@ -598,6 +598,11 @@ INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/euler/eusb10.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/vf/public/eulervm/zeuex10.vf
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/euler/euex10.tfm
+INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/palatino/pplri9d.tfm
+INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/palatino/pplri9d.vf
+INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
+INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/palatino/pplrij8r.tfm
 OUTPUT Chapters/strumenti.aux
 INPUT Chapters/strumenti.tex
 INPUT Chapters/strumenti.tex
