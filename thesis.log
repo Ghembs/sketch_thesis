@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  30 MAR 2018 18:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  1 APR 2018 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1747,7 +1747,7 @@ Class scrbook Warning: \float@addtolists detected!
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<img/sketch_rnn_latent.png, id=227, 1311.90125pt x 508.90125pt>
+<img/sketch_rnn_latent.png, id=233, 1311.90125pt x 508.90125pt>
 File: img/sketch_rnn_latent.png Graphic file (type png)
 <use img/sketch_rnn_latent.png>
 Package pdftex.def Info: img/sketch_rnn_latent.png  used on input line 6.
@@ -1757,7 +1757,7 @@ Package pdftex.def Info: img/sketch_rnn_latent.png  used on input line 6.
 
 
  <./img/sketch_rnn_latent.png>]
-<img/artificial_neuron.PNG, id=241, 204.01219pt x 98.61844pt>
+<img/artificial_neuron.PNG, id=247, 204.01219pt x 98.61844pt>
 File: img/artificial_neuron.PNG Graphic file (type png)
 <use img/artificial_neuron.PNG>
 Package pdftex.def Info: img/artificial_neuron.PNG  used on input line 25.
@@ -1777,23 +1777,23 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 92.
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 [9 <./img/artificial_neuron.PNG>]
-<img/RNN.png, id=264, 50.6111pt x 78.56876pt>
+<img/RNN.png, id=270, 50.6111pt x 78.56876pt>
 File: img/RNN.png Graphic file (type png)
 <use img/RNN.png>
 Package pdftex.def Info: img/RNN.png  used on input line 100.
 (pdftex.def)             Requested size: 50.61096pt x 78.56854pt.
  [10 <./img/RNN.png>]
-<img/unrolled_rnn.png, id=272, 289.29382pt x 76.0118pt>
+<img/unrolled_rnn.png, id=278, 289.29382pt x 76.0118pt>
 File: img/unrolled_rnn.png Graphic file (type png)
 <use img/unrolled_rnn.png>
 Package pdftex.def Info: img/unrolled_rnn.png  used on input line 114.
 (pdftex.def)             Requested size: 289.29312pt x 76.0116pt.
-<img/input_memory.png, id=274, 144.54pt x 97.13416pt>
+<img/input_memory.png, id=280, 144.54pt x 97.13416pt>
 File: img/input_memory.png Graphic file (type png)
 <use img/input_memory.png>
 Package pdftex.def Info: img/input_memory.png  used on input line 123.
 (pdftex.def)             Requested size: 153.64253pt x 103.25665pt.
-<img/hidden_memory.png, id=275, 144.54pt x 95.99638pt>
+<img/hidden_memory.png, id=281, 144.54pt x 95.99638pt>
 File: img/hidden_memory.png Graphic file (type png)
 <use img/hidden_memory.png>
 Package pdftex.def Info: img/hidden_memory.png  used on input line 124.
@@ -1805,60 +1805,65 @@ Overfull \hbox (14.61766pt too wide) in paragraph at lines 122--127
 
 [11 <./img/unrolled_rnn.png>] [12 <./img/input_memory.png> <./img/hidden_memory
 .png>]
-<img/rnn_seq.jpg, id=291, 362.44087pt x 113.45027pt>
+<img/rnn_seq.jpg, id=297, 362.44087pt x 113.45027pt>
 File: img/rnn_seq.jpg Graphic file (type jpg)
 <use img/rnn_seq.jpg>
 Package pdftex.def Info: img/rnn_seq.jpg  used on input line 137.
 (pdftex.def)             Requested size: 362.43997pt x 113.44998pt.
-<img/rnn_struct.png, id=294, 361.67264pt x 135.34494pt>
+<img/rnn_struct.png, id=300, 361.67264pt x 135.34494pt>
 File: img/rnn_struct.png Graphic file (type png)
 <use img/rnn_struct.png>
 Package pdftex.def Info: img/rnn_struct.png  used on input line 153.
 (pdftex.def)             Requested size: 361.67175pt x 135.3446pt.
  [13 <./img/rnn_seq.jpg>]
-<img/lstm_struct.png, id=301, 361.83612pt x 135.95186pt>
+<img/lstm_struct.png, id=307, 361.83612pt x 135.95186pt>
 File: img/lstm_struct.png Graphic file (type png)
 <use img/lstm_struct.png>
 Package pdftex.def Info: img/lstm_struct.png  used on input line 162.
 (pdftex.def)             Requested size: 361.83524pt x 135.9515pt.
  [14 <./img/rnn_struct.png> <./img/lstm_struct.png>] [15]
-<img/rnn_confront.png, id=328, 1325.95375pt x 578.16pt>
+<img/rnn_confront.png, id=334, 1325.95375pt x 578.16pt>
 File: img/rnn_confront.png Graphic file (type png)
 <use img/rnn_confront.png>
 Package pdftex.def Info: img/rnn_confront.png  used on input line 182.
 (pdftex.def)             Requested size: 384.1122pt x 167.48566pt.
-<img/BRNN.png, id=329, 1428.33624pt x 633.36626pt>
+<img/BRNN.png, id=335, 1428.33624pt x 633.36626pt>
 File: img/BRNN.png Graphic file (type png)
 <use img/BRNN.png>
 Package pdftex.def Info: img/BRNN.png  used on input line 191.
 (pdftex.def)             Requested size: 384.1122pt x 170.325pt.
  [16 <./img/rnn_confront.png>] [17 <./img/BRNN.png>]
-<img/autoencoder_schema.jpg, id=349, 168.63pt x 52.998pt>
+<img/autoencoder_schema.jpg, id=355, 168.63pt x 52.998pt>
 File: img/autoencoder_schema.jpg Graphic file (type jpg)
 <use img/autoencoder_schema.jpg>
 Package pdftex.def Info: img/autoencoder_schema.jpg  used on input line 204.
 (pdftex.def)             Requested size: 307.29092pt x 96.5794pt.
  [18 <./img/autoencoder_schema.jpg>] [19]
-<img/vae_model.png, id=364, 475.0548pt x 510.2262pt>
+<img/vae_model.png, id=370, 475.0548pt x 510.2262pt>
 File: img/vae_model.png Graphic file (type png)
 <use img/vae_model.png>
 Package pdftex.def Info: img/vae_model.png  used on input line 249.
 (pdftex.def)             Requested size: 153.64253pt x 165.01964pt.
- [20] [21 <./img/vae_model.png>]) [22]
+ [20] [21 <./img/vae_model.png>] [22]
+<img/vae_struct.png, id=393, 749.80125pt x 411.03563pt>
+File: img/vae_struct.png Graphic file (type png)
+<use img/vae_struct.png>
+Package pdftex.def Info: img/vae_struct.png  used on input line 273.
+(pdftex.def)             Requested size: 384.1122pt x 210.57245pt.
+) [23 <./img/vae_struct.png>]
 \openout2 = `Chapters/strumenti.aux'.
 
-
-(./Chapters/strumenti.tex
-chapter 2.
-) [23
+ (./Chapters/strumenti.tex [24
 
 
 
 
 ]
+chapter 2.
+) [25]
 \openout2 = `Chapters/esperimenti.aux'.
 
- (./Chapters/esperimenti.tex [24
+ (./Chapters/esperimenti.tex [26
 
 
 
@@ -1867,13 +1872,13 @@ chapter 2.
 chapter 3.
 (c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [25] [26] [27]
-[28] [29] [30] [31]) [32]
+) [27] [28] [29]
+[30] [31] [32] [33]) [34]
 \openout2 = `Chapters/conclusioni.aux'.
 
  (./Chapters/conclusioni.tex
 chapter 4.
-) [33
+) [35
 
 
 
@@ -1885,7 +1890,7 @@ chapter 4.
 \tf@brf=\write8
 \openout8 = `thesis.brf'.
 
- [34
+ [36
 
 
 
@@ -1902,7 +1907,7 @@ Overfull \hbox (67.72122pt too wide) in paragraph at lines 40--40
 ainty-[]estimation /
  []
 
-[35]
+[37]
 Underfull \hbox (badness 6876) in paragraph at lines 47--47
 []\T1/pplj/m/n/12 (+20) A. Kar-pa-thy - \T1/pplj/m/it/12 (+20) The Un-rea-so-na
 -ble Ef-fec-ti-ve-ness of Re-cur-rent
@@ -1916,7 +1921,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--47
 
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [36]) [37]
+) [38]) [39]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
 
@@ -1931,11 +1936,11 @@ Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 8BE796C8A92901233BB8014ACBEAE19D;1124.
  ) 
 Here is how much of TeX's memory you used:
- 40669 strings out of 492982
- 758299 string characters out of 6136225
- 1019059 words of memory out of 5000000
- 42648 multiletter control sequences out of 15000+600000
- 636921 words of font info for 536 fonts, out of 8000000 for 9000
+ 40689 strings out of 492982
+ 758568 string characters out of 6136225
+ 1020059 words of memory out of 5000000
+ 42658 multiletter control sequences out of 15000+600000
+ 637202 words of font info for 540 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,14n,73p,10388b,2404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texm
@@ -1953,10 +1958,10 @@ e1/public/bera/fvmr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/latxfont/lcircle1.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
 plb8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/t
 exlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (39 pages, 1074093 bytes).
+Output written on thesis.pdf (41 pages, 1139803 bytes).
 PDF statistics:
- 876 PDF objects out of 1000 (max. 8388607)
- 783 compressed objects within 8 object streams
- 358 named destinations out of 1000 (max. 500000)
- 93979 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 896 PDF objects out of 1000 (max. 8388607)
+ 799 compressed objects within 8 object streams
+ 362 named destinations out of 1000 (max. 500000)
+ 93984 words of extra memory for PDF output out of 106986 (max. 10000000)
 

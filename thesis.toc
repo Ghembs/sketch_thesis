@@ -16,13 +16,13 @@
 \contentsline {section}{\numberline {1.8}Modelli Generativi}{19}{section.1.8}
 \contentsline {section}{\numberline {1.9}Variabili latenti}{20}{section.1.9}
 \contentsline {section}{\numberline {1.10}Variational Autoencoder}{21}{section.1.10}
-\contentsline {section}{\numberline {1.11}MDN}{22}{section.1.11}
-\contentsline {subsection}{\numberline {1.11.1}Misture gaussiane}{22}{subsection.1.11.1}
-\contentsline {chapter}{\numberline {2}\spacedlowsmallcaps {Strumenti}}{23}{chapter.2}
-\contentsline {section}{\numberline {2.1}Librerie software}{23}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Keras}{23}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Recurrentshop}{23}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Dataset}{23}{section.2.2}
-\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Esperimenti}}{25}{chapter.3}
-\contentsline {section}{\numberline {3.1}Keras sketch-rnn}{25}{section.3.1}
-\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Conclusioni}}{33}{chapter.4}
+\contentsline {section}{\numberline {1.11}MDN}{23}{section.1.11}
+\contentsline {subsection}{\numberline {1.11.1}Misture gaussiane}{23}{subsection.1.11.1}
+\contentsline {chapter}{\numberline {2}\spacedlowsmallcaps {Strumenti}}{25}{chapter.2}
+\contentsline {section}{\numberline {2.1}Librerie software}{25}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Keras}{25}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Recurrentshop}{25}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Dataset}{25}{section.2.2}
+\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Esperimenti}}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Keras sketch-rnn}{27}{section.3.1}
+\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Conclusioni}}{35}{chapter.4}

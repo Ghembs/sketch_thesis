@@ -15,6 +15,7 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Struttura generica di una BRNN, svolta lungo tre time steps.\relax }}{17}{figure.caption.13}
 \contentsline {figure}{\numberline {12}{\ignorespaces Struttura di un generico AutoEncoder, da \cite {keras_blog}\relax }}{18}{figure.caption.14}
 \contentsline {figure}{\numberline {13}{\ignorespaces Modello di un VAE\relax }}{21}{figure.caption.15}
+\contentsline {figure}{\numberline {14}{\ignorespaces Un VAE per intero, a sinistra senza il "reparametrization trick", a destra con. In rosso le operazioni non differenziabili, in blu le loss. Queste due varianti differiscono per il fatto che la retropropagazione si pu\IeC {\`o} applicare solo sulla rete a destra.\relax }}{23}{figure.caption.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

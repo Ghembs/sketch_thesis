@@ -603,6 +603,9 @@ INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/palatino/pplri9d.vf
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
 INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/palatino/pplrij8r.tfm
+INPUT img/vae_struct.png
+INPUT ./img/vae_struct.png
+INPUT ./img/vae_struct.png
 OUTPUT Chapters/strumenti.aux
 INPUT Chapters/strumenti.tex
 INPUT Chapters/strumenti.tex
