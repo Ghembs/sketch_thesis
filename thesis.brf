@@ -1,5 +1,6 @@
 \backcite {rnn_effect}{{3}{(document)}{Doc-Start}}
 \backcite {keras_blog}{{3}{(document)}{Doc-Start}}
+\backcite {VAE_tut}{{3}{(document)}{Doc-Start}}
 \backcite {sketchrnn}{{7}{1.1}{section.1.1}}
 \backcite {quickdraw}{{7}{1.1}{section.1.1}}
 \backcite {keras}{{7}{1.1}{section.1.1}}
@@ -21,6 +22,13 @@
 \backcite {phone1}{{16}{1.6.3}{subsection.1.6.3}}
 \backcite {keras_blog}{{18}{12}{figure.caption.14}}
 \backcite {BRNN}{{18}{2}{figure.caption.13}}
+\backcite {VAE_tut}{{21}{13}{figure.caption.15}}
+\backcite {VAE}{{21}{1.10}{figure.caption.15}}
 \backcite {rvg}{{22}{3}{equation.1.10.4}}
 \backcite {tensorflow}{{25}{2.2}{section.2.2}}
 \backcite {keras}{{25}{2.2.1}{subsection.2.2.1}}
+\backcite {gmm}{{28}{3.1}{equation.3.1.2}}
+\backcite {fake_chinese}{{28}{4}{equation.3.1.2}}
+\backcite {draw_chinese}{{28}{4}{equation.3.1.2}}
+\backcite {fake_chinese}{{31}{8}{lstnumber.3.2.11}}
+\backcite {draw_chinese}{{31}{8}{lstnumber.3.2.11}}

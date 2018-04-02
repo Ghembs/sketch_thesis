@@ -1,5 +1,5 @@
-\select@language {italian}
-\select@language {italian}
+\babel@toc {italian}{}
+\babel@toc {italian}{}
 \vspace {-\cftbeforepartskip }
 \contentsline {chapter}{\numberline {1}\spacedlowsmallcaps {Introduzione}}{7}{chapter.1}
 \contentsline {section}{\numberline {1.1}Prefazione}{7}{section.1.1}
@@ -25,5 +25,5 @@
 \contentsline {subsection}{\numberline {2.2.2}Recurrentshop}{26}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Dataset}{26}{section.2.3}
 \contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Esperimenti}}{27}{chapter.3}
-\contentsline {section}{\numberline {3.1}Keras sketch-rnn}{27}{section.3.1}
-\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Conclusioni}}{35}{chapter.4}
+\contentsline {section}{\numberline {3.1}Modello}{27}{section.3.1}
+\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Conclusioni}}{33}{chapter.4}
