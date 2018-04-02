@@ -1,5 +1,22 @@
 \myChapter{Strumenti}
 \section{Librerie software}
+Il campo del Deep Learning è in costante e vertiginosa evoluzione. Ciò rende difficile, se non impossibile, essere costantemente aggiornati su ogni nuovo sviluppo del settore.
+
+Al momento attuale le librerie software maggiormente diffuse sono \textit{TensorFlow} sviluppata da google, \textit{Torch} sviluppata da facebook, \textit{Theano} sviluppata dall'università di Montreal e \textit{Caffe} Sviluppata dall'università di Berkeley. Senza scendere in ulteriori dettagli per le altre si prende in considerazione la più apprezzata (stando a GitHub), ovvero TensorFlow
+\section{TensorFlow} % (fold)
+\label{sec:tensorflow}
+Secondo la pagina ufficiale \cite{tensorflow}, TensorFlow è una libreria software open-source per il calcolo numerico usando grafi di flussi di dati. I nodi di un grafo rappresentano operazioni matematiche, mentre gli archi rappresentano i tensori comunicanti fra loro. Può essere sfruttato in molti modelli di Machine Learning, al di là del Deep Learning. Uno dei vantaggi più importanti di TensorFlow, rispetto alle altre librerie, è che possiede un'architettura flessibile che permette agli sviluppatori di svolgere i calcoli su una o più CPU o GPU con una singola API.
+
+L'estrema versatilità delle API, inoltre, facilita la possibilità di interfacciarsi a TensorFlow anche da parte di altre librerie, quali Keras.
+% section tensorflow (end)
 \subsection{Keras}
+Secondo la pagina ufficiale \cite{keras}, Keras è una libreria di alto livello per sviluppare reti neurali, sviluppata da Fran\c{c}ois Chollet, scritta in Python ed in grado di interfacciarsi sia a TensorFlow che a Theano.
+
+Questa libreria è stata sviluppata a seguito del progetto di ricerca noto come ONEIROS (Open-ended Neuro-Electronic Intelligent Robot Operating System), ed è da considerarsi indipendente da istituzioni, organizzazioni o compagnie. Si tratta probabilmente della più supportata ed utilizzata dopo TensorFlow, le ragioni del successo di Keras sono molteplici: 
+\begin{itemize}
+	\item La modularità, la semplicità e l'estendibilità garantiscono la facilità d'uso e la rapidità della prototipazione.
+	\item Supporta l'implementazione di reti ricorrenti e convoluzionali, permettendo la combinazione fra di esse, inoltre è possibile definire layer personalizzati per integrare strutture complesse in una rete (ad esempio MDN).
+	\item Come TensorFlow (appoggiandosi ad esso), può eseguire la computazione su CPU e/o GPU senza accorgimenti particolari.
+\end{itemize}
 \subsection{Recurrentshop}
 \section{Dataset}
