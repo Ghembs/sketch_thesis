@@ -27,8 +27,11 @@
 \backcite {rvg}{{22}{3}{equation.1.10.4}}
 \backcite {tensorflow}{{25}{2.2}{section.2.2}}
 \backcite {keras}{{25}{2.2.1}{subsection.2.2.1}}
-\backcite {gmm}{{28}{3.1}{equation.3.1.2}}
-\backcite {fake_chinese}{{28}{4}{equation.3.1.2}}
-\backcite {draw_chinese}{{28}{4}{equation.3.1.2}}
-\backcite {fake_chinese}{{31}{8}{lstnumber.3.2.11}}
-\backcite {draw_chinese}{{31}{8}{lstnumber.3.2.11}}
+\backcite {sketchrnn}{{26}{2.4}{figure.caption.17}}
+\backcite {gmm}{{27}{2.4}{equation.2.4.2}}
+\backcite {fake_chinese}{{27}{4}{equation.2.4.2}}
+\backcite {draw_chinese}{{27}{4}{equation.2.4.2}}
+\backcite {sketchrnn}{{30}{2.4}{lstnumber.2.2.11}}
+\backcite {fake_chinese}{{30}{8}{lstnumber.2.2.11}}
+\backcite {draw_chinese}{{30}{8}{lstnumber.2.2.11}}
+\backcite {hyperlstm}{{33}{1}{section.3.1}}

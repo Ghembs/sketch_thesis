@@ -17,5 +17,9 @@
 \contentsline {figure}{\numberline {13}{\ignorespaces Modello di un VAE, da \cite {VAE_tut}\relax }}{21}{figure.caption.15}
 \contentsline {figure}{\numberline {14}{\ignorespaces Un VAE per intero, a sinistra senza il "reparametrization trick", a destra con. In rosso le operazioni non differenziabili, in blu le loss. Queste due varianti differiscono per il fatto che la retropropagazione si pu\IeC {\`o} applicare solo sulla rete a destra.\relax }}{23}{figure.caption.16}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {15}{\ignorespaces Sketch-rnn\relax }}{26}{figure.caption.17}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {16}{\ignorespaces I layer ottenuti attraverso la configurazione non condizionata.\relax }}{36}{figure.caption.19}
+\contentsline {figure}{\numberline {17}{\ignorespaces La prima immagine \IeC {\`e} estratta dal dataset, le altre sono immagini originali generate dal modello standard\relax }}{37}{figure.caption.20}
+\contentsline {figure}{\numberline {18}{\ignorespaces Immagini generate dal modello autoregressivo al variare del parametro di temperatura\relax }}{38}{figure.caption.21}
 \addvspace {10\p@ }

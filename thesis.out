@@ -21,6 +21,10 @@
 \BOOKMARK [2][-]{subsection.2.2.1}{Keras}{section.2.2}% 21
 \BOOKMARK [2][-]{subsection.2.2.2}{Recurrentshop}{section.2.2}% 22
 \BOOKMARK [1][-]{section.2.3}{Dataset}{chapter.2}% 23
-\BOOKMARK [0][-]{chapter.3}{Esperimenti}{}% 24
-\BOOKMARK [1][-]{section.3.1}{Modello}{chapter.3}% 25
-\BOOKMARK [0][-]{chapter.4}{Conclusioni}{}% 26
+\BOOKMARK [1][-]{section.2.4}{Modello}{chapter.2}% 24
+\BOOKMARK [0][-]{chapter.3}{Esperimenti}{}% 25
+\BOOKMARK [1][-]{section.3.1}{Introduzione}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.1.1}{Generazione condizionale}{section.3.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.2}{Generazione non condizionale}{section.3.1}% 28
+\BOOKMARK [1][-]{section.3.2}{training}{chapter.3}% 29
+\BOOKMARK [0][-]{chapter.4}{Conclusioni}{}% 30
