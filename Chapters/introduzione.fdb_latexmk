@@ -1,13 +1,13 @@
 # Fdb version 3
-["pdflatex"] 1522428636 "introduzione.tex" "introduzione.pdf" "introduzione" 1522428641
+["pdflatex"] 1522958328 "introduzione.tex" "introduzione.pdf" "introduzione" 1522958333
   "c:/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1519756435 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1519754645 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1519754645 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "c:/texlive/2017/texmf-dist/web2c/texmf.cnf" 1519757516 33095 db9a077a3f94a5d0b580d566a7906714 ""
   "c:/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1519763936 4127795 d2015c3da1652c2f6316157b49f3f69e ""
   "c:/texlive/2017/texmf.cnf" 1519763465 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "introduzione.aux" 1522171562 9436 3627faca4bdb16e42465f9676feefd6a ""
-  "introduzione.tex" 1522428589 34565 dd5de2e0fc7629bc9080a37027958616 ""
+  "introduzione.aux" 1522953378 13112 4cfbf6e57f0032d61148a07745f0e091 ""
+  "introduzione.tex" 1522958325 42449 05d762e64c4bd7d9c6d4693a71a3e497 ""
   (generated)
-  "introduzione.log"
   "introduzione.pdf"
+  "introduzione.log"

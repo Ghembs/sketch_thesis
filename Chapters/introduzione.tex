@@ -1,6 +1,7 @@
 \myChapter{Introduzione}
 \section{Prefazione}
-Lo scopo di questo elaborato è la riproduzione e lo studio di \textit{sketch-rnn} \cite{sketchrnn}: una rete neurale in grado di generare schizzi di semplici oggetti, composti da sequenze di tratti, appresi da un dataset di disegni creati da esseri umani. Il dataset è costantemente ampliato tramite \textit{Quick Draw!} \cite{quickdraw}, un gioco online in cui agli utenti viene chiesto di riprodurre alcuni oggetti entro 20 secondi, che al momento attuale costituisce la più vasta collezione di disegni al mondo. In questo lavoro viene proposta un'implementazione in \textit{Keras} \cite{keras}, un framework che a sua volta poggia su \textit{tensorflow} \cite{tensorflow}, che è la libreria software utilizzata per il lavoro originale.
+\label{sec:prefazione}
+Lo scopo di questo elaborato è la riproduzione e lo studio di \textit{sketch-rnn} \cite{sketchrnn}: una rete neurale in grado di generare schizzi di semplici oggetti, composti da sequenze di tratti, appresi da un dataset di disegni creati da esseri umani. Il dataset è costantemente ampliato tramite \textit{Quick Draw!} \cite{quickdraw}, un gioco online in cui agli utenti viene chiesto di riprodurre alcuni oggetti entro 20 secondi, che al momento attuale costituisce la più vasta collezione di disegni al mondo. In questo lavoro viene proposto un prototipo in \textit{Keras} \cite{keras}, un framework che a sua volta poggia su \textit{tensorflow} \cite{tensorflow}, che è la libreria software utilizzata per il lavoro originale.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{img/sketch_rnn_latent.png}
@@ -11,8 +12,6 @@ Lo scopo di questo elaborato è la riproduzione e lo studio di \textit{sketch-rn
 Negli ultimi anni la generazione di immagini attraverso l'uso di reti neurali ha avuto ampia diffusione, fra i modelli più importanti possiamo citare: \textit{Generative Adversarial Networks (GANs)} \cite{GAN}, \textit{Variational Inference (VI)} \cite{VI} e \textit{Autoregressive Density Estimation (AR)} \cite{AR}. Il limite della maggior parte di questi algoritmi consiste nel fatto che lavorano con figure in pixel a bassa risoluzione, a differenza degli animali complessi che, piuttosto che vedere il mondo come una griglia di pixel, astraggono concetti per rappresentare ciò che osservano. Allo stesso modo degli esseri umani, che fin da piccoli imparano a riportare le proprie idee attraverso una sequenza di tratti su un foglio, questo modello generativo apprende da, e produce, immagini vettoriali.
 
 L'obbiettivo è di addestrare una macchina a riprodurre ed astrarre concetti, in maniera analoga a come farebbe una persona. Ciò può avere numerose applicazioni in campo didattico come artistico, ad esempio assistendo il processo creativo, così come l'analisi della rappresentazione prodotta può offrire spunti di ricerca.
-\section{Lavori correlati}
-
 \section{Reti neurali}
 Per spiegare le reti neurali e il Deep Learning si possono usare diversi approcci: si può ad esempio seguire il corso storico, introducendo il concetto di \textit{Percettrone}, passando ai Percettroni Multi-Strato ed ai primi metodi di ottimizzazione che furono applicati a questi modelli. Un'altra possibilità consiste nel partire da un punto di vista stocastico, definendo una regressione logistica che implica in modo naturale la minimizzazione di una \textit{loss function}. Ciò permette la definizione del concetto stesso di loss function e di come modificare dei parametri per ottenere una soluzione migliore, cosa che si ricollega perfettamente al concetto di Percettrone Multi-Strato come classificatore di una regressione logistica.
 
@@ -156,7 +155,7 @@ Un'altra caratteristica delle RNN, che le avvantaggia ulteriormente rispetto all
 	\caption{Struttura interna di una RNN standard con un singolo hidden layer.}
 	\label{fig:1.8}
 \end{figure}
-Nel progettare una RNN va presa in considerazione la possibilità di incontrare la necessità di fornire un vasto numero di informazioni dal contesto per risolvere un problema. Tornando al compito della previsione di parole in un testo, si supponga di dover completare la frase "sto per andare a nuotare in", le informazioni a breve termine suggeriscono che la parola successiva sia un luogo dove sia possibile nuotare, sapendo che la frase precedente è "la spiaggia è molto assolata" si potrebbe dedurre che la parola da predire sia "mare". Il problema in questione è che si incontrano spesso difficoltà nell'identificare informazioni rilevanti. La formulazione di RNN data finora, in teoria, è perfettamente in grado di gestire dipendenze a lungo termine. In pratica, come spesso accade, si tratta di una prova tipicamente banale per una mente umana ma che una semplice implementazione (come in fig. \ref{fig:1.8}) non sarebbe in grado di risolvere efficacemente. Uno degli ostacoli più frequenti da risolvere è il cosiddetto problema del gradiente evanescente (\textit{vanishing gradient} \cite{vanishing}), per superarlo si rendono necessarie varianti più elaborate della RNN semplice, come le LSTM.
+Nel progettare una RNN va presa in considerazione la possibilità di incontrare la necessità di fornire un vasto numero di informazioni dal contesto per risolvere un problema. Tornando al compito della previsione di parole in un testo, si supponga di dover completare la frase "sto per andare a nuotare in", le informazioni a breve termine suggeriscono che la parola successiva sia un luogo dove sia possibile nuotare e sapendo che la frase precedente è "la spiaggia è molto assolata" si potrebbe dedurre che la parola da predire sia "mare". Il problema in questione è che si incontrano spesso difficoltà nell'identificare informazioni rilevanti. La formulazione di RNN data finora, in teoria, è perfettamente in grado di gestire dipendenze a lungo termine. In pratica, come spesso accade, si tratta di una prova tipicamente banale per una mente umana ma che una semplice implementazione (come in fig. \ref{fig:1.8}) non sarebbe in grado di risolvere efficacemente. Uno degli ostacoli più frequenti da risolvere è il cosiddetto problema del gradiente evanescente (\textit{vanishing gradient} \cite{vanishing}), per superarlo si rendono necessarie varianti più elaborate della RNN semplice, come le LSTM.
 % subsection dipendenze_a_lungo_termine (end)
 \subsection{Long Short Term Memory}
 \label{sub:lstm}
@@ -226,7 +225,7 @@ Da un punto di vista matematico, un modello discriminativo cerca di apprendere l
 	\label{conditional}
 	f(\boldsymbol{x}) = arg \max_y p(\boldsymbol{y}|\boldsymbol{x})
 \end{equation}
-Per contro, un modello generativo cerca di apprendere la distribuzione di probabilità congiunta, ovvero, usando la regola di Bayes (e liberandoci di $p(x)$, in quanto massimiziamo secondo $y$):
+Per contro, un modello generativo cerca di apprendere la distribuzione di probabilità congiunta, ovvero, usando la regola di Bayes (e liberandoci di $p(x)$, in quanto si massimizza secondo $y$):
 \begin{equation}
 	\label{joint}
 	f(\boldsymbol{x}) = arg\max_y p(\boldsymbol{y}|\boldsymbol{x})p(\boldsymbol{y})
@@ -268,7 +267,7 @@ La necessità della variabile latente è quella di rappresentare il più accurat
 
 Per massimizzare l'equazione \ref{probability}, come genericamente si fa nel machine learning, si cerca una formula computabile per $P(\boldsymbol{x})$, se ne prende il gradiente e con esso si ottimizza il modello tramide SGA (stochastic gradient ascent). Una computazione approssimata di $P(\boldsymbol{x})$ risulta abbastanza semplice: è sufficiente campionare una vasta quantità di valori di $\boldsymbol{z}$, $\{z_1,...,z_n\}$ e calcolare $P(\boldsymbol{x}) \approx \frac{1}{n} \sum_i P(\boldsymbol{x} | z_i)$. Il problema sorge per spazi a molte dimensioni, $n$ potrebbe dover essere estremamente ampio prima di ottenere una stima accurata di $P(\boldsymbol{x})$. La soluzione dei VAE è di evitare la definizione di una misura di somiglianza più accurata, che potrebbe essere di difficile implementazione in domini complessi quali le immagini. La scelta ricade piuttosto sull'alterare la procedura di campionamento, per renderla più rapida senza dover modificare la metrica. In sostanza l'idea è di definire una nuova funzione $Q(\boldsymbol{z} | \boldsymbol{x})$ che cerca di campionare valori di $\boldsymbol{z}$ che potrebbero aver prodotto $\boldsymbol{x}$. La speranza è che lo spazio generato da $Q$ sia minore dello spazio di ogni $\boldsymbol{z}$ che sottostà a $P(\boldsymbol{z})$. Ciò permette di calcolare facilmente $E_{\boldsymbol{z}\sim Q} P(\boldsymbol{x} | \boldsymbol{z})$ a patto che questa sia legata a $P(\boldsymbol{x})$.
 
-Per integrare questo concetto all'interno della computazione della rete neurale, potendo quindi effettuare SGD su tutti i passaggi, altrimenti non differenziabili, si compie un'operazione detta \textit{reparametrization trick}. Si sceglie la funzione di codifica come $Q(\boldsymbol{z} | \boldsymbol{x}) = \mathcal{N}(\boldsymbol{z} | \boldsymbol{\mu}(\boldsymbol{x}; \Theta), \sigma(\boldsymbol{x}; \Theta))$, dove $\mu$ e $\hat\sigma$ sono funzioni deterministiche arbitrarie (ovvero implementabili con una rete neurale) con parametro $\Theta$ che può essere appreso dai dati. Ciò permette di definire una loss function per la rete neurale che non è altro che la somma fra l'errore di ricostruzione nel riprodurre i dati a partire dalla variabile latente $\boldsymbol{z}$ e la \textit{divergenza di Kullback - Leibler} (KL divergence) fra $Q(\boldsymbol{z} | \boldsymbol{x})$ e $P(\boldsymbol{z})$:
+Per integrare questo concetto all'interno della computazione della rete neurale, potendo quindi effettuare SGD su tutti i passaggi, altrimenti non differenziabili, si compie un'operazione detta \textit{reparametrization trick}. Si sceglie la funzione di codifica come $Q(\boldsymbol{z} | \boldsymbol{x}) = \mathcal{N}(\boldsymbol{z} | \boldsymbol{\mu}(\boldsymbol{x}; \Theta), \sigma(\boldsymbol{x}; \Theta))$, dove $\mu$ e $\hat\sigma$ sono funzioni deterministiche arbitrarie (ovvero implementabili con una rete neurale) con parametro $\Theta$ che può essere appreso dai dati. Ciò permette di definire una loss function per la rete neurale che non è altro che la somma fra l'errore di ricostruzione nel riprodurre i dati a partire dalla variabile latente $\boldsymbol{z}$ e la \textit{KL divergence} (divergenza di Kullback - Leibler) fra $Q(\boldsymbol{z} | \boldsymbol{x})$ e $P(\boldsymbol{z})$:
 \begin{equation}
 	\label{vae_loss}
 	l = -E_{\boldsymbol{z}\sim Q}[\log(P(\boldsymbol{x} | \boldsymbol{z}))] + KL(Q(\boldsymbol{z} | \boldsymbol{x}) || P(\boldsymbol{z}))
@@ -279,8 +278,85 @@ Per integrare questo concetto all'interno della computazione della rete neurale,
 	\caption{Un VAE per intero, a sinistra senza il "reparametrization trick", a destra con. In rosso le operazioni non differenziabili, in blu le loss. Queste due varianti differiscono per il fatto che la retropropagazione si può applicare solo sulla rete a destra.}
 	\label{fig:1.14}
 \end{figure}
-\section{MDN}
-\subsection{Misture gaussiane} % (fold)
-\label{sub:misture_gaussiane}
 
-% subsection misture_gaussiane (end)
+\section{Problemi inversi} % (fold)
+\label{sec:problemi_inversi}
+Molte applicazioni potenziali delle reti neurali ricadono nella categoria dei problemi inversi. Alcuni esempi includono il controllo di impianti industriali, l'analisi di dati spettrali, le ricostruzioni tomografiche e la cinematica dei robot. Per questi problemi esiste un ben definito problema \textit{diretto} caratterizzato da una mappatura funzionale (ovvero a valore singolo). Di solito ciò corrisponde alla causalità nei sistemi fisici. 
+
+Si consideri un semplice esempio di un problema inverso che riguarda la mappatura fra una variabile unitaria in input e una in output, rispettivamente $t$ e $x$, definito da:
+\begin{equation}
+	\label{direct}
+	x = t + 0.3 \sin(2 \pi t) + \epsilon
+\end{equation}
+Dove $\epsilon$ è una variabile casuale con distribuzione uniforme nell'intervallo (-0.1, 0.1). La mappatura da $t$ a $x$ costituisce un esempio di problema diretto. In assenza del termine di disturbo $\epsilon$, questa mappatura è a valore singolo, ovvero ogni valore di $t$ dà origine ad un singolo valore di $x$. In fig. \ref{fig:1.20} si può notare un dataset di mille punti generati dal campionamento\ref{direct} ad intervalli uguali di $t$ nel raggio (0.0, 1.0). Allo stesso modo è mostrata la mappatura rappresentata da un MLP standard addestrato su questo dataset. La rete prende un valore in input, possiede cinque unità con funzione d'attivazione \textit{tanh} (tangente iperbolica) e restituisce un output lineare. L'addestramento è stato eseguito con mille cicli completi dell'algoritmo quasi-Newtoniano BFGS \cite{bfgs}. Si può notare che la rete, che approssima la media condizionale dei dati target, dà un'ottima rappresentazione della distribuzione alla base dei dati. Questo risultato è indipendente alla scelta della struttura della rete, al valore iniziale dei pesi e ai dettagli della procedura di training.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/direct.png}
+	\caption{Un semplice esempio di problema diretto: sono evidenziati 1000 punti corrispondenti ai dati (i cerchi) generati dalla mappatura $x = t + 0.3 \sin(2 \pi t) + \epsilon$ dove $\epsilon$ è una variabile casuale. La curva rappresenta il risultato dell'addestramento di un MLP con cinque unità e somma di quadrati come funzione d'errore. La rete approssima la media condizionale del target, che dà una buona rappresentazione del generatore dei dati.}
+	\label{fig:1.20}
+\end{figure}
+
+Si consideri adesso il corrispondente problema inverso, dove verrà utilizzato lo stesso dataset ma sarà tentata la mappatura dalla variabile $x$ alla variabile $t$. Il risultato dell'addestramento di un'analoga rete neurale è mostrato in fig. \ref{fig:1.21}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/inverse.png}
+	\caption{Quest'immagine mostra esattamente lo stesso dataset della figura \ref{fig:1.20}, invertendo input e variabili target. La curva mostra nuovamente il risultato dell'addestramento di una MLP con funzione \textit{sum-of-squares}. Stavolta la rete ottiene un pessimo risultato, continuando a tentare di rappresentare la media condizionale.}
+	\label{fig:1.21}
+\end{figure}
+
+Di nuovo, la rete tenta di approssimare la media condizionale dei dati di target ma stavolta ottiene una rappresentazione inadeguata del procedimento che ha generato i dati. La modalità di mappatura della rete adesso è molto più sensibile alla struttura, all'inizializzazione dei pesi, ecc... Di quanto non fosse nel caso del problema diretto. Il risultato ottenuto in figura è il migliore che sia stato possibile ricavare dopo attenta ottimizzazione (ovvero la generica soluzione trovata è stata spesso di qualità inferiore a questa). La rete di questo esempio è composta da venti unità ed è stata addestrata per mille cicli col medesimo algoritmo. Evidentemente una MLP convenzionale, addestrata con la somma di quadrati come funzione d'errore, non è in grado di dare una buona rappresentazione della distribuzione di questi dati.
+% section problemi_inversi (end)
+\section{Mixture Density Network} % (fold)
+\label{sec:mdn}
+Come spiegato da Bishop \cite{gmm}, se si assume che la distribuzione di probabilità condizionata dei dati di target sia Gaussiana, si può derivare la tecnica dei minimi quadrati utilizzando la massima verosimiglianza. Questo motiva l'idea di rimpiazzare la distribuzione Gaussiana nella densità condizionale del vettore target con un \textit{mixture model} (modello a mistura) \cite{mixture}, che ha la flessibilità per modellare completamente funzioni di distribuzione generiche. La densità di probabilità dei dati target è quindi rappresentata come combinazione lineare di funzioni kernel della forma:
+\begin{equation}
+	\label{density}
+	p(\boldsymbol{x} | \boldsymbol{y}) = \sum\_{i=1}^m \alpha_i(\boldsymbol{x}\phi_i(\boldsymbol{y} | \boldsymbol{X}))
+\end{equation}
+Dove \textit{m} è il numero di componenti nella mistura e $\alpha_i(\boldsymbol{x})$ sono detti \textit{mixing coefficients} (coefficienti di mescolamento).
+
+Sempre in accordo a Bishop, le funzioni della mistura saranno Gaussiane della forma:
+\begin{equation}
+	\label{kernel}
+	\phi_i(\boldsymbol{y} | \boldsymbol{x}) = \frac{1}{(2\pi)^{\frac{c}{2}}\sigma_i(\boldsymbol{x})^c} \exp\bigg\{-\frac{||\boldsymbol{y} - \boldsymbol{\mu}_i(\boldsymbol{x}||^2}{2\sigma_i(\boldsymbol{x})^2}\bigg\}
+\end{equation}
+
+Dove $\boldsymbol{\mu}_i$ rappresenta il centro dell'i-esima funzione. L'autore assume che le componenti del vettore di output sono statisticamente indipendenti rispetto ad ogni componente della distribuzione e possono essere descritte dalla varianza $\sigma_i(\boldsymbol{x}$. Questa assunzione può essere rilassata introducendo matrici complete di covarianza per ogni Gaussiana, al costo di un formalismo più complesso. In linea di principio, tuttavia, questa complicazione non è necessaria poiché un \textit{Gaussian Mixture Model} (modello a mistura gaussiana), con componenti date da \ref{kernel}, può approssimare qualunque funzione di densità di probabilità data con precisione arbitraria, data la corretta selezione dei coefficienti di mistura e dei parametri delle Gaussiane (media e varianza)\footnote{Ottenuti tramite le variabili addestrabili della rete neurale sottostante.}. Di conseguenza la rappresentazione data da \ref{density} e \ref{kernel} è completamente generale e, in particolare, non assume necessariamente che le componenti di $\boldsymbol{t}$ siano statisticamente indipendenti\footnote{Al contrario alla rappresentazione con singola Gaussiana.}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{img/mdn.png}
+	\caption{Rappresentazione di una MDN. L'output della rete neurale determina i parametri di una mistura. Di conseguenza, il modello rappresenta la funzione di densità di probabilità condizionale delle variabili target condizionate all'input $\boldsymbol{x}$ della rete.}
+	\label{fig:1.22}
+\end{figure}
+
+Come si può vedere in fig. \ref{fig:1.22}, dato un vettore di input $\boldsymbol{x}$, la MDN fornisce un formalismo generale per modellare una funzione di densità di probabilità condizionata $p(\boldsymbol{y} | \boldsymbol{x})$. Questa combinazione fra reti neurali tradizionali e modelli a mistura è resa possibile utilizzando la verosimiglianza logaritmica della combinazione lineare fra le distribuzioni Gaussiane come funzione di loss per la rete.
+
+Assemblare una MDN incrementa il numero di elementi di output della rete neurale di partenza: dati \textit{c} parametri, con la MDN questi salgono a $(c + 2) * m$, dove \textit{m} è il numero di misture del modello.
+
+Bishop suggerisce alcune restrizioni che i parametri della rete devono soddisfare:
+\begin{itemize}
+	\item Come richiesto per le probabilità, è necessario che i coefficienti di mistura $\alpha_i$ soddisfino il vincolo $\sum_{i=1}^m = 1$. Per ottenere questa restrizione, in linea di principio, è sufficiente una funzione di attivazione \textit{softmax} per il nodo corrispondente ad $\alpha_i$.
+	\begin{equation}
+		\label{softmax}
+		\alpha_i = \frac{\exp(z_i^\alpha)}{\sum_{j=1}^m\exp(z_j^\alpha)}
+	\end{equation}
+	dove $z_i^\alpha$ rappresenta l'output corrispondente. Questa restrizione assicura che le quantità $\alpha_i$ siano comprese in (0, 1) e sommino ad uno.
+	\item Le varianze $\sigma_i$ rappresentano parametri di scala, di conseguenza è conveniente rappresentarle in termini dell'esponenziale dell'output corrispondente
+	\begin{equation}
+		\label{exponential}
+		\sigma_i = \exp(z_i^\sigma)
+	\end{equation}
+	che, in un framework Bayesiano, corrisponderebbe alla scelta di una distribuzione a priori non informativa, assumendo che l'output corrispondente $z_i^\sigma$ abbia una distribuzione di probabilità uniforme. Questa rappresentazione ha il beneficio addizionale di evitare configurazioni "patologiche" in cui una o più varianze vanno a zero.
+	\item I parametri centrali $\mu_i$ rappresentano parametri di posizione, prendendo in considerazione l'idea che la distribuzione a priori sia non informativa, è conveniente rappresentare direttamente questi parametri dagli output della rete, ovvero:
+	\begin{equation}
+		\label{mus}
+		\mu\_{i,k} = z_{i,k}^\mu
+	\end{equation}
+\end{itemize}
+
+A questo punto è possibile costruire una funzione di verosimiglianza usando la densità condizionale del vettore di target completo. Dopodiché, per definire una funzione di errore (da usare come loss per la rete), si può utilizzare l'approccio standard del metodo di massima verosimiglianza, che richiede la massimizzazione della funzione di verosimiglianza logaritmica o, equivalentemente, la minimizzazione del logaritmo negativo della verosimiglianza. Di conseguenza, la funzione di errore per una MDN è:
+\begin{equation}
+	\label{mdnerror}
+	\log\mathbb{L}(\boldsymbol{y} | \boldsymbol{x}) = - \log(p(\boldsymbol{y} | \boldsymbol{x})) = - \log\bigg(\sum_{i=0}^m \alpha_i(\boldsymbol{x})\phi_i(\boldsymbol{y} | \boldsymbol{x})\bigg)
+\end{equation}
+% section mdn (end)

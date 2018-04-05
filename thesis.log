@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  3 APR 2018 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  6 APR 2018 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1656,7 +1656,7 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 \openout2 = `titlePage.aux'.
 
  (./titlePage.tex
-<logo/LOGO.pdf, id=127, 996.72375pt x 483.8075pt>
+<logo/LOGO.pdf, id=135, 996.72375pt x 483.8075pt>
 File: logo/LOGO.pdf Graphic file (type pdf)
 <use logo/LOGO.pdf>
 Package pdftex.def Info: logo/LOGO.pdf  used on input line 10.
@@ -1714,14 +1714,14 @@ Overfull \hbox (11.33438pt too wide) in paragraph at lines 8--8
 k).[] []  
  []
 
-)
+[3])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [3] [4
+ [4] [5
 
 
-] [5] [6
+] [6
 
 
 ]
@@ -1747,130 +1747,155 @@ Class scrbook Warning: \float@addtolists detected!
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<img/sketch_rnn_latent.png, id=272, 1311.90125pt x 508.90125pt>
+<img/sketch_rnn_latent.png, id=319, 1311.90125pt x 508.90125pt>
 File: img/sketch_rnn_latent.png Graphic file (type png)
 <use img/sketch_rnn_latent.png>
-Package pdftex.def Info: img/sketch_rnn_latent.png  used on input line 6.
+Package pdftex.def Info: img/sketch_rnn_latent.png  used on input line 7.
 (pdftex.def)             Requested size: 384.1122pt x 148.99861pt.
  [7
 
 
 
  <./img/sketch_rnn_latent.png>]
-<img/artificial_neuron.PNG, id=286, 204.01219pt x 98.61844pt>
+<img/artificial_neuron.PNG, id=332, 204.01219pt x 98.61844pt>
 File: img/artificial_neuron.PNG Graphic file (type png)
 <use img/artificial_neuron.PNG>
-Package pdftex.def Info: img/artificial_neuron.PNG  used on input line 25.
+Package pdftex.def Info: img/artificial_neuron.PNG  used on input line 24.
 (pdftex.def)             Requested size: 204.01169pt x 98.61818pt.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
  [8]
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <12> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 38.
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 37.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 92.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 91.
 
  (c:/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-[9 <./img/artificial_neuron.PNG>]
-<img/RNN.png, id=309, 50.6111pt x 78.56876pt>
+<img/RNN.png, id=345, 50.6111pt x 78.56876pt>
 File: img/RNN.png Graphic file (type png)
 <use img/RNN.png>
-Package pdftex.def Info: img/RNN.png  used on input line 101.
+Package pdftex.def Info: img/RNN.png  used on input line 100.
 (pdftex.def)             Requested size: 50.61096pt x 78.56854pt.
- [10 <./img/RNN.png>]
-<img/unrolled_rnn.png, id=318, 289.29382pt x 76.0118pt>
+
+[9 <./img/artificial_neuron.PNG>] [10 <./img/RNN.png>]
+<img/unrolled_rnn.png, id=361, 289.29382pt x 76.0118pt>
 File: img/unrolled_rnn.png Graphic file (type png)
 <use img/unrolled_rnn.png>
-Package pdftex.def Info: img/unrolled_rnn.png  used on input line 115.
+Package pdftex.def Info: img/unrolled_rnn.png  used on input line 114.
 (pdftex.def)             Requested size: 289.29312pt x 76.0116pt.
-<img/input_memory.png, id=320, 144.54pt x 97.13416pt>
+<img/input_memory.png, id=363, 144.54pt x 97.13416pt>
 File: img/input_memory.png Graphic file (type png)
 <use img/input_memory.png>
-Package pdftex.def Info: img/input_memory.png  used on input line 124.
+Package pdftex.def Info: img/input_memory.png  used on input line 123.
 (pdftex.def)             Requested size: 153.64253pt x 103.25665pt.
-<img/hidden_memory.png, id=321, 144.54pt x 95.99638pt>
+<img/hidden_memory.png, id=364, 144.54pt x 95.99638pt>
 File: img/hidden_memory.png Graphic file (type png)
 <use img/hidden_memory.png>
-Package pdftex.def Info: img/hidden_memory.png  used on input line 125.
+Package pdftex.def Info: img/hidden_memory.png  used on input line 124.
 (pdftex.def)             Requested size: 153.64253pt x 102.04713pt.
 
-Overfull \hbox (14.61766pt too wide) in paragraph at lines 123--128
+Overfull \hbox (14.61766pt too wide) in paragraph at lines 122--127
  [][] 
  []
 
 [11 <./img/unrolled_rnn.png>] [12 <./img/input_memory.png> <./img/hidden_memory
 .png>]
-<img/rnn_seq.jpg, id=337, 362.44087pt x 113.45027pt>
+<img/rnn_seq.jpg, id=380, 362.44087pt x 113.45027pt>
 File: img/rnn_seq.jpg Graphic file (type jpg)
 <use img/rnn_seq.jpg>
-Package pdftex.def Info: img/rnn_seq.jpg  used on input line 138.
+Package pdftex.def Info: img/rnn_seq.jpg  used on input line 137.
 (pdftex.def)             Requested size: 362.43997pt x 113.44998pt.
-<img/rnn_struct.png, id=340, 361.67264pt x 135.34494pt>
+<img/rnn_struct.png, id=383, 361.67264pt x 135.34494pt>
 File: img/rnn_struct.png Graphic file (type png)
 <use img/rnn_struct.png>
-Package pdftex.def Info: img/rnn_struct.png  used on input line 155.
+Package pdftex.def Info: img/rnn_struct.png  used on input line 154.
 (pdftex.def)             Requested size: 361.67175pt x 135.3446pt.
  [13 <./img/rnn_seq.jpg>]
-<img/lstm_struct.png, id=347, 361.83612pt x 135.95186pt>
+<img/lstm_struct.png, id=390, 361.83612pt x 135.95186pt>
 File: img/lstm_struct.png Graphic file (type png)
 <use img/lstm_struct.png>
-Package pdftex.def Info: img/lstm_struct.png  used on input line 165.
+Package pdftex.def Info: img/lstm_struct.png  used on input line 164.
 (pdftex.def)             Requested size: 361.83524pt x 135.9515pt.
  [14 <./img/rnn_struct.png> <./img/lstm_struct.png>] [15]
-<img/rnn_confront.png, id=373, 1325.95375pt x 578.16pt>
+<img/rnn_confront.png, id=416, 1325.95375pt x 578.16pt>
 File: img/rnn_confront.png Graphic file (type png)
 <use img/rnn_confront.png>
-Package pdftex.def Info: img/rnn_confront.png  used on input line 185.
+Package pdftex.def Info: img/rnn_confront.png  used on input line 184.
 (pdftex.def)             Requested size: 384.1122pt x 167.48566pt.
-<img/BRNN.png, id=374, 1428.33624pt x 633.36626pt>
+<img/BRNN.png, id=417, 1428.33624pt x 633.36626pt>
 File: img/BRNN.png Graphic file (type png)
 <use img/BRNN.png>
-Package pdftex.def Info: img/BRNN.png  used on input line 195.
+Package pdftex.def Info: img/BRNN.png  used on input line 194.
 (pdftex.def)             Requested size: 384.1122pt x 170.325pt.
  [16 <./img/rnn_confront.png>] [17 <./img/BRNN.png>]
-<img/autoencoder_schema.jpg, id=394, 168.63pt x 52.998pt>
+<img/autoencoder_schema.jpg, id=437, 168.63pt x 52.998pt>
 File: img/autoencoder_schema.jpg Graphic file (type jpg)
 <use img/autoencoder_schema.jpg>
-Package pdftex.def Info: img/autoencoder_schema.jpg  used on input line 208.
+Package pdftex.def Info: img/autoencoder_schema.jpg  used on input line 207.
 (pdftex.def)             Requested size: 307.29092pt x 96.5794pt.
  [18 <./img/autoencoder_schema.jpg>] [19]
-<img/vae_model.png, id=409, 475.0548pt x 510.2262pt>
+<img/vae_model.png, id=453, 475.0548pt x 510.2262pt>
 File: img/vae_model.png Graphic file (type png)
 <use img/vae_model.png>
-Package pdftex.def Info: img/vae_model.png  used on input line 254.
+Package pdftex.def Info: img/vae_model.png  used on input line 253.
 (pdftex.def)             Requested size: 153.64253pt x 165.01964pt.
  [20] [21 <./img/vae_model.png>] [22]
-<img/vae_struct.png, id=436, 749.80125pt x 411.03563pt>
+<img/vae_struct.png, id=479, 749.80125pt x 411.03563pt>
 File: img/vae_struct.png Graphic file (type png)
 <use img/vae_struct.png>
-Package pdftex.def Info: img/vae_struct.png  used on input line 278.
+Package pdftex.def Info: img/vae_struct.png  used on input line 277.
 (pdftex.def)             Requested size: 384.1122pt x 210.57245pt.
-) [23 <./img/vae_struct.png>]
+ [23 <./img/vae_struct.png>]
+<img/direct.png, id=490, 588.69937pt x 578.16pt>
+File: img/direct.png Graphic file (type png)
+<use img/direct.png>
+Package pdftex.def Info: img/direct.png  used on input line 294.
+(pdftex.def)             Requested size: 153.64253pt x 150.89148pt.
+<img/inverse.png, id=492, 580.41844pt x 566.86781pt>
+File: img/inverse.png Graphic file (type png)
+<use img/inverse.png>
+Package pdftex.def Info: img/inverse.png  used on input line 302.
+(pdftex.def)             Requested size: 153.64253pt x 150.0549pt.
+ [24 <./img/direct.png>] [25 <./img/inverse.png>]
+<img/mdn.png, id=514, 816.80156pt x 455.45157pt>
+File: img/mdn.png Graphic file (type png)
+<use img/mdn.png>
+Package pdftex.def Info: img/mdn.png  used on input line 327.
+(pdftex.def)             Requested size: 384.1122pt x 214.1804pt.
+ [26] [27 <./img/mdn.png>]) [28]
 \openout2 = `Chapters/strumenti.aux'.
 
- (./Chapters/strumenti.tex [24
-
-
-
-
-]
+ (./Chapters/strumenti.tex
 chapter 2.
-[25]
-<img/sketch_model.png, id=455, 1057.60976pt x 350.7739pt>
+[29
+
+
+
+
+] [30]
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 4.25003pt on input line 38.
+ [31]
+<img/turtle_code.png, id=561, 788.4pt x 197.1pt>
+File: img/turtle_code.png Graphic file (type png)
+<use img/turtle_code.png>
+Package pdftex.def Info: img/turtle_code.png  used on input line 73.
+(pdftex.def)             Requested size: 384.1122pt x 96.02946pt.
+<img/sketch_model.png, id=562, 1057.60976pt x 350.7739pt>
 File: img/sketch_model.png Graphic file (type png)
 <use img/sketch_model.png>
-Package pdftex.def Info: img/sketch_model.png  used on input line 27.
+Package pdftex.def Info: img/sketch_model.png  used on input line 81.
 (pdftex.def)             Requested size: 384.1122pt x 127.39714pt.
- [26 <./img/sketch_model.png>]
+ [32 <./img/turtle_code.png>] [33 <./img/sketch_model.png>]
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 6.46004pt on input line 46.
- [27]
-Overfull \hbox (10.1068pt too wide) detected at line 54
+(Font)              scaled to size 6.46004pt on input line 100.
+
+Overfull \hbox (10.1068pt too wide) detected at line 108
  $\U/zeur/m/n/12 x[] \U/zeus/m/n/12 ½ Û\U/zeur/m/n/12 S[]\T1/pplj/m/n/12 ; []\U
 /zeus/m/n/12 Ý\U/zeur/m/n/12 ; \U/zeus/m/n/12 Û\U/zeur/m/n/12 h[]\T1/pplj/m/n/1
 2 ; \U/zeur/m/n/12 c[]\U/zeus/m/n/12 Ý ½ \U/zeur/m/n/12 forward\U/zeus/m/n/12 ¨
@@ -1880,139 +1905,138 @@ Overfull \hbox (10.1068pt too wide) detected at line 54
 12 R[]$  
  []
 
-(c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+[34] (c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [28] [29] [30])
-[31]
+) [35] [36]
+Overfull \hbox (12.0pt too wide) in paragraph at lines 210--228
+[]$[]$ 
+ []
+
+[37]
+<img/tradeoff_loss.png, id=667, 1369.36594pt x 425.33907pt>
+File: img/tradeoff_loss.png Graphic file (type png)
+<use img/tradeoff_loss.png>
+Package pdftex.def Info: img/tradeoff_loss.png  used on input line 242.
+(pdftex.def)             Requested size: 384.1122pt x 119.30829pt.
+) [38] [39 <./img/tradeoff_loss.png>]
 \openout2 = `Chapters/esperimenti.aux'.
 
- (./Chapters/esperimenti.tex [32
+ (./Chapters/esperimenti.tex [40
 
 
 
 
 ]
 chapter 3.
-<img/encoder_variables.png, id=555, 707.64375pt x 577.40718pt>
-File: img/encoder_variables.png Graphic file (type png)
-<use img/encoder_variables.png>
-Package pdftex.def Info: img/encoder_variables.png  used on input line 71.
-(pdftex.def)             Requested size: 384.1122pt x 313.42519pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 6--74
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+[][]\T1/pplj/m/n/10 (+20) Soluzione sug-ge-ri-ta in []$\T1/fvm/m/n/10 https : /
+ / github . com / tensorflow / magenta / tree / master /
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6--69
 []$[]$
  []
 
-[33]
-Overfull \vbox (25.69656pt too high) has occurred while \output is active []
-
-
-[34]
-<img/cat_enc.png, id=593, 50.0716pt x 56.7478pt>
+[41]
+<img/cat_enc.png, id=714, 50.0716pt x 56.7478pt>
 File: img/cat_enc.png Graphic file (type png)
 <use img/cat_enc.png>
-Package pdftex.def Info: img/cat_enc.png  used on input line 80.
+Package pdftex.def Info: img/cat_enc.png  used on input line 79.
 (pdftex.def)             Requested size: 76.82126pt x 87.06541pt.
-<img/cat_dec_0.png, id=594, 50.53847pt x 54.66577pt>
+<img/cat_dec_0.png, id=715, 50.53847pt x 54.66577pt>
 File: img/cat_dec_0.png Graphic file (type png)
 <use img/cat_dec_0.png>
-Package pdftex.def Info: img/cat_dec_0.png  used on input line 81.
+Package pdftex.def Info: img/cat_dec_0.png  used on input line 80.
 (pdftex.def)             Requested size: 76.82126pt x 83.10614pt.
-<img/cat_dec_1.png, id=595, 50.71579pt x 54.85757pt>
-File: img/cat_dec_1.png Graphic file (type png)
-<use img/cat_dec_1.png>
-Package pdftex.def Info: img/cat_dec_1.png  used on input line 82.
-(pdftex.def)             Requested size: 76.82126pt x 83.10225pt.
-<img/cat_dec_2.png, id=596, 52.11778pt x 56.89525pt>
+<img/cat_dec_2.png, id=716, 52.11778pt x 56.89525pt>
 File: img/cat_dec_2.png Graphic file (type png)
 <use img/cat_dec_2.png>
-Package pdftex.def Info: img/cat_dec_2.png  used on input line 83.
+Package pdftex.def Info: img/cat_dec_2.png  used on input line 81.
 (pdftex.def)             Requested size: 76.82126pt x 83.86331pt.
-<img/cat_dec_3.png, id=597, 51.31598pt x 55.42125pt>
+<img/cat_dec_3.png, id=717, 51.31598pt x 55.42125pt>
 File: img/cat_dec_3.png Graphic file (type png)
 <use img/cat_dec_3.png>
-Package pdftex.def Info: img/cat_dec_3.png  used on input line 84.
+Package pdftex.def Info: img/cat_dec_3.png  used on input line 82.
 (pdftex.def)             Requested size: 76.82126pt x 82.9718pt.
-<img/cat_dec_4.png, id=598, 53.20491pt x 53.47093pt>
+<img/cat_dec_4.png, id=718, 53.20491pt x 53.47093pt>
 File: img/cat_dec_4.png Graphic file (type png)
 <use img/cat_dec_4.png>
-Package pdftex.def Info: img/cat_dec_4.png  used on input line 85.
+Package pdftex.def Info: img/cat_dec_4.png  used on input line 83.
 (pdftex.def)             Requested size: 76.82126pt x 77.20691pt.
-<img/cat_dec_5.png, id=599, 51.37677pt x 56.77133pt>
+<img/cat_dec_5.png, id=719, 51.37677pt x 56.77133pt>
 File: img/cat_dec_5.png Graphic file (type png)
 <use img/cat_dec_5.png>
-Package pdftex.def Info: img/cat_dec_5.png  used on input line 86.
+Package pdftex.def Info: img/cat_dec_5.png  used on input line 84.
 (pdftex.def)             Requested size: 76.82126pt x 84.88995pt.
-<img/cat_dec_6.png, id=600, 49.38724pt x 56.38377pt>
+<img/cat_dec_6.png, id=720, 49.38724pt x 56.38377pt>
 File: img/cat_dec_6.png Graphic file (type png)
 <use img/cat_dec_6.png>
-Package pdftex.def Info: img/cat_dec_6.png  used on input line 87.
+Package pdftex.def Info: img/cat_dec_6.png  used on input line 85.
 (pdftex.def)             Requested size: 76.82126pt x 87.71138pt.
-<img/cat_dec_7.png, id=601, 49.95622pt x 54.86858pt>
+<img/cat_dec_7.png, id=721, 49.95622pt x 54.86858pt>
 File: img/cat_dec_7.png Graphic file (type png)
 <use img/cat_dec_7.png>
-Package pdftex.def Info: img/cat_dec_7.png  used on input line 88.
+Package pdftex.def Info: img/cat_dec_7.png  used on input line 86.
 (pdftex.def)             Requested size: 76.82126pt x 84.3798pt.
-<img/owl_temp_02.png, id=602, 619.45714pt x 92.91856pt>
+ [42] [43 <./img/cat_enc.png> <./img/cat_dec_0.png> <./img/cat_dec_2.png> <./im
+g/cat_dec_3.png> <./img/cat_dec_4.png> <./img/cat_dec_5.png> <./img/cat_dec_6.p
+ng> <./img/cat_dec_7.png>]
+<img/owl_temp_02.png, id=768, 619.45714pt x 92.91856pt>
 File: img/owl_temp_02.png Graphic file (type png)
 <use img/owl_temp_02.png>
-Package pdftex.def Info: img/owl_temp_02.png  used on input line 100.
+Package pdftex.def Info: img/owl_temp_02.png  used on input line 101.
 (pdftex.def)             Requested size: 384.1122pt x 57.6174pt.
-<img/owl_temp_04.png, id=603, 619.45714pt x 78.46457pt>
+<img/owl_temp_04.png, id=769, 619.45714pt x 78.46457pt>
 File: img/owl_temp_04.png Graphic file (type png)
 <use img/owl_temp_04.png>
-Package pdftex.def Info: img/owl_temp_04.png  used on input line 101.
+Package pdftex.def Info: img/owl_temp_04.png  used on input line 102.
 (pdftex.def)             Requested size: 384.1122pt x 48.65471pt.
-<img/owl_temp_05.png, id=604, 628.43478pt x 83.7913pt>
+<img/owl_temp_05.png, id=770, 628.43478pt x 83.7913pt>
 File: img/owl_temp_05.png Graphic file (type png)
 <use img/owl_temp_05.png>
-Package pdftex.def Info: img/owl_temp_05.png  used on input line 102.
+Package pdftex.def Info: img/owl_temp_05.png  used on input line 103.
 (pdftex.def)             Requested size: 384.1122pt x 51.21617pt.
-<img/owl_temp_06.png, id=605, 619.45714pt x 92.91856pt>
+<img/owl_temp_06.png, id=771, 619.45714pt x 92.91856pt>
 File: img/owl_temp_06.png Graphic file (type png)
 <use img/owl_temp_06.png>
-Package pdftex.def Info: img/owl_temp_06.png  used on input line 103.
+Package pdftex.def Info: img/owl_temp_06.png  used on input line 104.
 (pdftex.def)             Requested size: 384.1122pt x 57.6174pt.
-<img/owl_temp_08.png, id=606, 628.43478pt x 97.4074pt>
+<img/owl_temp_08.png, id=772, 628.43478pt x 97.4074pt>
 File: img/owl_temp_08.png Graphic file (type png)
 <use img/owl_temp_08.png>
-Package pdftex.def Info: img/owl_temp_08.png  used on input line 104.
+Package pdftex.def Info: img/owl_temp_08.png  used on input line 105.
 (pdftex.def)             Requested size: 384.1122pt x 59.5388pt.
-<img/owl_temp_1.png, id=607, 647.19403pt x 119.7309pt>
+<img/owl_temp_1.png, id=773, 647.19403pt x 119.7309pt>
 File: img/owl_temp_1.png Graphic file (type png)
 <use img/owl_temp_1.png>
-Package pdftex.def Info: img/owl_temp_1.png  used on input line 105.
+Package pdftex.def Info: img/owl_temp_1.png  used on input line 106.
 (pdftex.def)             Requested size: 384.1122pt x 71.0608pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 99--107
+Overfull \hbox (12.0pt too wide) in paragraph at lines 100--108
  [][] 
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 107--107
+Underfull \hbox (badness 1325) in paragraph at lines 108--108
 [][]|\T1/pplj/m/n/10.95 (+20) Im-ma-gi-ni ge-ne-ra-te dal mo-del-lo au-to-re-gr
 es-si-vo al va-ria-re del
  []
 
-[35]
-Overfull \vbox (174.05594pt too high) has occurred while \output is active []
-
-
-[36 <./img/encoder_variables.png>])
-Overfull \hbox (12.0pt too wide) in paragraph at lines 134--123
+)
+Overfull \hbox (12.0pt too wide) in paragraph at lines 113--123
 []$[]$ 
  []
 
-[37 <./img/cat_enc.png> <./img/cat_dec_0.png> <./img/cat_dec_1.png> <./img/cat_
-dec_2.png> <./img/cat_dec_3.png> <./img/cat_dec_4.png> <./img/cat_dec_5.png> <.
-/img/cat_dec_6.png> <./img/cat_dec_7.png>] [38 <./img/owl_temp_02.png> <./img/o
-wl_temp_04.png> <./img/owl_temp_05.png> <./img/owl_temp_06.png> <./img/owl_temp
-_08.png> <./img/owl_temp_1.png>]
+[44 <./img/owl_temp_02.png> <./img/owl_temp_04.png> <./img/owl_temp_05.png> <./
+img/owl_temp_06.png> <./img/owl_temp_08.png> <./img/owl_temp_1.png>]
 \openout2 = `Chapters/conclusioni.aux'.
 
- (./Chapters/conclusioni.tex
+
+(./Chapters/conclusioni.tex
 chapter 4.
-) [39
+) [45
 
 
 
@@ -2024,7 +2048,7 @@ chapter 4.
 \tf@brf=\write8
 \openout8 = `thesis.brf'.
 
- [40
+ [46
 
 
 
@@ -2041,7 +2065,7 @@ Overfull \hbox (67.72122pt too wide) in paragraph at lines 40--40
 ainty-[]estimation /
  []
 
-[41]
+[47]
 Underfull \hbox (badness 6876) in paragraph at lines 47--47
 []\T1/pplj/m/n/12 (+20) A. Kar-pa-thy - \T1/pplj/m/it/12 (+20) The Un-rea-so-na
 -ble Ef-fec-ti-ve-ness of Re-cur-rent
@@ -2055,28 +2079,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--47
 
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [42]) [43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+) [48]
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[]\T1/pplj/m/n/12 (+20) Fariz Rah-man - \T1/pplj/m/it/12 (+20) Re-cur-rent Shop
+ \T1/pplj/m/n/12 (+20) - []$\T1/fvm/m/n/12 https : / / github . com /
+ []
 
-(./thesis.aux (./titlePage.aux) (./Chapters/introduzione.aux)
+[49]) [50]
+LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 132.
+ [51
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+ (./thesis.aux (./titlePage.aux) (./Chapters/introduzione.aux)
 (./Chapters/strumenti.aux) (./Chapters/esperimenti.aux)
 (./Chapters/conclusioni.aux) (./Chapters/bibliografia.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2BB44266769A11CE631F8B71D5D6A172;1866.
+(rerunfilecheck)             Checksum: F933A650C61318368D981D569DAD15D3;2010.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 2F758BC4AA32E64B418EF0F7A0FE8D1E;1758.
+(rerunfilecheck)             Checksum: 8F8710C3D6B6E09A92CF43CB02767806;2334.
  ) 
 Here is how much of TeX's memory you used:
- 40603 strings out of 492982
- 758067 string characters out of 6136225
- 1024059 words of memory out of 5000000
- 42651 multiletter control sequences out of 15000+600000
- 660572 words of font info for 606 fonts, out of 8000000 for 9000
+ 41461 strings out of 492982
+ 767790 string characters out of 6136225
+ 1027826 words of memory out of 5000000
+ 43349 multiletter control sequences out of 15000+600000
+ 683851 words of font info for 707 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,14n,73p,10388b,1424s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,14n,73p,10388b,1600s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2017/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type
@@ -2095,10 +2129,10 @@ c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c
 :/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2017/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2017/texmf-dist/font
 s/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (45 pages, 1535082 bytes).
+Output written on thesis.pdf (53 pages, 1853655 bytes).
 PDF statistics:
- 848 PDF objects out of 1000 (max. 8388607)
- 709 compressed objects within 8 object streams
- 219 named destinations out of 1000 (max. 500000)
- 99741 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 1022 PDF objects out of 1200 (max. 8388607)
+ 866 compressed objects within 9 object streams
+ 268 named destinations out of 1000 (max. 500000)
+ 112060 words of extra memory for PDF output out of 128383 (max. 10000000)
 

@@ -16,10 +16,14 @@
 \contentsline {figure}{\numberline {12}{\ignorespaces Struttura di un generico AutoEncoder, da \cite {keras_blog}\relax }}{18}{figure.caption.14}
 \contentsline {figure}{\numberline {13}{\ignorespaces Modello di un VAE, da \cite {VAE_tut}\relax }}{21}{figure.caption.15}
 \contentsline {figure}{\numberline {14}{\ignorespaces Un VAE per intero, a sinistra senza il "reparametrization trick", a destra con. In rosso le operazioni non differenziabili, in blu le loss. Queste due varianti differiscono per il fatto che la retropropagazione si pu\IeC {\`o} applicare solo sulla rete a destra.\relax }}{23}{figure.caption.16}
+\contentsline {figure}{\numberline {15}{\ignorespaces Un semplice esempio di problema diretto: sono evidenziati 1000 punti corrispondenti ai dati (i cerchi) generati dalla mappatura $x = t + 0.3 \qopname \relax o{sin}(2 \pi t) + \epsilon $ dove $\epsilon $ \IeC {\`e} una variabile casuale. La curva rappresenta il risultato dell'addestramento di un MLP con cinque unit\IeC {\`a} e somma di quadrati come funzione d'errore. La rete approssima la media condizionale del target, che d\IeC {\`a} una buona rappresentazione del generatore dei dati.\relax }}{24}{figure.caption.17}
+\contentsline {figure}{\numberline {16}{\ignorespaces Quest'immagine mostra esattamente lo stesso dataset della figura \ref {fig:1.20}, invertendo input e variabili target. La curva mostra nuovamente il risultato dell'addestramento di una MLP con funzione \textit {sum-of-squares}. Stavolta la rete ottiene un pessimo risultato, continuando a tentare di rappresentare la media condizionale.\relax }}{25}{figure.caption.18}
+\contentsline {figure}{\numberline {17}{\ignorespaces Rappresentazione di una MDN. L'output della rete neurale determina i parametri di una mistura. Di conseguenza, il modello rappresenta la funzione di densit\IeC {\`a} di probabilit\IeC {\`a} condizionale delle variabili target condizionate all'input $\boldsymbol {x}$ della rete.\relax }}{27}{figure.caption.19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {15}{\ignorespaces Sketch-rnn\relax }}{26}{figure.caption.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Uno sketch e la lista di tratti corrispondenti, in formato \textit {stroke-5}, i colori corrispondono all'ordine della sequenza.\relax }}{32}{figure.caption.21}
+\contentsline {figure}{\numberline {19}{\ignorespaces Sketch-rnn\relax }}{33}{figure.caption.22}
+\contentsline {figure}{\numberline {20}{\ignorespaces Compromesso fra $L_R$ e $L_{KL}$, su due modelli addestrati su dataset con singola classe(sinistra). Il grafo della \textit {Validation Loss} per modelli addestrati sulla classe Yoga, al variare del peso $w_{KL}$, da \cite {sketchrnn}\relax }}{39}{figure.caption.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {16}{\ignorespaces I layer ottenuti attraverso la configurazione non condizionata.\relax }}{36}{figure.caption.19}
-\contentsline {figure}{\numberline {17}{\ignorespaces La prima immagine \IeC {\`e} estratta dal dataset, le altre sono immagini originali generate dal modello standard\relax }}{37}{figure.caption.20}
-\contentsline {figure}{\numberline {18}{\ignorespaces Immagini generate dal modello autoregressivo al variare del parametro di temperatura\relax }}{38}{figure.caption.21}
+\contentsline {figure}{\numberline {21}{\ignorespaces La prima immagine \IeC {\`e} estratta dal dataset, le altre sono immagini originali generate dal modello standard\relax }}{43}{figure.caption.25}
+\contentsline {figure}{\numberline {22}{\ignorespaces Immagini generate dal modello autoregressivo al variare del parametro di temperatura\relax }}{44}{figure.caption.26}
 \addvspace {10\p@ }

@@ -1,20 +1,20 @@
 \myChapter{Esperimenti}
 \section{Introduzione} % (fold)
 \label{sec:introduzione}
-In questo elaborato si è scelto di riprodurre ed analizzare i risultati presentati da Ha e Eck attraverso due esperimenti: nel primo è stata scelta la configurazione standard del modello, con un VAE completo e layer LSTM sia nell'encoder che nel decoder, la rete è stata addestrata su due dataset: \textit{cat.npz} (gatti) e \textit{flying\_saucer.npz} (dischi volanti). Nel secondo è stata scelta la configurazione con il solo decoder, utilizzato come modello autoregressivo non condizionato ad una variabile latente (con i pesi inizializzati a zero), in questo caso il layer utilizzato è HyperLSTM\footnote{Questo layer non è stato approfondito nell'introduzione di questo elaborato, si rimanda a \cite{hyperlstm} per ulteriori informazioni.}, che eccelle nella generazione di sequenze, il dataset è stato addestrato sul solo dataset \textit{owl.npz} (gufi). Di seguito verranno illustrate e confrontate le reti neurali prodotte da queste configurazioni, inoltre verranno mostrate alcune immagini generate tramite diversi approcci che mostreranno la capacità del modello di concettualizzare le proprietà di un disegno.
+In questo elaborato si è scelto di riprodurre ed analizzare i risultati presentati da Ha e Eck attraverso tre esperimenti: nel primo è stata scelta la configurazione standard del modello, con un VAE completo e layer LSTM sia nell'encoder che nel decoder, la rete è stata addestrata su due dataset: \textit{cat.npz} (gatti) e \textit{flying\_saucer.npz} (dischi volanti). Nel secondo è stata scelta la configurazione con il solo decoder, utilizzato come modello autoregressivo non condizionato ad una variabile latente (con i pesi inizializzati a zero), in questo caso il layer utilizzato è HyperLSTM\footnote{Questo layer non è stato approfondito nell'introduzione di questo elaborato, si rimanda a \cite{hyperlstm} per ulteriori informazioni.}, che eccelle nella generazione di sequenze, il dataset è stato addestrato sul solo dataset \textit{owl.npz} (gufi), infine è stato addestrato un modello con \textit{Layer Normalization} nell'encoder e HyperLSTM nel decoder\footnote{Soluzione suggerita in \url{https://github.com/tensorflow/magenta/tree/master/magenta/models/sketch_rnn}}, per poter gestire un ampio training set composto da tre categorie: \textit{elephant} (elefanti), \textit{hat} (cappelli) e \textit{snake} serpenti\footnote{In omaggio a \cite{petitprince}}. Di seguito verranno illustrate e confrontate le reti neurali prodotte da queste configurazioni, inoltre verranno mostrate alcune immagini generate tramite diversi approcci che mostreranno la capacità del modello di concettualizzare le proprietà di un disegno.
 
 \begin{minipage}{\linewidth}
-\begin{lstlisting}[language = Python, frame = single, caption = {Iperparametri standard di sketch-rnn}, label = {iperparametri} captionpos = b]
+\begin{lstlisting}[language = Python, frame = single, caption = {Iperparametri standard di sketch-rnn}, label = {iperparametri}, captionpos = b, basicstyle=\scriptsize]
 num_steps=10000000,            # Total number of training set. Keep large.
 save_every=500,                # Number of batches per checkpoint creation.
 dec_rnn_size=512,              # Size of decoder.
 dec_model='lstm',              # Decoder: lstm, layer_norm or hyper.
 enc_rnn_size=256,              # Size of encoder.
 enc_model='lstm',              # Encoder: lstm, layer_norm or hyper.
-z_size=128,                    # Size of latent vector z. Recommend 32, 64 or 128.
-kl_weight=0.5,                 # KL weight of loss equation. Recommend 0.5 or 1.0.
+z_size=128,                    # Size of latent vector z. Rec. 32, 64 or 128.
+kl_weight=0.5,                 # KL weight of loss. Recommend 0.5 or 1.0.
 kl_weight_start=0.01,          # KL start weight when annealing.
-kl_tolerance=0.2,              # Level of KL loss at which to stop optimizing for KL.
+kl_tolerance=0.2,              # Level of KL loss at which to stop optimizing
 batch_size=100,                # Minibatch size. Recommend leaving at 100.
 grad_clip=1.0,                 # Gradient clipping. Recommend leaving at 1.0.
 num_mixture=20,                # Number of mixtures in Gaussian mixture model.
@@ -22,7 +22,7 @@ learning_rate=0.001,           # Learning rate.
 decay_rate=0.9999,             # Learning rate decay per minibatch.
 kl_decay_rate=0.99995,         # KL annealing decay rate per minibatch.
 min_learning_rate=0.00001,     # Minimum learning rate.
-use_recurrent_dropout=True,    # Recurrent Dropout without Memory Loss. Recomended.
+use_recurrent_dropout=True,    # Recurrent Dropout without Memory Loss.
 recurrent_dropout_prob=0.90,   # Probability of recurrent dropout keep.
 use_input_dropout=False,       # Input dropout. Recommend leaving False.
 input_dropout_prob=0.90,       # Probability of input dropout keep.
@@ -64,25 +64,23 @@ In questa sezione di codice sono mostrati gli iperparametri del modello, coi lor
 		\hline
 	\end{tabular}
 	\caption{I layer ottenuti attraverso la configurazione standard.}
-	\label{tab:1}
+	\label{tab:2}
 \end{table}
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=\textwidth]{img/encoder_variables.png}
-	\caption{I layer ottenuti attraverso la configurazione non condizionata.}
-\end{figure}
 
+Nel caso della seconda rete la dimensione del layer ricorrente è sempre 512 ma, per la maggior complessità dei parametri interni, si ottiene una rete com 2218363 variabili addestrabili. L'ultimo modello, infine, presenta 24515195 variabili addestrabili con la dimensione dell'output del decoder pari a 2048 e quella dell'encoder pari a 512 (1024)\footnote{Si omette la tabella, riportando solo le dimensioni fondamentali, per la complessità di lettura derivante dalla struttura dell'HyperLSTM.}.
+
+Con queste reti sono stati condotti vari esperimenti, in particolare: nei modelli condizionali sono state svolte interpolazioni nello spazio di latenza, sia all'interno di una singola classe sia fra classi diverse, inoltre è stato osservato l'esito della variazione del parametro di temperatura sia su interpolazioni che su generazioni condizionali semplici ed in special modo nel modello autoregressivo, sul quale ha un impatto rilevante.
+Di seguito i test effettuati saranno illustrati in dettaglio e commentati.
 \subsection{Generazione condizionale} % (fold)
 \label{sub:generazione_condizionale}
 \begin{figure}[ht]
 	\centering
-	\begin{tabular}{ccc}
-		\includegraphics[width=0.2\linewidth]{img/cat_enc.png} &
+	\begin{tabular}{cccc}
+		\fbox{\includegraphics[width=0.2\linewidth]{img/cat_enc.png}} &
 		\includegraphics[width=0.2\linewidth]{img/cat_dec_0.png} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_1.png} \\
 		\includegraphics[width=0.2\linewidth]{img/cat_dec_2.png} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_3.png} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_4.png} \\
+		\includegraphics[width=0.2\linewidth]{img/cat_dec_3.png} \\
+		\includegraphics[width=0.2\linewidth]{img/cat_dec_4.png} &
 		\includegraphics[width=0.2\linewidth]{img/cat_dec_5.png} &
 		\includegraphics[width=0.2\linewidth]{img/cat_dec_6.png} &
 		\includegraphics[width=0.2\linewidth]{img/cat_dec_7.png}
@@ -90,6 +88,9 @@ In questa sezione di codice sono mostrati gli iperparametri del modello, coi lor
 	\caption{La prima immagine è estratta dal dataset, le altre sono immagini originali generate dal modello standard}
 	\label{fig:1.17}
 \end{figure}
+Questo primo esempio \ref{fig:1.17} illustra un risultato semplice, quanto interessante: la figura nel riquadro è stata passata come input alla prima rete neurale, le successive sono immagini generate dalla rete attraverso un parametro di temperatura di 0.8, condizionate allo stesso input. L'ampiezza del parametro di temperatura permette alla rete una maggiore libertà \ref{sec:modello}, aumentando la varianza sull'offset dei punti\footnote{Al prezzo di immagini maggiormente confuse.}, il che mostra le potenzialità del modello nel creare sketch simili ma unici ed originali, a partire da un singolo input.
+
+
 % subsection generazione_condizionale (end)
 
 \subsection{Generazione non condizionale} % (fold)
@@ -108,28 +109,6 @@ In questa sezione di codice sono mostrati gli iperparametri del modello, coi lor
 \end{figure}
 % subsection generazione_non_condizionale (end)
 % section esperimenti (end)
-
-\section{training} % (fold)
-\label{sec:training}
-% section training (end)
-\begin{minipage}{\linewidth}
-\begin{lstlisting}[language = Python, frame = single, caption = {Implementazione in Keras del calcolo dell'errore di ricostruzione, suddiviso fra i termini dell'errore nell'offset $(L_s)$ e l'errore degli stati della penna $(L_p)$}, captionpos = b]
-def get_lossfunc(out_pi, out_mu_x, out_mu_y, out_sigma_x, out_sigma_y, out_ro, out_q, x, y, logits):
-    # L_r loss term calculation, L_s part
-    result = tf_bi_normal(x, y, out_mu_x, out_mu_y, out_sigma_x, out_sigma_y, out_ro)
-    result = result * out_pi
-    result = K.sum(result, axis=1, keepdims=True)
-    result = -K.log(result + 1e-8)
-    fs = 1.0 - logits[:, 2]
-    fs = K.reshape(fs, (-1, 1))
-    result = result * fs
-    # L_r loss term, L_p part
-    result1 = K.categorical_crossentropy(out_q, logits, from_logits = True)
-    result1 = K.reshape(result1, (-1, 1))
-    result = result + result1
-    return K.mean(result)
-\end{lstlisting}
-\end{minipage}
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[language = Python, frame = single, caption = {}, captionpos = b]
