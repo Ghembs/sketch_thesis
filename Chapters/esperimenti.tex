@@ -71,8 +71,9 @@ Nel caso della seconda rete la dimensione del layer ricorrente è sempre 512 ma,
 
 Con queste reti sono stati condotti vari esperimenti, in particolare: nei modelli condizionali sono state svolte interpolazioni nello spazio di latenza, sia all'interno di una singola classe sia fra classi diverse, inoltre è stato osservato l'esito della variazione del parametro di temperatura sia su interpolazioni che su generazioni condizionali semplici ed in special modo nel modello autoregressivo, sul quale ha un impatto rilevante.
 Di seguito i test effettuati saranno illustrati in dettaglio e commentati.
-\subsection{Generazione condizionale} % (fold)
-\label{sub:generazione_condizionale}
+\section{Generazione condizionale} % (fold)
+\label{sec:generazione_condizionale}
+In questa sezione vengono valutati i disegni ricostruiti \textit{S'}, dato in input un disegno \textit{S}, da parte dei due VAE.
 \begin{figure}[ht]
 	\centering
 	\begin{tabular}{cccc}
@@ -90,11 +91,29 @@ Di seguito i test effettuati saranno illustrati in dettaglio e commentati.
 \end{figure}
 Questo primo esempio \ref{fig:1.17} illustra un risultato semplice, quanto interessante: la figura nel riquadro è stata passata come input alla prima rete neurale, le successive sono immagini generate dalla rete attraverso un parametro di temperatura di 0.8, condizionate allo stesso input. L'ampiezza del parametro di temperatura permette alla rete una maggiore libertà \ref{sec:modello}, aumentando la varianza sull'offset dei punti\footnote{Al prezzo di immagini maggiormente confuse.}, il che mostra le potenzialità del modello nel creare sketch simili ma unici ed originali, a partire da un singolo input.
 
+Il modello è anche in grado di reinterpretare un disegno proveniente da una classe qualunque, secondo le caratteristiche su cui è stato addestrato. Se infatti alla rete viene chiesto di riprodurre dati da una classe che non conosce, questa produrrà sketch che combineranno proprietà dovute al condizionamento con le proprietà dovute all'apprendimento, talvolta aggiungendo dettagli, talvolta distorcendo le strutture date.
+\subsection{Variazioni di temperatura} % (fold)
+\label{sub:variazioni_di_temperatura}
+Come detto in precedenza \ref{sec:modello}, nell'operazione di campionamento di un disegno viene introdotto un parametro $\tau$ il cui scopo è contenere la variabilità dell'offset e dei parametri categorici. La variazione di questo parametro, generando schizzi condizionati dallo stesso disegno di partenza, porta ad output che vanno da una riproduzione più fedele dell'input ad una più fantasiosa.
 
-% subsection generazione_condizionale (end)
+Anche in questo caso è interessante osservare come ciò si rifletta sui tentativi della rete di interpretare oggetti sconosciuti secondo le proprie categorie. Di fatto in questa situazione il parametro di temperatura diventa il peso assegnato alle nuove caratteristiche osservate, con un parametro più basso che obbliga il VAE ad attenersi il più possibile alle proprietà dell'input.
+% subsection variazioni_di_temperatura (end)
+\subsection{Interpolazioni} % (fold)
+\label{sub:interpolazioni}
+Interpolando fra vettori latenti è possibile visualizzare come un'immagine muta in un'altra, osservando la ricostruzione dell'interpolazione. Considerato che sullo spazio di latenza viene forzata una Gaussiana come distribuzione a priori, è lecito aspettarsi una mutazione più fluida e priva di "salti" nello spazio fra due vettori di latenza diversi. Un modello addestrato col parametro del peso della divergenza KL ($w_KL$ \ref{sub:training}) posto ad un valore alto dovrebbe produrre immagini più aderenti ai dati, dato un vettore di latenza $\boldsymbol{z}$ interpolato sfericamente, rispetto ad una rete addestrata con un valore di $w_KL$ più basso.
 
-\subsection{Generazione non condizionale} % (fold)
-\label{sub:generazione_non_condizionale}
+Per dimostrare questo risultato è sufficiente addestrare diversi modelli sugli stessi dataset, utilizzando valori diversi di $w_KL$. Si riporta l'esperimento svolto da Ha e Eck sui dataset \textit{cat} e \textit{pigs}.
+% subsection interpolazioni (end)
+\subsection{Analogie fra disegni} % (fold)
+\label{sub:analogie_fra_disegni}
+L'esempio di interpolazione in fig. suggerisce che il vettore di latenza $\boldsymbol{z}$ codifichi caratteristiche concettuali di un disegno. Modelli addestrati con un minor peso alla divergenza KL, sono in grado di incrementare i dettagli di uno sketch con caratteristiche prese da un altro, ad esempio aggiungendo un corpo ad una testa di gatto, acquisendolo dal disegno di un maiale. Questo è possibile perché lo spazio di latenza è abbastanza "rilassato" da permettere che ogni vettore interpolato fra due vettori di latenza risulti in un disegno coerente, ciò permette di eseguire operazioni aritmetiche fra vettori ottenuti da diversi disegni ed esplorare come il modello organizzi lo spazio latente per rappresentare i concetti nella moltitudine degli sketch generati.
+
+Nello specifico della figura: è stato sottratto il vettore latente codificante la testa di un maiale da quello che codifica un maiale intero, ciò ha portato ad un vettore contenente le caratteristiche di un corpo. Aggiungendo questa differenza al vettore che rappresenta la testa di un gatto è stato ottenuto un gatto completo. Allo stesso modo è stato rimosso il corpo di un maiale ottenendo prima la codifica tramite gatti.
+% subsection analogie_fra_disegni (end)
+% section generazione_condizionale (end)
+\section{Generazione non condizionale} % (fold)
+\label{sec:generazione_non_condizionale}
+Come caso particolare, è possibile addestrare il modello per generare disegni non condizionati ad un input, è il caso della terza rete che è stata assemblata per gli esperimenti di questo elaborato. Rimuovendo l'encoder si ottiene un modello autoregressivo privo di variabile latente, di conseguenza gli stati iniziali e delle celle vengono inizializzati a zero. Gli input $x_i$ della RNN ad ogni time step sono solo $s_{i-1}$ o $S{i-1}'$ dato che non c'è nessun vettore da concatenare. Con questa struttura è stata sperimentata la generazione al variare del parametro di temperatura.
 \begin{figure}[ht]
 	\centering
 	\begin{tabular}{c}
@@ -107,8 +126,14 @@ Questo primo esempio \ref{fig:1.17} illustra un risultato semplice, quanto inter
 	\end{tabular}
 	\caption{Immagini generate dal modello autoregressivo al variare del parametro di temperatura}
 \end{figure}
-% subsection generazione_non_condizionale (end)
-% section esperimenti (end)
+
+Si può notare come la mancanza di uno spazio di latenza a cui condizionare l'output renda preminente l'impatto della variazione della temperatura sulla variabilità dei disegni generati: al crescere del parametro la rete passa da disegni estremamente fedeli ed accurati a disegni molto più vaghi ed imprecisi.
+
+\subsection{Predire il finale di un disegno incompleto} % (fold)
+\label{sub:predire_il_finale_di_un_disegno_incompleto}
+Un'interessante applicazione pratica della variante con il solo decoder è che rende possibile utilizzare \texttt{sketch-rnn} per offrire spunti artistici, completando sketch in input. Il layer ricorrente della rete viene utilizzato in un primo momento per generare una codifica della porzione di disegno ricevuta in input, ottenendo un hidden state condizionato ad esso. Successivamente lo stato generato viene utilizzato per inizializzare nuovamente la rete, che proseguirà l'esecuzione fino in fondo, completando la sequenza a partire da quella data.
+% subsection predire_il_finale_di_un_disegno_incompleto (end)
+% section generazione_non_condizionale (end)
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[language = Python, frame = single, caption = {}, captionpos = b]

@@ -25,5 +25,5 @@
 \contentsline {figure}{\numberline {20}{\ignorespaces Compromesso fra $L_R$ e $L_{KL}$, su due modelli addestrati su dataset con singola classe(sinistra). Il grafo della \textit {Validation Loss} per modelli addestrati sulla classe Yoga, al variare del peso $w_{KL}$, da \cite {sketchrnn}\relax }}{39}{figure.caption.23}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {21}{\ignorespaces La prima immagine \IeC {\`e} estratta dal dataset, le altre sono immagini originali generate dal modello standard\relax }}{43}{figure.caption.25}
-\contentsline {figure}{\numberline {22}{\ignorespaces Immagini generate dal modello autoregressivo al variare del parametro di temperatura\relax }}{44}{figure.caption.26}
+\contentsline {figure}{\numberline {22}{\ignorespaces Immagini generate dal modello autoregressivo al variare del parametro di temperatura\relax }}{46}{figure.caption.26}
 \addvspace {10\p@ }

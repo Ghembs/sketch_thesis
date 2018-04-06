@@ -27,9 +27,13 @@
 \contentsline {subsection}{\numberline {2.4.1}training}{37}{subsection.2.4.1}
 \contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Esperimenti}}{41}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduzione}{41}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Generazione condizionale}{43}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Generazione non condizionale}{44}{subsection.3.1.2}
-\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Conclusioni}}{45}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lavori correlati}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}Sviluppi futuri}{45}{section.4.2}
-\contentsline {section}{\numberline {4.3}Lista di acronimi}{51}{section.4.3}
+\contentsline {section}{\numberline {3.2}Generazione condizionale}{43}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Variazioni di temperatura}{44}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Interpolazioni}{44}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Analogie fra disegni}{45}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Generazione non condizionale}{45}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Predire il finale di un disegno incompleto}{46}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Conclusioni}}{47}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lavori correlati}{47}{section.4.1}
+\contentsline {section}{\numberline {4.2}Sviluppi futuri}{47}{section.4.2}
+\contentsline {section}{\numberline {4.3}Lista di acronimi}{53}{section.4.3}
