@@ -2,28 +2,38 @@
 \babel@toc {italian}{}
 \deactivateaddvspace 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Interpolazioni nello spazio di latenza di immagini vettoriali generate dal modello.\relax }}{7}{figure.caption.3}
-\contentsline {figure}{\numberline {2}{\ignorespaces Rappresentazione di un neurone artificiale.\relax }}{9}{figure.caption.4}
-\contentsline {figure}{\numberline {3}{\ignorespaces Rappresentazione di un modello Multi-Strato.\relax }}{10}{figure.caption.5}
-\contentsline {figure}{\numberline {4}{\ignorespaces Una semplice RNN (Recurrent Neural Network).\relax }}{10}{figure.caption.6}
-\contentsline {figure}{\numberline {5}{\ignorespaces Una RNN dispiegata lungo la linea temporale.\relax }}{11}{figure.caption.7}
-\contentsline {figure}{\numberline {6}{\ignorespaces Due diversi metodi di implementazione della memoria in una RNN\relax }}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {7}{\ignorespaces Combinazioni di sequenze vettoriali. \cite {rnn_effect}\relax }}{13}{figure.caption.9}
-\contentsline {figure}{\numberline {8}{\ignorespaces Struttura interna di una RNN standard con un singolo hidden layer.\relax }}{14}{figure.caption.10}
-\contentsline {figure}{\numberline {9}{\ignorespaces Struttura interna di una lstm che evidenzia i quattro strati interni di un layer\relax }}{14}{figure.caption.11}
-\contentsline {figure}{\numberline {10}{\ignorespaces Confronto sull'utilizzo dell'input in diverse reti neurali.\relax }}{16}{figure.caption.12}
-\contentsline {figure}{\numberline {11}{\ignorespaces Struttura generica di una BRNN, svolta lungo tre time steps.\relax }}{17}{figure.caption.13}
-\contentsline {figure}{\numberline {12}{\ignorespaces Struttura di un generico AutoEncoder, da \cite {keras_blog}\relax }}{18}{figure.caption.14}
-\contentsline {figure}{\numberline {13}{\ignorespaces Modello di un VAE, da \cite {VAE_tut}\relax }}{21}{figure.caption.15}
-\contentsline {figure}{\numberline {14}{\ignorespaces Un VAE per intero, a sinistra senza il "reparametrization trick", a destra con. In rosso le operazioni non differenziabili, in blu le loss. Queste due varianti differiscono per il fatto che la retropropagazione si pu\IeC {\`o} applicare solo sulla rete a destra.\relax }}{23}{figure.caption.16}
-\contentsline {figure}{\numberline {15}{\ignorespaces Un semplice esempio di problema diretto: sono evidenziati 1000 punti corrispondenti ai dati (i cerchi) generati dalla mappatura $x = t + 0.3 \qopname \relax o{sin}(2 \pi t) + \epsilon $ dove $\epsilon $ \IeC {\`e} una variabile casuale. La curva rappresenta il risultato dell'addestramento di un MLP con cinque unit\IeC {\`a} e somma di quadrati come funzione d'errore. La rete approssima la media condizionale del target, che d\IeC {\`a} una buona rappresentazione del generatore dei dati.\relax }}{24}{figure.caption.17}
-\contentsline {figure}{\numberline {16}{\ignorespaces Quest'immagine mostra esattamente lo stesso dataset della figura \ref {fig:1.20}, invertendo input e variabili target. La curva mostra nuovamente il risultato dell'addestramento di una MLP con funzione \textit {sum-of-squares}. Stavolta la rete ottiene un pessimo risultato, continuando a tentare di rappresentare la media condizionale.\relax }}{25}{figure.caption.18}
-\contentsline {figure}{\numberline {17}{\ignorespaces Rappresentazione di una MDN. L'output della rete neurale determina i parametri di una mistura. Di conseguenza, il modello rappresenta la funzione di densit\IeC {\`a} di probabilit\IeC {\`a} condizionale delle variabili target condizionate all'input $\boldsymbol {x}$ della rete.\relax }}{27}{figure.caption.19}
+\contentsline {figure}{\numberline {1}{\ignorespaces Interpolazioni nello spazio di latenza di immagini vettoriali generate dal modello.\relax }}{9}{figure.caption.3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Rappresentazione di un neurone artificiale.\relax }}{11}{figure.caption.4}
+\contentsline {figure}{\numberline {3}{\ignorespaces Rappresentazione di un modello Multi-Strato.\relax }}{12}{figure.caption.5}
+\contentsline {figure}{\numberline {4}{\ignorespaces Una semplice RNN (Recurrent Neural Network).\relax }}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Una RNN dispiegata lungo la linea temporale.\relax }}{13}{figure.caption.7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Due diversi metodi di implementazione della memoria in una RNN\relax }}{14}{figure.caption.8}
+\contentsline {figure}{\numberline {7}{\ignorespaces Combinazioni di sequenze vettoriali. \cite {rnn_effect}\relax }}{15}{figure.caption.9}
+\contentsline {figure}{\numberline {8}{\ignorespaces Struttura interna di una RNN standard con un singolo hidden layer.\relax }}{16}{figure.caption.10}
+\contentsline {figure}{\numberline {9}{\ignorespaces Struttura interna di una lstm che evidenzia i quattro strati interni di un layer. Immagine da \cite {LSTM}\relax }}{16}{figure.caption.11}
+\contentsline {figure}{\numberline {10}{\ignorespaces Confronto sull'utilizzo dell'input in diverse reti neurali.\relax }}{18}{figure.caption.12}
+\contentsline {figure}{\numberline {11}{\ignorespaces Struttura generica di una BRNN, svolta lungo tre time steps.\relax }}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {12}{\ignorespaces Struttura di un generico AutoEncoder, da \cite {keras_blog}\relax }}{20}{figure.caption.14}
+\contentsline {figure}{\numberline {13}{\ignorespaces Modello di un VAE, da \cite {VAE_tut}\relax }}{23}{figure.caption.15}
+\contentsline {figure}{\numberline {14}{\ignorespaces Un VAE per intero, a sinistra senza il "reparametrization trick", a destra con. In rosso le operazioni non differenziabili, in blu le loss. Queste due varianti differiscono per il fatto che la retropropagazione si pu\IeC {\`o} applicare solo sulla rete a destra.\relax }}{25}{figure.caption.16}
+\contentsline {figure}{\numberline {15}{\ignorespaces Un semplice esempio di problema diretto: sono evidenziati 1000 punti corrispondenti ai dati (i cerchi) generati dalla mappatura $x = t + 0.3 \qopname \relax o{sin}(2 \pi t) + \epsilon $ dove $\epsilon $ \IeC {\`e} una variabile casuale. La curva rappresenta il risultato dell'addestramento di un MLP con cinque unit\IeC {\`a} e somma di quadrati come funzione d'errore. La rete approssima la media condizionale del target, che d\IeC {\`a} una buona rappresentazione del generatore dei dati.\relax }}{26}{figure.caption.17}
+\contentsline {figure}{\numberline {16}{\ignorespaces Quest'immagine mostra esattamente lo stesso dataset della figura \ref {fig:1.20}, invertendo input e variabili target. La curva mostra nuovamente il risultato dell'addestramento di una MLP con funzione \textit {sum-of-squares}. Stavolta la rete ottiene un pessimo risultato, continuando a tentare di rappresentare la media condizionale.\relax }}{27}{figure.caption.18}
+\contentsline {figure}{\numberline {17}{\ignorespaces Rappresentazione di una MDN. L'output della rete neurale determina i parametri di una mistura. Di conseguenza, il modello rappresenta la funzione di densit\IeC {\`a} di probabilit\IeC {\`a} condizionale delle variabili target condizionate all'input $\boldsymbol {x}$ della rete. Immagine da \cite {MDN}\relax }}{29}{figure.caption.19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {18}{\ignorespaces Uno sketch e la lista di tratti corrispondenti, in formato \textit {stroke-5}, i colori corrispondono all'ordine della sequenza.\relax }}{32}{figure.caption.21}
-\contentsline {figure}{\numberline {19}{\ignorespaces Sketch-rnn\relax }}{33}{figure.caption.22}
-\contentsline {figure}{\numberline {20}{\ignorespaces Compromesso fra $L_R$ e $L_{KL}$, su due modelli addestrati su dataset con singola classe(sinistra). Il grafo della \textit {Validation Loss} per modelli addestrati sulla classe Yoga, al variare del peso $w_{KL}$, da \cite {sketchrnn}\relax }}{39}{figure.caption.23}
+\contentsline {figure}{\numberline {18}{\ignorespaces Uno sketch e la lista di tratti corrispondenti, in formato \textit {stroke-5}, i colori corrispondono all'ordine della sequenza.\relax }}{34}{figure.caption.21}
+\contentsline {figure}{\numberline {19}{\ignorespaces Sketch-rnn\relax }}{35}{figure.caption.22}
+\contentsline {figure}{\numberline {20}{\ignorespaces Compromesso fra $L_R$ e $L_{KL}$, su due modelli addestrati su dataset con singola classe(sinistra). Il grafo della \textit {Validation Loss} per modelli addestrati sulla classe Yoga, al variare del peso $w_{KL}$, da \cite {sketchrnn}\relax }}{41}{figure.caption.23}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {21}{\ignorespaces La prima immagine \IeC {\`e} estratta dal dataset, le altre sono immagini originali generate dal modello standard\relax }}{43}{figure.caption.25}
-\contentsline {figure}{\numberline {22}{\ignorespaces Immagini generate dal modello autoregressivo al variare del parametro di temperatura\relax }}{46}{figure.caption.26}
+\contentsline {figure}{\numberline {21}{\ignorespaces Le immagini nei riquadri sono estratte dal dataset, le altre sono immagini originali generate dal modello standard\relax }}{45}{figure.caption.25}
+\contentsline {figure}{\numberline {22}{\ignorespaces Le reti condizionali tentano di ricostruire un input sconosciuto secondo la propria interpretazione.\relax }}{46}{figure.caption.26}
+\contentsline {figure}{\numberline {23}{\ignorespaces Ricostruzioni condizionali al variare del parametro di temperatura da 0.1 a 1.\relax }}{47}{figure.caption.27}
+\contentsline {figure}{\numberline {24}{\ignorespaces Ricostruzioni condizionali al variare del parametro di temperatura, passando alla rete input inattesi. Immagine da \cite {sketchrnn}\relax }}{48}{figure.caption.28}
+\contentsline {figure}{\numberline {25}{\ignorespaces Interpolazioni nello spazio di latenza delle due reti condizionali.\relax }}{49}{figure.caption.29}
+\contentsline {figure}{\numberline {26}{\ignorespaces Interpolazione fra due elementi sconosciuti.\relax }}{50}{figure.caption.30}
+\contentsline {figure}{\numberline {27}{\ignorespaces Interpolazioni di reti addestrate su medesimi dataset con un peso diverso per la divergenza KL.\relax }}{51}{figure.caption.31}
+\contentsline {figure}{\numberline {28}{\ignorespaces Aritmetica fra vettori di latenza, visualizzata attraverso le rispettive decodifiche.\relax }}{51}{figure.caption.32}
+\contentsline {figure}{\numberline {29}{\ignorespaces Immagini generate dal modello autoregressivo al variare del parametro di temperatura\relax }}{52}{figure.caption.33}
+\contentsline {figure}{\numberline {30}{\ignorespaces Completamento di sketch parziali passati alla rete composta dal solo decoder.\relax }}{53}{figure.caption.34}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {31}{\ignorespaces Immagine tratta da \href {http://frauzufall.de/en/2017/google-quick-draw/}{\textit {Letter collages}}.\relax }}{56}{figure.caption.35}
 \addvspace {10\p@ }

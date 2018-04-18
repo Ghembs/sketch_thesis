@@ -1,7 +1,7 @@
 \myChapter{Esperimenti}
 \section{Introduzione} % (fold)
 \label{sec:introduzione}
-In questo elaborato si è scelto di riprodurre ed analizzare i risultati presentati da Ha e Eck attraverso tre esperimenti: nel primo è stata scelta la configurazione standard del modello, con un VAE completo e layer LSTM sia nell'encoder che nel decoder, la rete è stata addestrata su due dataset: \textit{cat.npz} (gatti) e \textit{flying\_saucer.npz} (dischi volanti). Nel secondo è stata scelta la configurazione con il solo decoder, utilizzato come modello autoregressivo non condizionato ad una variabile latente (con i pesi inizializzati a zero), in questo caso il layer utilizzato è HyperLSTM\footnote{Questo layer non è stato approfondito nell'introduzione di questo elaborato, si rimanda a \cite{hyperlstm} per ulteriori informazioni.}, che eccelle nella generazione di sequenze, il dataset è stato addestrato sul solo dataset \textit{owl.npz} (gufi), infine è stato addestrato un modello con \textit{Layer Normalization} nell'encoder e HyperLSTM nel decoder\footnote{Soluzione suggerita in \url{https://github.com/tensorflow/magenta/tree/master/magenta/models/sketch_rnn}}, per poter gestire un ampio training set composto da tre categorie: \textit{elephant} (elefanti), \textit{hat} (cappelli) e \textit{snake} serpenti\footnote{In omaggio a \cite{petitprince}}. Di seguito verranno illustrate e confrontate le reti neurali prodotte da queste configurazioni, inoltre verranno mostrate alcune immagini generate tramite diversi approcci che mostreranno la capacità del modello di concettualizzare le proprietà di un disegno.
+In questo elaborato si è scelto di riprodurre ed analizzare i risultati presentati da Ha e Eck attraverso tre esperimenti: nel primo è stata scelta la configurazione standard del modello, con un VAE completo e layer LSTM sia nell'encoder che nel decoder, la rete è stata addestrata su due dataset: \textit{cat.npz} (gatti) e \textit{flying\_saucer.npz} (dischi volanti). Nel secondo è stata scelta la configurazione con il solo decoder, utilizzato come modello autoregressivo non condizionato rispetto ad una variabile latente (con i pesi inizializzati a zero), in questo caso il layer utilizzato è HyperLSTM\footnote{Questo layer non è stato approfondito nell'introduzione di questo elaborato, si rimanda a \cite{hyperlstm} per ulteriori informazioni.}, che eccelle nella generazione di sequenze, il decoder è stato addestrato sul solo dataset \textit{owl.npz} (gufi). Per ultimo è stato assemblato un modello con \textit{Layer Normalization} nell'encoder e HyperLSTM nel decoder\footnote{Soluzione suggerita in \url{https://github.com/tensorflow/magenta/tree/master/magenta/models/sketch_rnn}} per poter gestire un ampio training set composto da tre categorie: \textit{elephant} (elefanti), \textit{hat} (cappelli) e \textit{snake} serpenti\footnote{In omaggio a \cite{petitprince}}. Gli esperimenti sono stati effettuati utilizzando il codice del repository originale \cite{sketchrepo}, in \ref{sec:prototipo} è riportato il prototipo di un'implementazione in Keras sviluppata nell'ambito di questo elaborato\footnote{Non sono riportati esperimenti effettuati per problemi di convergenza nella procedura di training.}. Di seguito verranno illustrate e confrontate le reti neurali prodotte da queste configurazioni, inoltre verranno mostrate alcune immagini generate tramite diversi approcci che mostreranno la capacità del modello di concettualizzare le proprietà di un disegno.
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[language = Python, frame = single, caption = {Iperparametri standard di sketch-rnn}, label = {iperparametri}, captionpos = b, basicstyle=\scriptsize]
@@ -76,44 +76,147 @@ Di seguito i test effettuati saranno illustrati in dettaglio e commentati.
 In questa sezione vengono valutati i disegni ricostruiti \textit{S'}, dato in input un disegno \textit{S}, da parte dei due VAE.
 \begin{figure}[ht]
 	\centering
-	\begin{tabular}{cccc}
-		\fbox{\includegraphics[width=0.2\linewidth]{img/cat_enc.png}} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_0.png} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_2.png} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_3.png} \\
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_4.png} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_5.png} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_6.png} &
-		\includegraphics[width=0.2\linewidth]{img/cat_dec_7.png}
+	\begin{tabular}{ccccc}
+		\fbox{\includegraphics[width=0.15\linewidth]{img/cat_enc.png}} &
+		\includegraphics[width=0.15\linewidth]{img/cat_dec_0.png} &
+		\includegraphics[width=0.15\linewidth]{img/cat_dec_1.png} &
+		\includegraphics[width=0.15\linewidth]{img/cat_dec_2.png} &
+		\includegraphics[width=0.15\linewidth]{img/cat_dec_3.png} \\
+		\fbox{\includegraphics[width=0.15\linewidth]{img/saucer_enc.png}} &
+		\includegraphics[width=0.15\linewidth]{img/saucer_dec_0.png} &
+		\includegraphics[width=0.15\linewidth]{img/saucer_dec_1.png} &
+		\includegraphics[width=0.15\linewidth]{img/saucer_dec_2.png} &
+		\includegraphics[width=0.15\linewidth]{img/saucer_dec_3.png} \\
+		\fbox{\includegraphics[width=0.15\linewidth]{img/elephant_enc.png}} &
+		\includegraphics[width=0.15\linewidth]{img/elephant_dec_0.png} &
+		\includegraphics[width=0.15\linewidth]{img/elephant_dec_1.png} &
+		\includegraphics[width=0.15\linewidth]{img/elephant_dec_2.png} &
+		\includegraphics[width=0.15\linewidth]{img/elephant_dec_3.png}
 	\end{tabular}
-	\caption{La prima immagine è estratta dal dataset, le altre sono immagini originali generate dal modello standard}
+	\caption{Le immagini nei riquadri sono estratte dal dataset, le altre sono immagini originali generate dal modello standard}
 	\label{fig:1.17}
 \end{figure}
-Questo primo esempio \ref{fig:1.17} illustra un risultato semplice, quanto interessante: la figura nel riquadro è stata passata come input alla prima rete neurale, le successive sono immagini generate dalla rete attraverso un parametro di temperatura di 0.8, condizionate allo stesso input. L'ampiezza del parametro di temperatura permette alla rete una maggiore libertà \ref{sec:modello}, aumentando la varianza sull'offset dei punti\footnote{Al prezzo di immagini maggiormente confuse.}, il che mostra le potenzialità del modello nel creare sketch simili ma unici ed originali, a partire da un singolo input.
 
-Il modello è anche in grado di reinterpretare un disegno proveniente da una classe qualunque, secondo le caratteristiche su cui è stato addestrato. Se infatti alla rete viene chiesto di riprodurre dati da una classe che non conosce, questa produrrà sketch che combineranno proprietà dovute al condizionamento con le proprietà dovute all'apprendimento, talvolta aggiungendo dettagli, talvolta distorcendo le strutture date.
+Questo primo esempio \ref{fig:1.17} illustra un risultato semplice, quanto interessante: la figura nel riquadro è stata passata come input alla prima rete neurale, le successive sono immagini generate dalla rete attraverso un parametro di temperatura di 0.8, condizionate allo stesso input. L'ampiezza del parametro di temperatura permette alla rete una maggiore libertà \ref{sec:modello}, aumentando la varianza sull'offset dei punti\footnote{Al prezzo di immagini maggiormente confuse.}, il che mostra le potenzialità del modello nel creare sketch simili ma unici ed originali, a partire da un singolo input. Un dettaglio di rilievo nella seconda riga è che l'utente ha voluto inserire nel suo disegno una piccola figura umana (in basso a destra) che la rete non è addestrata a riconoscere. Questo genera, nella sezione corrispondente delle figure ricostruite, delle perturbazioni che rappresentano il tentativo della rete di interpretare la forma sconosciuta.
+\begin{figure}[ht]
+	\centering
+	\begin{tabular}{ccccc}
+		\fbox{\includegraphics[width=0.15\linewidth]{img/cookie_enc.png}} &
+		\includegraphics[width=0.15\linewidth]{img/cookie_dec_0.png} &
+		\includegraphics[width=0.15\linewidth]{img/cookie_dec_1.png} &
+		\includegraphics[width=0.15\linewidth]{img/cookie_dec_2.png} &
+		\includegraphics[width=0.15\linewidth]{img/cookie_dec_3.png} \\
+		\fbox{\includegraphics[width=0.15\linewidth]{img/face_enc.png}} &
+		\includegraphics[width=0.15\linewidth]{img/face_dec_0.png} &
+		\includegraphics[width=0.15\linewidth]{img/face_dec_1.png} &
+		\includegraphics[width=0.15\linewidth]{img/face_dec_2.png} &
+		\includegraphics[width=0.15\linewidth]{img/face_dec_3.png} \\
+		\fbox{\includegraphics[width=0.15\linewidth]{img/hat_enc.png}} &
+		\includegraphics[width=0.15\linewidth]{img/hat_dec_0.png} &
+		\includegraphics[width=0.15\linewidth]{img/hat_dec_1.png} &
+		\includegraphics[width=0.15\linewidth]{img/hat_dec_2.png} &
+		\includegraphics[width=0.15\linewidth]{img/hat_dec_3.png}
+	\end{tabular}
+	\caption{Le reti condizionali tentano di ricostruire un input sconosciuto secondo la propria interpretazione.}
+	\label{fig:1.22}
+\end{figure}
+
+Il modello è anche in grado di reinterpretare completamente un disegno proveniente da una classe qualunque, secondo le caratteristiche su cui è stato addestrato. Se infatti alla rete viene chiesto di riprodurre dati da una categoria che non conosce, questa produrrà sketch che combineranno proprietà dovute al condizionamento con le proprietà dovute all'apprendimento, talvolta aggiungendo dettagli, talvolta distorcendo le strutture date. In fig:\ref{fig:1.22} nella prima riga è stato chiesto di riprodurre un biscotto che tipicamente viene interpretato come disco volante e talvolta come gatto. Nella seconda è stata data in input una faccia. Come si può notare la rete mantiene alcune caratteristiche (forma allungata, orientamento) mentre ne distorce altre secondo le proprietà note (ad esempio capelli come baffi od orecchie). Il terzo input sarebbe un cappello, la cui forma non dà difficoltà alla rete per la somiglianza con un disco volante, la particolarità sta nella ricostruzione della fascetta.
+
 \subsection{Variazioni di temperatura} % (fold)
 \label{sub:variazioni_di_temperatura}
+\begin{figure}[ht]
+	\centering
+	\begin{tabular}{l}
+		\includegraphics[width=0.15\linewidth]{img/cat_enc_temp.png} \\
+		\includegraphics[width=\linewidth]{img/cat_dec_temp.png} \\
+		\includegraphics[width=0.15\linewidth]{img/saucer_enc_temp.png} \\
+		\includegraphics[width=\linewidth]{img/saucer_dec_temp.png} \\
+		\includegraphics[width=0.15\linewidth]{img/hat_enc_temp.png} \\
+		\includegraphics[width=\linewidth]{img/hat_dec_temp.png} \\
+		\includegraphics[width=0.15\linewidth]{img/snake_enc_temp.png} \\
+		\includegraphics[width=\linewidth]{img/snake_dec_temp.png}
+	\end{tabular}
+	\caption{Ricostruzioni condizionali al variare del parametro di temperatura da 0.1 a 1.}
+	\label{fig:1.24}
+\end{figure}
+
 Come detto in precedenza \ref{sec:modello}, nell'operazione di campionamento di un disegno viene introdotto un parametro $\tau$ il cui scopo è contenere la variabilità dell'offset e dei parametri categorici. La variazione di questo parametro, generando schizzi condizionati dallo stesso disegno di partenza, porta ad output che vanno da una riproduzione più fedele dell'input ad una più fantasiosa.
 
+\begin{figure}[ht]
+	\centering
+	\begin{tabular}{c}
+		\includegraphics[width=\linewidth]{img/cat_temp.png} \\
+		\includegraphics[width=\linewidth]{img/pig_temp.png}
+	\end{tabular}
+	\caption{Ricostruzioni condizionali al variare del parametro di temperatura, passando alla rete input inattesi. Immagine da \cite{sketchrnn}}
+	\label{fig:1.25}
+\end{figure}
 Anche in questo caso è interessante osservare come ciò si rifletta sui tentativi della rete di interpretare oggetti sconosciuti secondo le proprie categorie. Di fatto in questa situazione il parametro di temperatura diventa il peso assegnato alle nuove caratteristiche osservate, con un parametro più basso che obbliga il VAE ad attenersi il più possibile alle proprietà dell'input.
+\newpage
 % subsection variazioni_di_temperatura (end)
 \subsection{Interpolazioni} % (fold)
 \label{sub:interpolazioni}
-Interpolando fra vettori latenti è possibile visualizzare come un'immagine muta in un'altra, osservando la ricostruzione dell'interpolazione. Considerato che sullo spazio di latenza viene forzata una Gaussiana come distribuzione a priori, è lecito aspettarsi una mutazione più fluida e priva di "salti" nello spazio fra due vettori di latenza diversi. Un modello addestrato col parametro del peso della divergenza KL ($w_KL$ \ref{sub:training}) posto ad un valore alto dovrebbe produrre immagini più aderenti ai dati, dato un vettore di latenza $\boldsymbol{z}$ interpolato sfericamente, rispetto ad una rete addestrata con un valore di $w_KL$ più basso.
+\begin{figure}[ht]
+	\centering
+	\begin{tabular}{lr}
+		\includegraphics[width=0.15\linewidth]{img/cat_enc_inter.png} &
+		\includegraphics[width=0.15\linewidth]{img/saucer_enc_inter.png} \\
+		\multicolumn{2}{c}{\includegraphics[width=\linewidth]{img/cat_saucer_inter.png}} \\
+		\includegraphics[width=0.15\linewidth]{img/cat_enc_inter_1.png} &
+		\includegraphics[width=0.15\linewidth]{img/saucer_enc_inter_1.png} \\
+		\multicolumn{2}{c}{\includegraphics[width=\linewidth]{img/cat_saucer_inter_1.png}} \\
+		\includegraphics[width=0.15\linewidth]{img/snake_enc_inter_1.png} &
+		\includegraphics[width=0.15\linewidth]{img/hat_enc_inter_1.png} \\
+		\multicolumn{2}{c}{\includegraphics[width=\linewidth]{img/snake_hat_inter_1.png}} \\
+		\includegraphics[width=0.15\linewidth]{img/snake_enc_inter.png} &
+		\includegraphics[width=0.15\linewidth]{img/hat_enc_inter.png} \\
+		\multicolumn{2}{c}{\includegraphics[width=\linewidth]{img/snake_hat_inter.png}}
+	\end{tabular}
+	\caption{Interpolazioni nello spazio di latenza delle due reti condizionali.}
+	\label{fig:1.26}
+\end{figure}
 
-Per dimostrare questo risultato è sufficiente addestrare diversi modelli sugli stessi dataset, utilizzando valori diversi di $w_KL$. Si riporta l'esperimento svolto da Ha e Eck sui dataset \textit{cat} e \textit{pigs}.
+Interpolando fra vettori latenti è possibile visualizzare come un'immagine muta in un'altra, osservando la ricostruzione dell'interpolazione. Considerato che sullo spazio di latenza viene forzata una Gaussiana come distribuzione a priori, è lecito aspettarsi una mutazione fluida e priva di "salti" nello spazio fra due vettori di latenza diversi. In fig. \ref{fig:1.26} sono mostrati alcuni esempi, si noti in particolare nella seconda trasformazione come le orecchie del gatto si fondano fino a diventare la calotta del disco volante, nella terza come la sinuosità del serpente diventi progressivamente una curva omogenea, fino a comporre il bordo del cappello e infine nell'ultima come il rettile gonfi\footnote{Come se avesse ingoiato un grosso elefante \cite{petitprince}.}.
+
+\begin{figure}[ht]
+	\centering
+	\begin{tabular}{lr}
+		\includegraphics[width=0.15\linewidth]{img/owl_enc_inter.png} &
+		\includegraphics[width=0.15\linewidth]{img/cookie_enc_inter.png} \\
+		\multicolumn{2}{c}{\includegraphics[width=\linewidth]{img/cookie_owl_inter.png}}
+	\end{tabular}
+	\caption{Interpolazione fra due elementi sconosciuti.}
+	\label{fig:1.29}
+\end{figure}
+
+Si riporta anche un esperimento di interpolazione fra oggetti inattesi, ottenuto passando un gufo e un biscotto alla rete addestrata su gatti e dischi volanti \ref{fig:1.29}. La codifica mostra un comportamento che potrebbe essere considerato una sorta di "pensiero laterale", in quanto il modello sceglie di interpretare controintuitivamente l'animale come disco volante e il biscotto come gatto.
+
+Un modello addestrato col parametro del peso della divergenza KL ($w_{KL}$ \ref{sub:training}) posto ad un valore alto dovrebbe produrre immagini più aderenti ai dati, dato un vettore di latenza $\boldsymbol{z}$ interpolato sfericamente, rispetto ad una rete addestrata con un valore di $w_{KL}$ più basso. Per dimostrare questo risultato è sufficiente addestrare diversi modelli sugli stessi dataset, utilizzando valori diversi di $w_{KL}$. Si riporta l'esperimento svolto da Ha e Eck sui dataset \textit{cat} e \textit{pigs} \ref{fig:1.27}.
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/weight_inter.png}
+	\caption{Interpolazioni di reti addestrate su medesimi dataset con un peso diverso per la divergenza KL.}
+	\label{fig:1.27}
+\end{figure}
 % subsection interpolazioni (end)
 \subsection{Analogie fra disegni} % (fold)
 \label{sub:analogie_fra_disegni}
-L'esempio di interpolazione in fig. suggerisce che il vettore di latenza $\boldsymbol{z}$ codifichi caratteristiche concettuali di un disegno. Modelli addestrati con un minor peso alla divergenza KL, sono in grado di incrementare i dettagli di uno sketch con caratteristiche prese da un altro, ad esempio aggiungendo un corpo ad una testa di gatto, acquisendolo dal disegno di un maiale. Questo è possibile perché lo spazio di latenza è abbastanza "rilassato" da permettere che ogni vettore interpolato fra due vettori di latenza risulti in un disegno coerente, ciò permette di eseguire operazioni aritmetiche fra vettori ottenuti da diversi disegni ed esplorare come il modello organizzi lo spazio latente per rappresentare i concetti nella moltitudine degli sketch generati.
+L'esempio di interpolazione in fig. \ref{fig:1.27} suggerisce che il vettore di latenza $\boldsymbol{z}$ codifichi caratteristiche concettuali di un disegno. Modelli addestrati con un minor peso alla divergenza KL, sono in grado di incrementare i dettagli di uno sketch con caratteristiche prese da un altro, ad esempio aggiungendo un corpo ad una testa di gatto, acquisendolo dal disegno di un maiale. Questo è possibile perché lo spazio di latenza è abbastanza "rilassato" da permettere che ogni vettore interpolato fra due vettori di latenza risulti in un disegno coerente, ciò permette di eseguire operazioni aritmetiche fra vettori ottenuti da diversi disegni ed esplorare come il modello organizzi lo spazio latente per rappresentare i concetti nella moltitudine degli sketch generati.
 
-Nello specifico della figura: è stato sottratto il vettore latente codificante la testa di un maiale da quello che codifica un maiale intero, ciò ha portato ad un vettore contenente le caratteristiche di un corpo. Aggiungendo questa differenza al vettore che rappresenta la testa di un gatto è stato ottenuto un gatto completo. Allo stesso modo è stato rimosso il corpo di un maiale ottenendo prima la codifica tramite gatti.
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/arithmetic.png}
+	\caption{Aritmetica fra vettori di latenza, visualizzata attraverso le rispettive decodifiche.}
+	\label{fig:1.30}
+\end{figure}
+
+Nello specifico di fig. \ref{fig:1.30} è stato sottratto il vettore latente codificante la testa di un maiale da quello che codifica un maiale intero, ciò ha portato ad un vettore contenente le caratteristiche di un corpo. Aggiungendo questa differenza al vettore che rappresenta la testa di un gatto è stato ottenuto un gatto completo. Allo stesso modo è stato rimosso il corpo di un maiale ottenendo prima la codifica tramite gatti.
 % subsection analogie_fra_disegni (end)
 % section generazione_condizionale (end)
+\newpage
 \section{Generazione non condizionale} % (fold)
 \label{sec:generazione_non_condizionale}
-Come caso particolare, è possibile addestrare il modello per generare disegni non condizionati ad un input, è il caso della terza rete che è stata assemblata per gli esperimenti di questo elaborato. Rimuovendo l'encoder si ottiene un modello autoregressivo privo di variabile latente, di conseguenza gli stati iniziali e delle celle vengono inizializzati a zero. Gli input $x_i$ della RNN ad ogni time step sono solo $s_{i-1}$ o $S{i-1}'$ dato che non c'è nessun vettore da concatenare. Con questa struttura è stata sperimentata la generazione al variare del parametro di temperatura.
 \begin{figure}[ht]
 	\centering
 	\begin{tabular}{c}
@@ -121,22 +224,25 @@ Come caso particolare, è possibile addestrare il modello per generare disegni n
 		\includegraphics[width=\linewidth]{img/owl_temp_04.png} \\
 		\includegraphics[width=\linewidth]{img/owl_temp_05.png} \\
 		\includegraphics[width=\linewidth]{img/owl_temp_06.png} \\
-		\includegraphics[width=\linewidth]{img/owl_temp_08.png} \\
-		\includegraphics[width=\linewidth]{img/owl_temp_1.png}
+		\includegraphics[width=\linewidth]{img/owl_temp_08.png}
 	\end{tabular}
 	\caption{Immagini generate dal modello autoregressivo al variare del parametro di temperatura}
+	\label{fig:1.28}
 \end{figure}
+
+Come caso particolare, è possibile addestrare il modello per generare disegni non condizionati rispetto ad un input: è il caso della terza rete che è stata assemblata per gli esperimenti di questo elaborato. Rimuovendo l'encoder si ottiene un modello autoregressivo privo di variabile latente, di conseguenza gli stati iniziali e quelli delle celle vengono inizializzati a zero. Gli input $x_i$ della RNN ad ogni time step sono solo $S_{i-1}$ o $S_{i-1}'$ dato che non c'è nessun vettore da concatenare. Con questa struttura è stata sperimentata la generazione al variare del parametro di temperatura.
 
 Si può notare come la mancanza di uno spazio di latenza a cui condizionare l'output renda preminente l'impatto della variazione della temperatura sulla variabilità dei disegni generati: al crescere del parametro la rete passa da disegni estremamente fedeli ed accurati a disegni molto più vaghi ed imprecisi.
 
 \subsection{Predire il finale di un disegno incompleto} % (fold)
 \label{sub:predire_il_finale_di_un_disegno_incompleto}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{img/completion.png}
+	\caption{Completamento di sketch parziali passati alla rete composta dal solo decoder.}
+	\label{fig:1.31}
+\end{figure}
+
 Un'interessante applicazione pratica della variante con il solo decoder è che rende possibile utilizzare \texttt{sketch-rnn} per offrire spunti artistici, completando sketch in input. Il layer ricorrente della rete viene utilizzato in un primo momento per generare una codifica della porzione di disegno ricevuta in input, ottenendo un hidden state condizionato ad esso. Successivamente lo stato generato viene utilizzato per inizializzare nuovamente la rete, che proseguirà l'esecuzione fino in fondo, completando la sequenza a partire da quella data.
 % subsection predire_il_finale_di_un_disegno_incompleto (end)
 % section generazione_non_condizionale (end)
-
-\begin{minipage}{\linewidth}
-\begin{lstlisting}[language = Python, frame = single, caption = {}, captionpos = b]
-
-\end{lstlisting}
-\end{minipage}

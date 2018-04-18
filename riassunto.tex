@@ -1,0 +1,37 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[colorlinks=true, urlcolor = red]{hyperref}
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\author{Giuliano Gambacorta}
+\title{Riassunto del lavoro di Tesi}
+\date{}
+\begin{document}
+\maketitle
+\begin{center}
+	\textbf{Titolo italiano:} 
+
+	Riproduzione ed analisi di un modello generativo per la creazione di immagini vettoriali.
+	
+	\vspace{2mm}
+	
+	\textbf{Titolo inglese:}
+
+	Reproduction and analysis of a generative model for vector images creation.
+	
+	\vspace{2mm}
+	
+	\textbf{Relatore:} Paolo Frasconi.
+\end{center}
+
+\vspace{5mm}
+
+\textit{Sketch-rnn} è un modello basato sulle reti neurali ricorrenti in grado di generare disegni di oggetti comuni, in grafica vettoriale, sia condizionatamente ad un input che non. Apprende da un insieme di dati di immagini create da esseri umani tramite un gioco online (\textit{Quick Draw!}) che ad oggi forma la più vasta collezione di disegni al mondo. 
+
+All'interno di questo elaborato vengono prima di tutto presentate, in termini di complessità crescente, le basi teoriche che vanno a definirne la struttura, successivamente viene proposta la riproduzione di alcuni esperimenti per mettere alla prova i risultati del modello e studiarne le caratteristiche. Vengono poi formulate alcune considerazioni riguardo le potenzialità della ricerca in questo ambito ed infine riportato il prototipo di un'implementazione in \textit{Keras}, insieme al codice per effettuare i test.
+\end{document}

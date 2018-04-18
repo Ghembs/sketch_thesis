@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  6 APR 2018 04:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.2.27)  6 APR 2018 23:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1447,43 +1447,47 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (./thesis.aux
 (./titlePage.aux) (./Chapters/introduzione.aux) (./Chapters/strumenti.aux)
-(./Chapters/esperimenti.aux) (./Chapters/conclusioni.aux)
-(./Chapters/bibliografia.aux))
+(./Chapters/esperimenti.aux
+
+LaTeX Warning: Label `fig:1.22' multiply defined.
+
+) (./Chapters/conclusioni.aux) (./Chapters/bibliografia.aux)
+(./Chapters/appendici.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 96.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 97.
 
 (c:/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Try loading font information for T1+pplj on input line 96.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Try loading font information for T1+pplj on input line 97.
 
 (c:/texlive/2017/texmf-dist/tex/latex/psnfss/t1pplj.fd
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
 )
-LaTeX Info: Redefining \it@ocap on input line 96.
-LaTeX Info: Redefining \it@ccap on input line 96.
+LaTeX Info: Redefining \it@ocap on input line 97.
+LaTeX Info: Redefining \it@ccap on input line 97.
 
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \dots on input line 96.
+LaTeX Info: Redefining \dots on input line 97.
 \c@lstlisting=\count341
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -1529,8 +1533,8 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box68
-Package backref Info: ** backref set up for natbib ** on input line 96.
-Package hyperref Info: Link coloring OFF on input line 96.
+Package backref Info: ** backref set up for natbib ** on input line 97.
+Package hyperref Info: Link coloring OFF on input line 97.
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1540,15 +1544,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count348
 )
-LaTeX Info: Redefining \ref on input line 96.
-LaTeX Info: Redefining \pageref on input line 96.
-LaTeX Info: Redefining \nameref on input line 96.
+LaTeX Info: Redefining \ref on input line 97.
+LaTeX Info: Redefining \pageref on input line 97.
+LaTeX Info: Redefining \nameref on input line 97.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write5
 \openout5 = `thesis.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 96.
+LaTeX Info: Redefining \microtypecontext on input line 97.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1598,14 +1602,14 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c__siunitx_mathsf_int=\count349
-LaTeX Font Info:    Try loading font information for U+zeur on input line 96.
+LaTeX Font Info:    Try loading font information for U+zeur on input line 97.
 (c:/texlive/2017/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
 )
 (c:/texlive/2017/texmf-dist/tex/latex/microtype/mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeus on input line 96.
+LaTeX Font Info:    Try loading font information for U+zeus on input line 97.
 
 (c:/texlive/2017/texmf-dist/tex/latex/eulervm/uzeus.fd
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
@@ -1613,12 +1617,12 @@ File: uzeus.fd 2005/01/11 v4.0 (WaS)
 (c:/texlive/2017/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeuex on input line 96.
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 97.
 
 (c:/texlive/2017/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 96.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 97.
 
 
 (c:/texlive/2017/texmf-dist/tex/latex/psnfss/ot1zplm.fd
@@ -1628,7 +1632,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zplm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 96.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 97.
 
 (c:/texlive/2017/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1638,25 +1642,25 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \c__siunitx_mathtt_int=\count350
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 96.
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 97.
 
 (c:/texlive/2017/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 10.20007pt on input line 96.
+(Font)              scaled to size 10.20007pt on input line 97.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 7.65005pt on input line 96.
+(Font)              scaled to size 7.65005pt on input line 97.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 5.95004pt on input line 96.
+(Font)              scaled to size 5.95004pt on input line 97.
 \openout2 = `titlePage.aux'.
 
  (./titlePage.tex
-<logo/LOGO.pdf, id=151, 996.72375pt x 483.8075pt>
+<logo/LOGO.pdf, id=163, 996.72375pt x 483.8075pt>
 File: logo/LOGO.pdf Graphic file (type pdf)
 <use logo/LOGO.pdf>
 Package pdftex.def Info: logo/LOGO.pdf  used on input line 10.
@@ -1684,27 +1688,27 @@ LaTeX Font Info:    Try loading font information for TS1+pplj on input line 44.
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 )) [2]
 Package tocbasic Info: character protrusion at toc deactivated on input line 11
-2.
+3.
  (./thesis.toc
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-)
-\tf@toc=\write6
-\openout6 = `thesis.toc'.
-
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 113.
+(Font)              scaled to size 9.30756pt on input line 40.
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 5.10004pt on input line 113.
+(Font)              scaled to size 5.10004pt on input line 40.
 
 [1
 
 
 
-] [2]
+])
+\tf@toc=\write6
+\openout6 = `thesis.toc'.
+
+ [2]
 Package tocbasic Info: character protrusion at lof deactivated on input line 11
-3.
+4.
  (./thesis.lof
 Overfull \hbox (11.33438pt too wide) in paragraph at lines 8--8
  [][] [][]\T1/pplj/m/n/12 (-20) Una sem-pli-ce RNN (Re-cur-rent Neu-ral Net-wor
@@ -1714,14 +1718,14 @@ k).[] []
 [3
 
 
-])
+] [4])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [4] [5
+ [5] [6
 
 
-] [6
+] [7] [8
 
 
 ]
@@ -1747,17 +1751,17 @@ Class scrbook Warning: \float@addtolists detected!
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<img/sketch_rnn_latent.png, id=340, 1311.90125pt x 508.90125pt>
+<img/sketch_rnn_latent.png, id=397, 1311.90125pt x 508.90125pt>
 File: img/sketch_rnn_latent.png Graphic file (type png)
 <use img/sketch_rnn_latent.png>
 Package pdftex.def Info: img/sketch_rnn_latent.png  used on input line 7.
 (pdftex.def)             Requested size: 384.1122pt x 148.99861pt.
- [7
+ [9
 
 
 
  <./img/sketch_rnn_latent.png>]
-<img/artificial_neuron.PNG, id=352, 204.01219pt x 98.61844pt>
+<img/artificial_neuron.PNG, id=409, 204.01219pt x 98.61844pt>
 File: img/artificial_neuron.PNG Graphic file (type png)
 <use img/artificial_neuron.PNG>
 Package pdftex.def Info: img/artificial_neuron.PNG  used on input line 24.
@@ -1765,7 +1769,7 @@ Package pdftex.def Info: img/artificial_neuron.PNG  used on input line 24.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
- [8]
+ [10]
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <12> not available
 (Font)              Font shape `T1/pplj/b/n' tried instead on input line 37.
 Missing character: There is no ; in font nullfont!
@@ -1776,24 +1780,24 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 91.
  (c:/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-<img/RNN.png, id=365, 50.6111pt x 78.56876pt>
+<img/RNN.png, id=422, 50.6111pt x 78.56876pt>
 File: img/RNN.png Graphic file (type png)
 <use img/RNN.png>
 Package pdftex.def Info: img/RNN.png  used on input line 100.
 (pdftex.def)             Requested size: 50.61096pt x 78.56854pt.
 
-[9 <./img/artificial_neuron.PNG>] [10 <./img/RNN.png>]
-<img/unrolled_rnn.png, id=381, 289.29382pt x 76.0118pt>
+[11 <./img/artificial_neuron.PNG>] [12 <./img/RNN.png>]
+<img/unrolled_rnn.png, id=439, 289.29382pt x 76.0118pt>
 File: img/unrolled_rnn.png Graphic file (type png)
 <use img/unrolled_rnn.png>
 Package pdftex.def Info: img/unrolled_rnn.png  used on input line 114.
 (pdftex.def)             Requested size: 289.29312pt x 76.0116pt.
-<img/input_memory.png, id=383, 144.54pt x 97.13416pt>
+<img/input_memory.png, id=441, 144.54pt x 97.13416pt>
 File: img/input_memory.png Graphic file (type png)
 <use img/input_memory.png>
 Package pdftex.def Info: img/input_memory.png  used on input line 123.
 (pdftex.def)             Requested size: 153.64253pt x 103.25665pt.
-<img/hidden_memory.png, id=384, 144.54pt x 95.99638pt>
+<img/hidden_memory.png, id=442, 144.54pt x 95.99638pt>
 File: img/hidden_memory.png Graphic file (type png)
 <use img/hidden_memory.png>
 Package pdftex.def Info: img/hidden_memory.png  used on input line 124.
@@ -1803,95 +1807,95 @@ Overfull \hbox (14.61766pt too wide) in paragraph at lines 122--127
  [][] 
  []
 
-[11 <./img/unrolled_rnn.png>] [12 <./img/input_memory.png> <./img/hidden_memory
+[13 <./img/unrolled_rnn.png>] [14 <./img/input_memory.png> <./img/hidden_memory
 .png>]
-<img/rnn_seq.jpg, id=400, 362.44087pt x 113.45027pt>
+<img/rnn_seq.jpg, id=457, 362.44087pt x 113.45027pt>
 File: img/rnn_seq.jpg Graphic file (type jpg)
 <use img/rnn_seq.jpg>
 Package pdftex.def Info: img/rnn_seq.jpg  used on input line 137.
 (pdftex.def)             Requested size: 362.43997pt x 113.44998pt.
-<img/rnn_struct.png, id=403, 361.67264pt x 135.34494pt>
+<img/rnn_struct.png, id=460, 361.67264pt x 135.34494pt>
 File: img/rnn_struct.png Graphic file (type png)
 <use img/rnn_struct.png>
 Package pdftex.def Info: img/rnn_struct.png  used on input line 154.
 (pdftex.def)             Requested size: 361.67175pt x 135.3446pt.
- [13 <./img/rnn_seq.jpg>]
-<img/lstm_struct.png, id=410, 361.83612pt x 135.95186pt>
+ [15 <./img/rnn_seq.jpg>]
+<img/lstm_struct.png, id=468, 361.83612pt x 135.95186pt>
 File: img/lstm_struct.png Graphic file (type png)
 <use img/lstm_struct.png>
 Package pdftex.def Info: img/lstm_struct.png  used on input line 164.
 (pdftex.def)             Requested size: 361.83524pt x 135.9515pt.
- [14 <./img/rnn_struct.png> <./img/lstm_struct.png>] [15]
-<img/rnn_confront.png, id=436, 1325.95375pt x 578.16pt>
+ [16 <./img/rnn_struct.png> <./img/lstm_struct.png>] [17]
+<img/rnn_confront.png, id=497, 1325.95375pt x 578.16pt>
 File: img/rnn_confront.png Graphic file (type png)
 <use img/rnn_confront.png>
 Package pdftex.def Info: img/rnn_confront.png  used on input line 184.
 (pdftex.def)             Requested size: 384.1122pt x 167.48566pt.
-<img/BRNN.png, id=437, 1428.33624pt x 633.36626pt>
+<img/BRNN.png, id=498, 1428.33624pt x 633.36626pt>
 File: img/BRNN.png Graphic file (type png)
 <use img/BRNN.png>
 Package pdftex.def Info: img/BRNN.png  used on input line 194.
 (pdftex.def)             Requested size: 384.1122pt x 170.325pt.
- [16 <./img/rnn_confront.png>] [17 <./img/BRNN.png>]
-<img/autoencoder_schema.jpg, id=457, 168.63pt x 52.998pt>
+ [18 <./img/rnn_confront.png>] [19 <./img/BRNN.png>]
+<img/autoencoder_schema.jpg, id=517, 168.63pt x 52.998pt>
 File: img/autoencoder_schema.jpg Graphic file (type jpg)
 <use img/autoencoder_schema.jpg>
 Package pdftex.def Info: img/autoencoder_schema.jpg  used on input line 207.
 (pdftex.def)             Requested size: 307.29092pt x 96.5794pt.
- [18 <./img/autoencoder_schema.jpg>] [19]
-<img/vae_model.png, id=473, 475.0548pt x 510.2262pt>
+ [20 <./img/autoencoder_schema.jpg>] [21]
+<img/vae_model.png, id=532, 475.0548pt x 510.2262pt>
 File: img/vae_model.png Graphic file (type png)
 <use img/vae_model.png>
 Package pdftex.def Info: img/vae_model.png  used on input line 253.
 (pdftex.def)             Requested size: 153.64253pt x 165.01964pt.
- [20] [21 <./img/vae_model.png>] [22]
-<img/vae_struct.png, id=499, 749.80125pt x 411.03563pt>
+ [22] [23 <./img/vae_model.png>] [24]
+<img/vae_struct.png, id=559, 749.80125pt x 411.03563pt>
 File: img/vae_struct.png Graphic file (type png)
 <use img/vae_struct.png>
 Package pdftex.def Info: img/vae_struct.png  used on input line 277.
 (pdftex.def)             Requested size: 384.1122pt x 210.57245pt.
- [23 <./img/vae_struct.png>]
-<img/direct.png, id=510, 588.69937pt x 578.16pt>
+ [25 <./img/vae_struct.png>]
+<img/direct.png, id=569, 588.69937pt x 578.16pt>
 File: img/direct.png Graphic file (type png)
 <use img/direct.png>
 Package pdftex.def Info: img/direct.png  used on input line 294.
 (pdftex.def)             Requested size: 153.64253pt x 150.89148pt.
-<img/inverse.png, id=512, 580.41844pt x 566.86781pt>
+<img/inverse.png, id=571, 580.41844pt x 566.86781pt>
 File: img/inverse.png Graphic file (type png)
 <use img/inverse.png>
 Package pdftex.def Info: img/inverse.png  used on input line 302.
 (pdftex.def)             Requested size: 153.64253pt x 150.0549pt.
- [24 <./img/direct.png>] [25 <./img/inverse.png>]
-<img/mdn.png, id=534, 816.80156pt x 455.45157pt>
+ [26 <./img/direct.png>] [27 <./img/inverse.png>]
+<img/mdn.png, id=593, 816.80156pt x 455.45157pt>
 File: img/mdn.png Graphic file (type png)
 <use img/mdn.png>
-Package pdftex.def Info: img/mdn.png  used on input line 327.
+Package pdftex.def Info: img/mdn.png  used on input line 326.
 (pdftex.def)             Requested size: 384.1122pt x 214.1804pt.
- [26] [27 <./img/mdn.png>]) [28]
+ [28] [29 <./img/mdn.png>]) [30]
 \openout2 = `Chapters/strumenti.aux'.
 
  (./Chapters/strumenti.tex
 chapter 2.
-[29
+[31
 
 
 
 
-] [30]
+] [32]
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 4.25003pt on input line 38.
- [31]
-<img/turtle_code.png, id=581, 788.4pt x 197.1pt>
+ [33]
+<img/turtle_code.png, id=643, 788.4pt x 197.1pt>
 File: img/turtle_code.png Graphic file (type png)
 <use img/turtle_code.png>
 Package pdftex.def Info: img/turtle_code.png  used on input line 73.
 (pdftex.def)             Requested size: 384.1122pt x 96.02946pt.
-<img/sketch_model.png, id=582, 1057.60976pt x 350.7739pt>
+<img/sketch_model.png, id=644, 1057.60976pt x 350.7739pt>
 File: img/sketch_model.png Graphic file (type png)
 <use img/sketch_model.png>
 Package pdftex.def Info: img/sketch_model.png  used on input line 81.
 (pdftex.def)             Requested size: 384.1122pt x 127.39714pt.
- [32 <./img/turtle_code.png>] [33 <./img/sketch_model.png>]
+ [34 <./img/turtle_code.png>] [35 <./img/sketch_model.png>]
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 6.46004pt on input line 100.
 
@@ -1905,23 +1909,23 @@ Overfull \hbox (10.1068pt too wide) detected at line 108
 12 R[]$  
  []
 
-[34] (c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+[36] (c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [35] [36]
+) [37] [38]
+[39]
 Overfull \hbox (12.0pt too wide) in paragraph at lines 210--228
 []$[]$ 
  []
 
-[37]
-<img/tradeoff_loss.png, id=687, 1369.36594pt x 425.33907pt>
+<img/tradeoff_loss.png, id=749, 1369.36594pt x 425.33907pt>
 File: img/tradeoff_loss.png Graphic file (type png)
 <use img/tradeoff_loss.png>
-Package pdftex.def Info: img/tradeoff_loss.png  used on input line 242.
+Package pdftex.def Info: img/tradeoff_loss.png  used on input line 243.
 (pdftex.def)             Requested size: 384.1122pt x 119.30829pt.
-) [38] [39 <./img/tradeoff_loss.png>]
+) [40] [41 <./img/tradeoff_loss.png>]
 \openout2 = `Chapters/esperimenti.aux'.
 
- (./Chapters/esperimenti.tex [40
+ (./Chapters/esperimenti.tex [42
 
 
 
@@ -1939,178 +1943,504 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 6--69
 []$[]$
  []
 
-[41]
-<img/cat_enc.png, id=734, 50.0716pt x 56.7478pt>
+[43]
+<img/cat_enc.png, id=798, 106.3975pt x 87.32625pt>
 File: img/cat_enc.png Graphic file (type png)
 <use img/cat_enc.png>
 Package pdftex.def Info: img/cat_enc.png  used on input line 80.
-(pdftex.def)             Requested size: 76.82126pt x 87.06541pt.
-<img/cat_dec_0.png, id=735, 50.53847pt x 54.66577pt>
+(pdftex.def)             Requested size: 57.61447pt x 47.28738pt.
+<img/cat_dec_0.png, id=799, 98.3675pt x 85.31876pt>
 File: img/cat_dec_0.png Graphic file (type png)
 <use img/cat_dec_0.png>
 Package pdftex.def Info: img/cat_dec_0.png  used on input line 81.
-(pdftex.def)             Requested size: 76.82126pt x 83.10614pt.
-<img/cat_dec_2.png, id=736, 52.11778pt x 56.89525pt>
+(pdftex.def)             Requested size: 57.61447pt x 49.97049pt.
+<img/cat_dec_1.png, id=800, 84.315pt x 84.315pt>
+File: img/cat_dec_1.png Graphic file (type png)
+<use img/cat_dec_1.png>
+Package pdftex.def Info: img/cat_dec_1.png  used on input line 82.
+(pdftex.def)             Requested size: 57.61447pt x 57.61517pt.
+<img/cat_dec_2.png, id=801, 81.30376pt x 89.33376pt>
 File: img/cat_dec_2.png Graphic file (type png)
 <use img/cat_dec_2.png>
-Package pdftex.def Info: img/cat_dec_2.png  used on input line 82.
-(pdftex.def)             Requested size: 76.82126pt x 83.86331pt.
-<img/cat_dec_3.png, id=737, 51.31598pt x 55.42125pt>
+Package pdftex.def Info: img/cat_dec_2.png  used on input line 83.
+(pdftex.def)             Requested size: 57.61447pt x 63.30608pt.
+<img/cat_dec_3.png, id=802, 79.29625pt x 90.3375pt>
 File: img/cat_dec_3.png Graphic file (type png)
 <use img/cat_dec_3.png>
-Package pdftex.def Info: img/cat_dec_3.png  used on input line 83.
-(pdftex.def)             Requested size: 76.82126pt x 82.9718pt.
-<img/cat_dec_4.png, id=738, 53.20491pt x 53.47093pt>
-File: img/cat_dec_4.png Graphic file (type png)
-<use img/cat_dec_4.png>
-Package pdftex.def Info: img/cat_dec_4.png  used on input line 84.
-(pdftex.def)             Requested size: 76.82126pt x 77.20691pt.
-<img/cat_dec_5.png, id=739, 51.37677pt x 56.77133pt>
-File: img/cat_dec_5.png Graphic file (type png)
-<use img/cat_dec_5.png>
-Package pdftex.def Info: img/cat_dec_5.png  used on input line 85.
-(pdftex.def)             Requested size: 76.82126pt x 84.88995pt.
-<img/cat_dec_6.png, id=740, 49.38724pt x 56.38377pt>
-File: img/cat_dec_6.png Graphic file (type png)
-<use img/cat_dec_6.png>
-Package pdftex.def Info: img/cat_dec_6.png  used on input line 86.
-(pdftex.def)             Requested size: 76.82126pt x 87.71138pt.
-<img/cat_dec_7.png, id=741, 49.95622pt x 54.86858pt>
-File: img/cat_dec_7.png Graphic file (type png)
-<use img/cat_dec_7.png>
-Package pdftex.def Info: img/cat_dec_7.png  used on input line 87.
-(pdftex.def)             Requested size: 76.82126pt x 84.3798pt.
- [42] [43 <./img/cat_enc.png> <./img/cat_dec_0.png> <./img/cat_dec_2.png> <./im
-g/cat_dec_3.png> <./img/cat_dec_4.png> <./img/cat_dec_5.png> <./img/cat_dec_6.p
-ng> <./img/cat_dec_7.png>] [44]
-<img/owl_temp_02.png, id=794, 619.45714pt x 92.91856pt>
+Package pdftex.def Info: img/cat_dec_3.png  used on input line 84.
+(pdftex.def)             Requested size: 57.61447pt x 65.63841pt.
+<img/saucer_enc.png, id=803, 76.285pt x 77.28876pt>
+File: img/saucer_enc.png Graphic file (type png)
+<use img/saucer_enc.png>
+Package pdftex.def Info: img/saucer_enc.png  used on input line 85.
+(pdftex.def)             Requested size: 57.61447pt x 58.37447pt.
+<img/saucer_dec_0.png, id=804, 80.3pt x 71.26625pt>
+File: img/saucer_dec_0.png Graphic file (type png)
+<use img/saucer_dec_0.png>
+Package pdftex.def Info: img/saucer_dec_0.png  used on input line 86.
+(pdftex.def)             Requested size: 57.61447pt x 51.13438pt.
+<img/saucer_dec_1.png, id=805, 72.27pt x 69.25874pt>
+File: img/saucer_dec_1.png Graphic file (type png)
+<use img/saucer_dec_1.png>
+Package pdftex.def Info: img/saucer_dec_1.png  used on input line 87.
+(pdftex.def)             Requested size: 57.61447pt x 55.21365pt.
+<img/saucer_dec_2.png, id=806, 68.255pt x 70.2625pt>
+File: img/saucer_dec_2.png Graphic file (type png)
+<use img/saucer_dec_2.png>
+Package pdftex.def Info: img/saucer_dec_2.png  used on input line 88.
+(pdftex.def)             Requested size: 57.61447pt x 59.30956pt.
+<img/saucer_dec_3.png, id=807, 68.255pt x 73.27374pt>
+File: img/saucer_dec_3.png Graphic file (type png)
+<use img/saucer_dec_3.png>
+Package pdftex.def Info: img/saucer_dec_3.png  used on input line 89.
+(pdftex.def)             Requested size: 57.61447pt x 61.85138pt.
+<img/elephant_enc.png, id=808, 129.48375pt x 85.31876pt>
+File: img/elephant_enc.png Graphic file (type png)
+<use img/elephant_enc.png>
+Package pdftex.def Info: img/elephant_enc.png  used on input line 90.
+(pdftex.def)             Requested size: 57.61447pt x 37.96346pt.
+<img/elephant_dec_0.png, id=809, 135.50626pt x 110.4125pt>
+File: img/elephant_dec_0.png Graphic file (type png)
+<use img/elephant_dec_0.png>
+Package pdftex.def Info: img/elephant_dec_0.png  used on input line 91.
+(pdftex.def)             Requested size: 57.61447pt x 46.94574pt.
+<img/elephant_dec_1.png, id=810, 123.46124pt x 109.40875pt>
+File: img/elephant_dec_1.png Graphic file (type png)
+<use img/elephant_dec_1.png>
+Package pdftex.def Info: img/elephant_dec_1.png  used on input line 92.
+(pdftex.def)             Requested size: 57.61447pt x 51.05817pt.
+<img/elephant_dec_2.png, id=811, 135.50626pt x 105.39375pt>
+File: img/elephant_dec_2.png Graphic file (type png)
+<use img/elephant_dec_2.png>
+Package pdftex.def Info: img/elephant_dec_2.png  used on input line 93.
+(pdftex.def)             Requested size: 57.61447pt x 44.81184pt.
+<img/elephant_dec_3.png, id=812, 139.52126pt x 107.40125pt>
+File: img/elephant_dec_3.png Graphic file (type png)
+<use img/elephant_dec_3.png>
+Package pdftex.def Info: img/elephant_dec_3.png  used on input line 94.
+(pdftex.def)             Requested size: 57.61447pt x 44.35107pt.
+ [44]
+<img/cookie_enc.png, id=847, 102.3825pt x 84.315pt>
+File: img/cookie_enc.png Graphic file (type png)
+<use img/cookie_enc.png>
+Package pdftex.def Info: img/cookie_enc.png  used on input line 104.
+(pdftex.def)             Requested size: 57.61447pt x 47.44763pt.
+<img/cookie_dec_0.png, id=848, 102.3825pt x 83.31125pt>
+File: img/cookie_dec_0.png Graphic file (type png)
+<use img/cookie_dec_0.png>
+Package pdftex.def Info: img/cookie_dec_0.png  used on input line 105.
+(pdftex.def)             Requested size: 57.61447pt x 46.88278pt.
+<img/cookie_dec_1.png, id=849, 102.3825pt x 84.315pt>
+File: img/cookie_dec_1.png Graphic file (type png)
+<use img/cookie_dec_1.png>
+Package pdftex.def Info: img/cookie_dec_1.png  used on input line 106.
+(pdftex.def)             Requested size: 57.61447pt x 47.44763pt.
+<img/cookie_dec_2.png, id=850, 100.375pt x 84.315pt>
+File: img/cookie_dec_2.png Graphic file (type png)
+<use img/cookie_dec_2.png>
+Package pdftex.def Info: img/cookie_dec_2.png  used on input line 107.
+(pdftex.def)             Requested size: 57.61447pt x 48.39711pt.
+<img/cookie_dec_3.png, id=851, 99.37125pt x 84.315pt>
+File: img/cookie_dec_3.png Graphic file (type png)
+<use img/cookie_dec_3.png>
+Package pdftex.def Info: img/cookie_dec_3.png  used on input line 108.
+(pdftex.def)             Requested size: 57.61447pt x 48.88599pt.
+<img/face_enc.png, id=852, 72.27pt x 80.3pt>
+File: img/face_enc.png Graphic file (type png)
+<use img/face_enc.png>
+Package pdftex.def Info: img/face_enc.png  used on input line 109.
+(pdftex.def)             Requested size: 57.61447pt x 64.01584pt.
+<img/face_dec_0.png, id=853, 83.31125pt x 101.37875pt>
+File: img/face_dec_0.png Graphic file (type png)
+<use img/face_dec_0.png>
+Package pdftex.def Info: img/face_dec_0.png  used on input line 110.
+(pdftex.def)             Requested size: 57.61447pt x 70.11073pt.
+<img/face_dec_1.png, id=854, 82.3075pt x 103.38625pt>
+File: img/face_dec_1.png Graphic file (type png)
+<use img/face_dec_1.png>
+Package pdftex.def Info: img/face_dec_1.png  used on input line 111.
+(pdftex.def)             Requested size: 57.61447pt x 72.37144pt.
+<img/face_dec_2.png, id=855, 87.32625pt x 101.37875pt>
+File: img/face_dec_2.png Graphic file (type png)
+<use img/face_dec_2.png>
+Package pdftex.def Info: img/face_dec_2.png  used on input line 112.
+(pdftex.def)             Requested size: 57.61447pt x 66.88696pt.
+<img/face_dec_3.png, id=856, 94.3525pt x 93.34875pt>
+File: img/face_dec_3.png Graphic file (type png)
+<use img/face_dec_3.png>
+Package pdftex.def Info: img/face_dec_3.png  used on input line 113.
+(pdftex.def)             Requested size: 57.61447pt x 57.00104pt.
+<img/hat_enc.png, id=857, 106.3975pt x 79.29625pt>
+File: img/hat_enc.png Graphic file (type png)
+<use img/hat_enc.png>
+Package pdftex.def Info: img/hat_enc.png  used on input line 114.
+(pdftex.def)             Requested size: 57.61447pt x 42.9391pt.
+<img/hat_dec_0.png, id=858, 108.405pt x 75.28125pt>
+File: img/hat_dec_0.png Graphic file (type png)
+<use img/hat_dec_0.png>
+Package pdftex.def Info: img/hat_dec_0.png  used on input line 115.
+(pdftex.def)             Requested size: 57.61447pt x 40.01028pt.
+<img/hat_dec_1.png, id=859, 101.37875pt x 77.28876pt>
+File: img/hat_dec_1.png Graphic file (type png)
+<use img/hat_dec_1.png>
+Package pdftex.def Info: img/hat_dec_1.png  used on input line 116.
+(pdftex.def)             Requested size: 57.61447pt x 43.92531pt.
+<img/hat_dec_2.png, id=860, 106.3975pt x 74.2775pt>
+File: img/hat_dec_2.png Graphic file (type png)
+<use img/hat_dec_2.png>
+Package pdftex.def Info: img/hat_dec_2.png  used on input line 117.
+(pdftex.def)             Requested size: 57.61447pt x 40.22145pt.
+<img/hat_dec_3.png, id=861, 107.40125pt x 76.285pt>
+File: img/hat_dec_3.png Graphic file (type png)
+<use img/hat_dec_3.png>
+Package pdftex.def Info: img/hat_dec_3.png  used on input line 118.
+(pdftex.def)             Requested size: 57.61447pt x 40.92322pt.
+ [45 <./img/cat_enc.png> <./img/cat_dec_0.png> <./img/cat_dec_1.png> <./img/cat
+_dec_2.png> <./img/cat_dec_3.png> <./img/saucer_enc.png> <./img/saucer_dec_0.pn
+g> <./img/saucer_dec_1.png> <./img/saucer_dec_2.png> <./img/saucer_dec_3.png> <
+./img/elephant_enc.png> <./img/elephant_dec_0.png> <./img/elephant_dec_1.png> <
+./img/elephant_dec_2.png> <./img/elephant_dec_3.png>]
+<img/cat_enc_temp.png, id=880, 74.2775pt x 75.28125pt>
+File: img/cat_enc_temp.png Graphic file (type png)
+<use img/cat_enc_temp.png>
+Package pdftex.def Info: img/cat_enc_temp.png  used on input line 131.
+(pdftex.def)             Requested size: 57.61447pt x 58.39519pt.
+<img/cat_dec_temp.png, id=881, 825.0825pt x 84.315pt>
+File: img/cat_dec_temp.png Graphic file (type png)
+<use img/cat_dec_temp.png>
+Package pdftex.def Info: img/cat_dec_temp.png  used on input line 132.
+(pdftex.def)             Requested size: 384.1122pt x 39.25237pt.
+<img/saucer_enc_temp.png, id=882, 98.3675pt x 78.2925pt>
+File: img/saucer_enc_temp.png Graphic file (type png)
+<use img/saucer_enc_temp.png>
+Package pdftex.def Info: img/saucer_enc_temp.png  used on input line 133.
+(pdftex.def)             Requested size: 57.61447pt x 45.85527pt.
+<img/saucer_dec_temp.png, id=883, 845.1575pt x 91.34125pt>
+File: img/saucer_dec_temp.png Graphic file (type png)
+<use img/saucer_dec_temp.png>
+Package pdftex.def Info: img/saucer_dec_temp.png  used on input line 134.
+(pdftex.def)             Requested size: 384.1122pt x 41.51433pt.
+<img/hat_enc_temp.png, id=884, 109.40875pt x 80.3pt>
+File: img/hat_enc_temp.png Graphic file (type png)
+<use img/hat_enc_temp.png>
+Package pdftex.def Info: img/hat_enc_temp.png  used on input line 135.
+(pdftex.def)             Requested size: 57.61447pt x 42.28555pt.
+<img/hat_dec_temp.png, id=885, 840.13875pt x 78.2925pt>
+File: img/hat_dec_temp.png Graphic file (type png)
+<use img/hat_dec_temp.png>
+Package pdftex.def Info: img/hat_dec_temp.png  used on input line 136.
+(pdftex.def)             Requested size: 384.1122pt x 35.79517pt.
+<img/snake_enc_temp.png, id=886, 73.27374pt x 83.31125pt>
+File: img/snake_enc_temp.png Graphic file (type png)
+<use img/snake_enc_temp.png>
+Package pdftex.def Info: img/snake_enc_temp.png  used on input line 137.
+(pdftex.def)             Requested size: 57.61447pt x 65.50624pt.
+<img/snake_dec_temp.png, id=887, 829.0975pt x 90.3375pt>
+File: img/snake_dec_temp.png Graphic file (type png)
+<use img/snake_dec_temp.png>
+Package pdftex.def Info: img/snake_dec_temp.png  used on input line 138.
+(pdftex.def)             Requested size: 384.1122pt x 41.85211pt.
+
+Overfull \hbox (12.00002pt too wide) in paragraph at lines 130--140
+ [][] 
+ []
+
+[46 <./img/cookie_enc.png> <./img/cookie_dec_0.png> <./img/cookie_dec_1.png> <.
+/img/cookie_dec_2.png> <./img/cookie_dec_3.png> <./img/face_enc.png> <./img/fac
+e_dec_0.png> <./img/face_dec_1.png> <./img/face_dec_2.png> <./img/face_dec_3.pn
+g> <./img/hat_enc.png> <./img/hat_dec_0.png> <./img/hat_dec_1.png> <./img/hat_d
+ec_2.png> <./img/hat_dec_3.png>]
+<img/cat_temp.png, id=901, 755.07094pt x 143.78719pt>
+File: img/cat_temp.png Graphic file (type png)
+<use img/cat_temp.png>
+Package pdftex.def Info: img/cat_temp.png  used on input line 149.
+(pdftex.def)             Requested size: 384.1122pt x 73.1462pt.
+<img/pig_temp.png, id=902, 752.0597pt x 157.33781pt>
+File: img/pig_temp.png Graphic file (type png)
+<use img/pig_temp.png>
+Package pdftex.def Info: img/pig_temp.png  used on input line 150.
+(pdftex.def)             Requested size: 384.1122pt x 80.36125pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 148--152
+ [][] 
+ []
+
+[47 <./img/cat_enc_temp.png> <./img/cat_dec_temp.png> <./img/saucer_enc_temp.pn
+g> <./img/saucer_dec_temp.png> <./img/hat_enc_temp.png> <./img/hat_dec_temp.png
+> <./img/snake_enc_temp.png> <./img/snake_dec_temp.png>] [48 <./img/cat_temp.pn
+g> <./img/pig_temp.png>]
+<img/cat_enc_inter.png, id=923, 70.2625pt x 71.26625pt>
+File: img/cat_enc_inter.png Graphic file (type png)
+<use img/cat_enc_inter.png>
+Package pdftex.def Info: img/cat_enc_inter.png  used on input line 163.
+(pdftex.def)             Requested size: 57.61447pt x 58.43759pt.
+<img/saucer_enc_inter.png, id=924, 95.35625pt x 80.3pt>
+File: img/saucer_enc_inter.png Graphic file (type png)
+<use img/saucer_enc_inter.png>
+Package pdftex.def Info: img/saucer_enc_inter.png  used on input line 164.
+(pdftex.def)             Requested size: 57.61447pt x 48.5173pt.
+<img/cat_saucer_inter.png, id=925, 837.1275pt x 85.31876pt>
+File: img/cat_saucer_inter.png Graphic file (type png)
+<use img/cat_saucer_inter.png>
+Package pdftex.def Info: img/cat_saucer_inter.png  used on input line 165.
+(pdftex.def)             Requested size: 384.1122pt x 39.14685pt.
+<img/cat_enc_inter_1.png, id=926, 97.36375pt x 82.3075pt>
+File: img/cat_enc_inter_1.png Graphic file (type png)
+<use img/cat_enc_inter_1.png>
+Package pdftex.def Info: img/cat_enc_inter_1.png  used on input line 166.
+(pdftex.def)             Requested size: 57.61447pt x 48.70416pt.
+<img/saucer_enc_inter_1.png, id=927, 73.27374pt x 73.27374pt>
+File: img/saucer_enc_inter_1.png Graphic file (type png)
+<use img/saucer_enc_inter_1.png>
+Package pdftex.def Info: img/saucer_enc_inter_1.png  used on input line 167.
+(pdftex.def)             Requested size: 57.61447pt x 57.6139pt.
+<img/cat_saucer_inter_1.png, id=928, 825.0825pt x 89.33376pt>
+File: img/cat_saucer_inter_1.png Graphic file (type png)
+<use img/cat_saucer_inter_1.png>
+Package pdftex.def Info: img/cat_saucer_inter_1.png  used on input line 168.
+(pdftex.def)             Requested size: 384.1122pt x 41.58882pt.
+<img/snake_enc_inter_1.png, id=929, 102.3825pt x 66.2475pt>
+File: img/snake_enc_inter_1.png Graphic file (type png)
+<use img/snake_enc_inter_1.png>
+Package pdftex.def Info: img/snake_enc_inter_1.png  used on input line 169.
+(pdftex.def)             Requested size: 57.61447pt x 37.28029pt.
+<img/hat_enc_inter_1.png, id=930, 67.25125pt x 65.24374pt>
+File: img/hat_enc_inter_1.png Graphic file (type png)
+<use img/hat_enc_inter_1.png>
+Package pdftex.def Info: img/hat_enc_inter_1.png  used on input line 170.
+(pdftex.def)             Requested size: 57.61447pt x 55.89546pt.
+<img/snake_hat_inter_1.png, id=931, 819.06pt x 85.31876pt>
+File: img/snake_hat_inter_1.png Graphic file (type png)
+<use img/snake_hat_inter_1.png>
+Package pdftex.def Info: img/snake_hat_inter_1.png  used on input line 171.
+(pdftex.def)             Requested size: 384.1122pt x 40.01257pt.
+<img/snake_enc_inter.png, id=932, 136.51pt x 67.25125pt>
+File: img/snake_enc_inter.png Graphic file (type png)
+<use img/snake_enc_inter.png>
+Package pdftex.def Info: img/snake_enc_inter.png  used on input line 172.
+(pdftex.def)             Requested size: 57.61447pt x 28.38385pt.
+<img/hat_enc_inter.png, id=933, 143.53625pt x 73.27374pt>
+File: img/hat_enc_inter.png Graphic file (type png)
+<use img/hat_enc_inter.png>
+Package pdftex.def Info: img/hat_enc_inter.png  used on input line 173.
+(pdftex.def)             Requested size: 57.61447pt x 29.4107pt.
+<img/snake_hat_inter.png, id=934, 864.22874pt x 91.34125pt>
+File: img/snake_hat_inter.png Graphic file (type png)
+<use img/snake_hat_inter.png>
+Package pdftex.def Info: img/snake_hat_inter.png  used on input line 174.
+(pdftex.def)             Requested size: 384.1122pt x 40.59724pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 162--176
+ [][] 
+ []
+
+<img/owl_enc_inter.png, id=937, 93.34875pt x 110.4125pt>
+File: img/owl_enc_inter.png Graphic file (type png)
+<use img/owl_enc_inter.png>
+Package pdftex.def Info: img/owl_enc_inter.png  used on input line 185.
+(pdftex.def)             Requested size: 57.61447pt x 68.14671pt.
+<img/cookie_enc_inter.png, id=938, 95.35625pt x 86.3225pt>
+File: img/cookie_enc_inter.png Graphic file (type png)
+<use img/cookie_enc_inter.png>
+Package pdftex.def Info: img/cookie_enc_inter.png  used on input line 186.
+(pdftex.def)             Requested size: 57.61447pt x 52.1561pt.
+<img/cookie_owl_inter.png, id=939, 831.105pt x 110.4125pt>
+File: img/cookie_owl_inter.png Graphic file (type png)
+<use img/cookie_owl_inter.png>
+Package pdftex.def Info: img/cookie_owl_inter.png  used on input line 187.
+(pdftex.def)             Requested size: 384.1122pt x 51.02959pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 184--189
+ [][] 
+ []
+
+[49 <./img/cat_enc_inter.png> <./img/saucer_enc_inter.png> <./img/cat_saucer_in
+ter.png> <./img/cat_enc_inter_1.png> <./img/saucer_enc_inter_1.png> <./img/cat_
+saucer_inter_1.png> <./img/snake_enc_inter_1.png> <./img/hat_enc_inter_1.png> <
+./img/snake_hat_inter_1.png> <./img/snake_enc_inter.png> <./img/hat_enc_inter.p
+ng> <./img/snake_hat_inter.png>]
+<img/weight_inter.png, id=957, 761.09344pt x 318.43968pt>
+File: img/weight_inter.png Graphic file (type png)
+<use img/weight_inter.png>
+Package pdftex.def Info: img/weight_inter.png  used on input line 198.
+(pdftex.def)             Requested size: 384.1122pt x 160.71602pt.
+ [50 <./img/owl_enc_inter.png> <./img/cookie_enc_inter.png> <./img/cookie_owl_i
+nter.png>]
+<img/arithmetic.png, id=965, 696.35156pt x 222.07968pt>
+File: img/arithmetic.png Graphic file (type png)
+<use img/arithmetic.png>
+Package pdftex.def Info: img/arithmetic.png  used on input line 209.
+(pdftex.def)             Requested size: 384.1122pt x 122.5pt.
+ [51 <./img/weight_inter.png> <./img/arithmetic.png>]
+<img/owl_temp_02.png, id=973, 619.45714pt x 92.91856pt>
 File: img/owl_temp_02.png Graphic file (type png)
 <use img/owl_temp_02.png>
-Package pdftex.def Info: img/owl_temp_02.png  used on input line 120.
+Package pdftex.def Info: img/owl_temp_02.png  used on input line 223.
 (pdftex.def)             Requested size: 384.1122pt x 57.6174pt.
-<img/owl_temp_04.png, id=795, 619.45714pt x 78.46457pt>
+<img/owl_temp_04.png, id=974, 619.45714pt x 78.46457pt>
 File: img/owl_temp_04.png Graphic file (type png)
 <use img/owl_temp_04.png>
-Package pdftex.def Info: img/owl_temp_04.png  used on input line 121.
+Package pdftex.def Info: img/owl_temp_04.png  used on input line 224.
 (pdftex.def)             Requested size: 384.1122pt x 48.65471pt.
-<img/owl_temp_05.png, id=796, 628.43478pt x 83.7913pt>
+<img/owl_temp_05.png, id=975, 628.43478pt x 83.7913pt>
 File: img/owl_temp_05.png Graphic file (type png)
 <use img/owl_temp_05.png>
-Package pdftex.def Info: img/owl_temp_05.png  used on input line 122.
+Package pdftex.def Info: img/owl_temp_05.png  used on input line 225.
 (pdftex.def)             Requested size: 384.1122pt x 51.21617pt.
-<img/owl_temp_06.png, id=797, 619.45714pt x 92.91856pt>
+<img/owl_temp_06.png, id=976, 619.45714pt x 92.91856pt>
 File: img/owl_temp_06.png Graphic file (type png)
 <use img/owl_temp_06.png>
-Package pdftex.def Info: img/owl_temp_06.png  used on input line 123.
+Package pdftex.def Info: img/owl_temp_06.png  used on input line 226.
 (pdftex.def)             Requested size: 384.1122pt x 57.6174pt.
-<img/owl_temp_08.png, id=798, 628.43478pt x 97.4074pt>
+<img/owl_temp_08.png, id=977, 628.43478pt x 97.4074pt>
 File: img/owl_temp_08.png Graphic file (type png)
 <use img/owl_temp_08.png>
-Package pdftex.def Info: img/owl_temp_08.png  used on input line 124.
+Package pdftex.def Info: img/owl_temp_08.png  used on input line 227.
 (pdftex.def)             Requested size: 384.1122pt x 59.5388pt.
-<img/owl_temp_1.png, id=799, 647.19403pt x 119.7309pt>
-File: img/owl_temp_1.png Graphic file (type png)
-<use img/owl_temp_1.png>
-Package pdftex.def Info: img/owl_temp_1.png  used on input line 125.
-(pdftex.def)             Requested size: 384.1122pt x 71.0608pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 119--127
+Overfull \hbox (12.0pt too wide) in paragraph at lines 222--229
  [][] 
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 127--127
+Underfull \hbox (badness 1009) in paragraph at lines 229--229
 [][]|\T1/pplj/m/n/10.95 (+20) Im-ma-gi-ni ge-ne-ra-te dal mo-del-lo au-to-re-gr
 es-si-vo al va-ria-re del
  []
 
-[45])
-Overfull \hbox (12.0pt too wide) in paragraph at lines 138--123
-[]$[]$ 
- []
-
-[46 <./img/owl_temp_02.png> <./img/owl_temp_04.png> <./img/owl_temp_05.png> <./
-img/owl_temp_06.png> <./img/owl_temp_08.png> <./img/owl_temp_1.png>]
+<img/completion.png, id=978, 1274.51157pt x 561.59813pt>
+File: img/completion.png Graphic file (type png)
+<use img/completion.png>
+Package pdftex.def Info: img/completion.png  used on input line 241.
+(pdftex.def)             Requested size: 384.1122pt x 169.25197pt.
+[52 <./img/owl_temp_02.png> <./img/owl_temp_04.png> <./img/owl_temp_05.png> <./
+img/owl_temp_06.png> <./img/owl_temp_08.png>]) [53 <./img/completion.png>]
 \openout2 = `Chapters/conclusioni.aux'.
 
 
-(./Chapters/conclusioni.tex
-chapter 4.
-) [47
+(./Chapters/conclusioni.tex [54
 
 
 
 
 ]
+chapter 4.
+[55]
+<img/heart.png, id=1014, 364.2408pt x 232.34805pt>
+File: img/heart.png Graphic file (type png)
+<use img/heart.png>
+Package pdftex.def Info: img/heart.png  used on input line 13.
+(pdftex.def)             Requested size: 384.1122pt x 245.03624pt.
+ [56 <./img/heart.png>]) [57]
 \openout2 = `Chapters/bibliografia.aux'.
 
  (./Chapters/bibliografia.tex (./thesis.brf)
 \tf@brf=\write8
 \openout8 = `thesis.brf'.
 
- [48
+
+[58
 
 
 
 
 ]
-Underfull \hbox (badness 1502) in paragraph at lines 40--40
+Underfull \hbox (badness 1502) in paragraph at lines 36--36
 []\T1/pplj/m/n/12 (+20) Axel Bran-do - \T1/pplj/m/it/12 (+20) Mix-tu-re Den-si-
 ty Net-works (MDN) for di-stri-bu-
  []
 
 
-Overfull \hbox (67.72122pt too wide) in paragraph at lines 40--40
+Overfull \hbox (67.72122pt too wide) in paragraph at lines 36--36
 \T1/fvm/m/n/12 Mixture-[]Density-[]Networks-[]for-[]distribution-[]and-[]uncert
 ainty-[]estimation /
  []
 
-[49]
-Underfull \hbox (badness 6876) in paragraph at lines 47--47
+[59]
+Underfull \hbox (badness 2359) in paragraph at lines 38--38
+[]\T1/pplj/m/n/12 (+20) Colah - \T1/pplj/m/it/12 (+20) Un-der-stan-ding lstm ne
+t-works, co-lah's blog. \T1/pplj/m/n/12 (+20) - []$\T1/fvm/m/n/12 http : / /
+ []
+
+
+Underfull \hbox (badness 6876) in paragraph at lines 43--43
 []\T1/pplj/m/n/12 (+20) A. Kar-pa-thy - \T1/pplj/m/it/12 (+20) The Un-rea-so-na
 -ble Ef-fec-ti-ve-ness of Re-cur-rent
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 \T1/pplj/m/it/12 (+20) Neu-ral Net-works \T1/pplj/m/n/12 (+20) - []$\T1/fvm/m/n
 /12 http : / / karpathy . github . io / 2015 / 05 / 21 /
  []
 
 (c:/texlive/2017/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [50]
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+) [60]
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 []\T1/pplj/m/n/12 (+20) Fariz Rah-man - \T1/pplj/m/it/12 (+20) Re-cur-rent Shop
  \T1/pplj/m/n/12 (+20) - []$\T1/fvm/m/n/12 https : / / github . com /
  []
 
-[51]) [52]
+[61]
+Underfull \hbox (badness 2042) in paragraph at lines 101--101
+[]\T1/pplj/m/n/12 (+20) David Ha, Dou-glas Eck - \T1/pplj/m/it/12 (+20) sketch-
+rnn \T1/pplj/m/n/12 (+20) - []$\T1/fvm/m/n/12 https : / / github . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+\T1/fvm/m/n/12 tensorflow / magenta / tree / master / magenta / models / sketch
+ _ rnn$[]
+ []
+
+) [62]
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 132.
- [53
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 133.
+ [63
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+\openout2 = `Chapters/appendici.aux'.
+
+ (./Chapters/appendici.tex [64
+
+
+
+]
+chapter A.
+(./code/keras-sketch_rnn/test.py
+Overfull \hbox (47.8922pt too wide) in paragraph at lines 9--10
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[65] [66] [67] [68] [69] [70]) (./code/keras-sketch_rnn/model.py [71] [72]))
+[73]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
  (./thesis.aux (./titlePage.aux) (./Chapters/introduzione.aux)
 (./Chapters/strumenti.aux) (./Chapters/esperimenti.aux)
-(./Chapters/conclusioni.aux) (./Chapters/bibliografia.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+(./Chapters/conclusioni.aux) (./Chapters/bibliografia.aux)
+(./Chapters/appendici.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 61CA493D8050ED678C41AFBC4947C792;2313.
+(rerunfilecheck)             Checksum: A9B0664769368555AB14B5DE95C294E6;2495.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 8F8710C3D6B6E09A92CF43CB02767806;2334.
+(rerunfilecheck)             Checksum: 1C984AEEF83C80BB104BFB505D104919;2932.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 41481 strings out of 492982
- 768198 string characters out of 6136225
- 1030063 words of memory out of 5000000
- 43363 multiletter control sequences out of 15000+600000
- 683851 words of font info for 707 fonts, out of 8000000 for 9000
+ 42904 strings out of 492982
+ 792748 string characters out of 6136225
+ 1032738 words of memory out of 5000000
+ 44204 multiletter control sequences out of 15000+600000
+ 686413 words of font info for 734 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,15n,73p,10388b,1600s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,15n,73p,10388b,2366s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2017/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type
@@ -2118,21 +2448,22 @@ onts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type
 msfonts/cm/cmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/e
 uler/euex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/e
 ufb10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.
-pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><c
-:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb><c:/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb><c:/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb><c:/texlive/2017/texm
-f-dist/fonts/type1/public/mathpazo/fplmbb.pfb><c:/texlive/2017/texmf-dist/fonts
-/type1/public/fpl/fplrc8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/fp
-l/fplrij8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb><
-c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c
-:/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2017/
-texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2017/texmf-dist/font
-s/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (55 pages, 1860390 bytes).
+pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><c:
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><c:/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb><c:/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb><c:/texlive/2017/texmf
+-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb><c:/texlive/2017/texmf-dist/
+fonts/type1/public/mathpazo/fplmbb.pfb><c:/texlive/2017/texmf-dist/fonts/type1/
+public/fpl/fplrc8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/fpl/fplri
+j8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb><c:/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c:/texli
+ve/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2017/texmf-d
+ist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2017/texmf-dist/fonts/type1
+/urw/palatino/uplri8a.pfb>
+Output written on thesis.pdf (75 pages, 2549012 bytes).
 PDF statistics:
- 1054 PDF objects out of 1200 (max. 8388607)
- 896 compressed objects within 9 object streams
- 274 named destinations out of 1000 (max. 500000)
- 112092 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1880 PDF objects out of 2073 (max. 8388607)
+ 1603 compressed objects within 17 object streams
+ 761 named destinations out of 1000 (max. 500000)
+ 112878 words of extra memory for PDF output out of 128383 (max. 10000000)
 
